@@ -1,7 +1,12 @@
-import {Controller, Get, Post} from '@nestjs/common';
+import {Controller, Delete, Get, HttpCode, Post, Put} from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+// http://192.168.1.10:3000/segmentoInicial
+// http://192.168.1.10:3000/segmentoInicial
+// http://192.168.1.10:3000/segmentoInicial
+
+@Controller('/api')
+// Segemento inicial 'api'
 /* @[nombre] nombre del decorador y pueden utilizarse antes de instanciar clases, atributos,
  métodos y/o constructores.
  Un decorador es una función que se ejecuta antes de crearse la clase.
@@ -9,15 +14,37 @@ import { AppService } from './app.service';
 export class AppController {
     constructor(private readonly appService: AppService) {}
 
-    @Get()      //Método http
-    getHello(): string {
-        return this.appService.getHello();
+    @Get('/hello-world')      //Método http
+    helloWorld() {
+        return 'Hello world';
     }
 
-    @Post()     //Método http
-    postHello(){
+    @Post('/hola-mundo')     //Método http
+    @HttpCode(201)
+    holaMundo(){
         return 'Hola mundo';
     }
+
+    @Put('/salut-monde')     //Método http
+    @HttpCode(202)
+    salutMonde(){
+        return 'Salut monde';
+    }
+
+    @Delete('/ciao-mondo')     //Método http
+    @HttpCode(203)
+    ciaoMondo(){
+        return 'Ciao mondo';
+    }
+
+    /*
+    Segmento inicial: api
+    1) Segmento Acción: GET ->'hello-world' -> 'Hello world'
+    2) Segmento Acción: POST ->'hello-world' -> 'Hola mundo'
+    3) Segmento Acción: PUT ->'...' -> '...'
+    4) Segmento Acción: DELETE ->'...' -> '...'
+    ¨
+     */
 }
 
 /*
