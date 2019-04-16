@@ -1,5 +1,6 @@
-import {Controller, Delete, Get, HttpCode, Post, Put} from '@nestjs/common';
+import {Controller, Delete, Get, HttpCode, Post, Put, Headers} from '@nestjs/common';
 import { AppService } from './app.service';
+import any = jasmine.any;
 
 // http://192.168.1.10:3000/segmentoInicial
 // http://192.168.1.10:3000/segmentoInicial
@@ -45,7 +46,72 @@ export class AppController {
     4) Segmento Acción: DELETE ->'...' -> '...'
     ¨
      */
+
+    @Get('/adivina')      //Método http
+    adivina(@Headers() headers): string {
+        console.log('Headers: ', headers);
+        const numeroRandomico = Math.round(Math.random()*10);
+        const numeroCabecera = Number(headers.numero);
+        if (numeroCabecera == numeroRandomico){
+            return 'ok';
+        }else{
+            return ':(';
+        }
+
+        /* nombre: string = 'Cristian';
+        let edad = 21; //number
+        let sueldo = 1.20; //number
+        let casado = false; //boolean
+        let hijos = null; //null
+        let alas = undefined; //undefined*/
+
+        return 'Hello world';
+    }
 }
+const json = [
+    {
+        llave: 'valor',
+        'nombre': "Cristian",
+        "edad": 21,
+        sueldo: 2.2,
+        casado: false,
+        hijos: null,
+        mascotas: ["cachetas", 1, 1.25, false, null,
+            {
+                "nombre": "Cristian"
+            }
+        ]
+    }
+];
+
+let objeto : any = {
+    propiedad: 'valor',
+    propiedadDos: 'valorDos'
+};
+
+objeto.propiedad;
+objeto.propiedadDos;
+
+// Agregar propiedades
+objeto.propiedadTres = 'valorTres';
+objeto['propiedadTres'] = 'valorTres';
+delete objeto.propiedadTres; // destruir
+objeto.propiedadTres = undefined; // destruir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 class usuario{
