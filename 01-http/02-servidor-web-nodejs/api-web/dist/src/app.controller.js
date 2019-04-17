@@ -40,7 +40,47 @@ let AppController = class AppController {
         else {
             return ':(';
         }
-        return 'Hello world';
+    }
+    consultar(queryParams) {
+        console.log(queryParams);
+        if (queryParams.nombre) {
+            return `Hola ${queryParams.nombre}`;
+        }
+        else {
+            return 'Hola extraño';
+        }
+    }
+    ciudad(parametrosRuta) {
+        switch (parametrosRuta.idCiudad.toLowerCase()) {
+            case 'quito':
+                return 'Que fueff';
+            case 'guayaquil':
+                return 'Que mashhh ñañoshh';
+            default:
+                return 'Buenas tardes';
+        }
+    }
+    registroComida(parametrosCuerpo, respuesta) {
+        if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad) {
+            const cantidad = Number(parametrosCuerpo.cantidad);
+            if (cantidad > 1) {
+                respuesta.set('premio', 'Guatita');
+            }
+            return respuesta.send({ mensaje: 'Registro creado' });
+        }
+        else {
+            return respuesta.status(400).send({ mensaje: 'ERROR. no envía nombre y cantidad', error: 400 });
+        }
+    }
+    semilla(peticion) {
+        console.log(peticion.cookies);
+        const cookies = peticion.cookies;
+        if (cookies.micookie) {
+            return 'OK';
+        }
+        else {
+            return ':(';
+        }
     }
 };
 __decorate([
@@ -77,34 +117,37 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", String)
 ], AppController.prototype, "adivina", null);
+__decorate([
+    common_1.Get('/consultar'),
+    __param(0, common_1.Query()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "consultar", null);
+__decorate([
+    common_1.Get('/ciudad/:idCiudad'),
+    __param(0, common_1.Param()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "ciudad", null);
+__decorate([
+    common_1.Post('registroComida'),
+    __param(0, common_1.Body()), __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "registroComida", null);
+__decorate([
+    common_1.Get('semilla'),
+    __param(0, common_1.Request()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "semilla", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
-const json = [
-    {
-        llave: 'valor',
-        'nombre': "Cristian",
-        "edad": 21,
-        sueldo: 2.2,
-        casado: false,
-        hijos: null,
-        mascotas: ["cachetas", 1, 1.25, false, null,
-            {
-                "nombre": "Cristian"
-            }
-        ]
-    }
-];
-let objeto = {
-    propiedad: 'valor',
-    propiedadDos: 'valorDos'
-};
-objeto.propiedad;
-objeto.propiedadDos;
-objeto.propiedadTres = 'valorTres';
-objeto['propiedadTres'] = 'valorTres';
-delete objeto.propiedadTres;
-objeto.propiedadTres = undefined;
 //# sourceMappingURL=app.controller.js.map

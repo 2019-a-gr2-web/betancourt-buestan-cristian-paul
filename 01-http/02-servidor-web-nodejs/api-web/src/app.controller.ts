@@ -1,6 +1,5 @@
-import {Controller, Delete, Get, HttpCode, Post, Put, Headers} from '@nestjs/common';
+import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Body,Response, Request} from '@nestjs/common';
 import { AppService } from './app.service';
-import any = jasmine.any;
 
 // http://192.168.1.10:3000/segmentoInicial
 // http://192.168.1.10:3000/segmentoInicial
@@ -12,6 +11,15 @@ import any = jasmine.any;
  métodos y/o constructores.
  Un decorador es una función que se ejecuta antes de crearse la clase.
  Pueden ser utilizados en clases, atributos, parámetros y/o métodos*/
+
+/*
+Segmento inicial: api
+1) Segmento Acción: GET ->'hello-world' -> 'Hello world'
+2) Segmento Acción: POST ->'hello-world' -> 'Hola mundo'
+3) Segmento Acción: PUT ->'...' -> '...'
+4) Segmento Acción: DELETE ->'...' -> '...'
+*/
+
 export class AppController {
     constructor(private readonly appService: AppService) {}
 
@@ -38,15 +46,6 @@ export class AppController {
         return 'Ciao mondo';
     }
 
-    /*
-    Segmento inicial: api
-    1) Segmento Acción: GET ->'hello-world' -> 'Hello world'
-    2) Segmento Acción: POST ->'hello-world' -> 'Hola mundo'
-    3) Segmento Acción: PUT ->'...' -> '...'
-    4) Segmento Acción: DELETE ->'...' -> '...'
-    ¨
-     */
-
     @Get('/adivina')      //Método http
     adivina(@Headers() headers): string {
         console.log('Headers: ', headers);
@@ -57,18 +56,62 @@ export class AppController {
         }else{
             return ':(';
         }
+    }
 
-        /* nombre: string = 'Cristian';
-        let edad = 21; //number
-        let sueldo = 1.20; //number
-        let casado = false; //boolean
-        let hijos = null; //null
-        let alas = undefined; //undefined*/
+    @Get('/consultar')
+    consultar(@Query() queryParams){
+        console.log(queryParams);
+        if(queryParams.nombre){
+            return `Hola ${queryParams.nombre}`;
+        }else{
+            return 'Hola extraño';
+        }
+    }
 
-        return 'Hello world';
+    @Get('/ciudad/:idCiudad')
+    ciudad(@Param() parametrosRuta){
+      switch (parametrosRuta.idCiudad.toLowerCase()) {
+          case 'quito':
+              return 'Que fueff';
+          case 'guayaquil':
+              return 'Que mashhh ñañoshh';
+          default:
+              return 'Buenas tardes';
+      }
+    }
+
+    @Post('registroComida')
+    registroComida(@Body() parametrosCuerpo, @Response() respuesta){
+        //Al utilizar @Response no se utilizan los returns
+        //console.log(parametrosCuerpo);
+        //console.log(request.body); @Request
+        if(parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
+            const cantidad = Number(parametrosCuerpo.cantidad);
+            if(cantidad>1) {
+                respuesta.set('premio', 'Guatita');
+            }
+                return respuesta.send({mensaje:'Registro creado'});
+                //return 'Registro creado';
+        }else{
+            return respuesta.status(400).send({mensaje:'ERROR. no envía nombre y cantidad', error: 400});
+            //return 'ERROR. no envía nombre y cantidad';
+        }
+    }
+
+        @Get('semilla')
+        semilla(@Request() peticion){
+        console.log(peticion.cookies);
+        const cookies = peticion.cookies;
+        if(cookies.micookie) {
+            return 'OK';
+        }else{
+            return ':(';
+        }
+
     }
 }
-const json = [
+
+/*const json = [
     {
         llave: 'valor',
         'nombre': "Cristian",
@@ -97,24 +140,16 @@ objeto.propiedadTres = 'valorTres';
 objeto['propiedadTres'] = 'valorTres';
 delete objeto.propiedadTres; // destruir
 objeto.propiedadTres = undefined; // destruir
+*/
 
+        /*nombre: string = 'Cristian';
+        let edad = 21; //number
+        let sueldo = 1.20; //number
+        let casado = false; //boolean
+        let hijos = null; //null
+        let alas = undefined; //undefined*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-class usuario{
+/*class usuario{
 
 
     atributoPublico;
@@ -130,5 +165,4 @@ class usuario{
     public metodoPublico(){}
     private metodoPrivado(){}
     protected metodoProtegido(){}
-}
-*/
+}*/
