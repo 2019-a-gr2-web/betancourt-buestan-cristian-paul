@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/02-deberes/01-calculadora/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -13,70 +15,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1106420193">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.26" value="1" />
-          <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="gitignore" value="2" />
-          <entry key="html" value="2" />
-          <entry key="js" value="1" />
-          <entry key="json" value="3" />
-          <entry key="ts" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="TypeScript" value="8" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="gitignore" value="12" />
-          <entry key="html" value="98" />
-          <entry key="json" value="220" />
-          <entry key="ts" value="3661" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="HTML" value="98" />
-          <entry key="JSON" value="220" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="TypeScript" value="3661" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.js.language.service.starts">
-        <counts>
-          <entry key="TypeScriptServerServiceImpl" value="6" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="betancourt-buestan-cristian-paul" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+            <state relative-caret-position="-840">
+              <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
               <folding>
                 <element signature="e#0#123#0" expanded="true" />
               </folding>
@@ -84,20 +32,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="11" selection-end-column="3" />
+            <state relative-caret-position="240">
+              <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#105#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,7 +59,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/02-deberes/01-calculadora" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -127,25 +69,13 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/01-calculadora/.gitignore" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" />
-    </packageJsonPaths>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="720" />
     <option name="width" value="720" />
     <option name="height" value="860" />
@@ -198,10 +128,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
-    <property name="ts.external.directory.path" value="C:\Users\USRKAP\Desktop\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="ts.external.directory.path" value="D:\Program Files\JetBrains\WebStorm 2019.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -232,17 +164,18 @@
       <workItem from="1555445223409" duration="10000" />
       <workItem from="1555445249521" duration="3247000" />
       <workItem from="1555527597516" duration="6143000" />
+      <workItem from="1555623504510" duration="3671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17289000" />
+    <option name="totallyTimeSpent" value="20960000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="0" width="720" height="860" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.56304985" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.14144084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -254,7 +187,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32819074" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7419355" visible="true" weight="0.46563816" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7419355" visible="true" weight="0.22647059" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2580645" side_tool="true" weight="0.47685835" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32235938" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -264,9 +197,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json">
@@ -302,33 +232,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules/@nestjs/common/decorators/http/route-params.decorator.d.ts" />
+    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="23" />
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/ejemplo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
+        <state relative-caret-position="24">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/node_modules/@nestjs/common/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state relative-caret-position="216">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="104" column="27" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
+        <state relative-caret-position="-840">
+          <caret line="52" column="54" lean-forward="true" selection-start-line="52" selection-start-column="54" selection-end-line="52" selection-end-column="54" />
           <folding>
             <element signature="e#0#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" column="47" lean-forward="true" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#105#0" expanded="true" />
           </folding>
         </state>
       </provider>
