@@ -14,14 +14,13 @@ export class AppController {
       const resultado= numeroUno + numeroDos;
       response.status(200).send({suma: `${resultado}`});
       }else{
-      response.status(400).send({error: 'Parámetros a restar incorrectos'})
+      response.status(400).send({error: 'Parámetros a sumar incorrectos'})
     }
-
   }
 
   @Post('resta')
-  restar(@Headers() headers, @Body()  body, @Response() response){
-    const numeroUno = Number(headers.numero1);
+  restar(@Body()  body, @Response() response){
+    const numeroUno = Number(body.numero1);
     const numeroDos = Number (body.numero2);
     //console.log(`${numeroUno} ${numeroDos}`);
     if(!isNaN(numeroUno) && !isNaN(numeroDos)){
@@ -34,8 +33,8 @@ export class AppController {
   }
 
     @Put('multiplicacion')
-    multiplicar(@Headers() headers, @Query() query, @Response() response){
-      const numeroUno = Number(headers.numero1);
+    multiplicar(@Query() query, @Response() response){
+      const numeroUno = Number(query.numero1);
       const numeroDos = Number (query.numero2);
       console.log(`${numeroUno} ${numeroDos}`);
       if(!isNaN(numeroUno) && !isNaN(numeroDos)){

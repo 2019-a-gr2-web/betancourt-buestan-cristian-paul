@@ -26,11 +26,11 @@ let AppController = class AppController {
             response.status(200).send({ suma: `${resultado}` });
         }
         else {
-            response.status(400).send({ error: 'Parámetros a restar incorrectos' });
+            response.status(400).send({ error: 'Parámetros a sumar incorrectos' });
         }
     }
-    restar(headers, body, response) {
-        const numeroUno = Number(headers.numero1);
+    restar(body, response) {
+        const numeroUno = Number(body.numero1);
         const numeroDos = Number(body.numero2);
         if (!isNaN(numeroUno) && !isNaN(numeroDos)) {
             const resultado = numeroUno - numeroDos;
@@ -41,8 +41,8 @@ let AppController = class AppController {
             response.status(401).send({ error: 'Parámetros a restar incorrectos' });
         }
     }
-    multiplicar(headers, query, response) {
-        const numeroUno = Number(headers.numero1);
+    multiplicar(query, response) {
+        const numeroUno = Number(query.numero1);
         const numeroDos = Number(query.numero2);
         console.log(`${numeroUno} ${numeroDos}`);
         if (!isNaN(numeroUno) && !isNaN(numeroDos)) {
@@ -75,16 +75,16 @@ __decorate([
 ], AppController.prototype, "sumar", null);
 __decorate([
     common_1.Post('resta'),
-    __param(0, common_1.Headers()), __param(1, common_1.Body()), __param(2, common_1.Response()),
+    __param(0, common_1.Body()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "restar", null);
 __decorate([
     common_1.Put('multiplicacion'),
-    __param(0, common_1.Headers()), __param(1, common_1.Query()), __param(2, common_1.Response()),
+    __param(0, common_1.Query()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "multiplicar", null);
 __decorate([
