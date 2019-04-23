@@ -14,6 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
+const Joi = require("@hapi/joi");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -72,14 +73,37 @@ let AppController = class AppController {
             return respuesta.status(400).send({ mensaje: 'ERROR. no envía nombre y cantidad', error: 400 });
         }
     }
-    semilla(peticion) {
+    semilla(peticion, respuesta) {
         console.log(peticion.cookies);
         const cookies = peticion.cookies;
-        if (cookies.micookie) {
-            return 'OK';
+        const esquemaValidacionNumero = Joi.object().keys({
+            numero: Joi.number().integer().required()
+        });
+        const objetoValidacion = { numero: cookies.numero };
+        const resultado = Joi.validate(objetoValidacion, esquemaValidacionNumero);
+        if (resultado.error) {
+            console.log('Resultado: ', resultado);
         }
         else {
-            return ':(';
+            console.log('Numero valido');
+        }
+        const cookieSegura = peticion.signedCookies.fechaServidor;
+        if (cookieSegura) {
+            console.log('Cookie segura');
+        }
+        else {
+            console.log('Cookie insegura, no es valida');
+        }
+        if (cookies.micookie) {
+            const horaFechaServidor = new Date();
+            const minutos = horaFechaServidor.getMinutes();
+            respuesta.cookie('fechaServidor', new Date().getTime(), {
+                signed: true
+            });
+            respuesta.send('ok');
+        }
+        else {
+            respuesta.send(':(');
         }
     }
 };
@@ -140,9 +164,9 @@ __decorate([
 ], AppController.prototype, "registroComida", null);
 __decorate([
     common_1.Get('semilla'),
-    __param(0, common_1.Request()),
+    __param(0, common_1.Request()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "semilla", null);
 AppController = __decorate([
