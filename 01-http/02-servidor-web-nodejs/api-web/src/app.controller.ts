@@ -1,5 +1,7 @@
 import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Body,Response, Request} from '@nestjs/common';
 import { AppService } from './app.service';
+import * as Joi from '@hapi/joi';
+
 
 // http://192.168.1.10:3000/segmentoInicial
 // http://192.168.1.10:3000/segmentoInicial
@@ -98,14 +100,43 @@ export class AppController {
         }
     }
 
-        @Get('semilla')
-        semilla(@Request() peticion){
+    @Get('semilla')
+    semilla(@Request() peticion, @Response() respuesta){
         console.log(peticion.cookies);
         const cookies = peticion.cookies;
-        if(cookies.micookie) {
-            return 'OK';
+        const esquemaValidacionNumero = Joi.object().keys({
+          numero: Joi.number().integer().required()
+        });
+
+        const objetoValidacion = {numero: cookies.numero};
+        const resultado = Joi.validate(objetoValidacion,esquemaValidacionNumero);
+
+        if(resultado.error){
+            console.log('Resultado: ', resultado)
         }else{
-            return ':(';
+            console.log('Numero valido');
+        }
+
+        const cookieSegura= peticion.signedCookies.fechaServidor;
+        if (cookieSegura){
+            console.log('Cookie segura');
+        }else{
+            console.log('Cookie insegura, no es valida')
+        }
+
+        if(cookies.micookie) {
+            const horaFechaServidor = new Date();
+            const minutos = horaFechaServidor.getMinutes();
+            respuesta.cookie('fechaServidor',       //nombre
+                new Date().getTime(),               //valor
+                {                                   //opciones
+                    //expires: horaFechaServidor.setMinutes(minutos+1)
+                    signed: true
+                }
+                );
+            respuesta.send('ok');
+        }else{
+            respuesta.send(':(');
         }
 
     }
