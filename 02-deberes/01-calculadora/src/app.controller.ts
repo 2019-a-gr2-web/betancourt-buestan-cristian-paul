@@ -49,7 +49,7 @@ export class AppController {
     dividir(@Query() query, @Body()  body, @Response() response){
       const numeroUno = Number(body.numero1);
       const numeroDos = Number (query.numero2);
-      console.log(`${numeroUno} ${numeroDos}`);
+      //console.log(`${numeroUno} ${numeroDos}`);
       if(!isNaN(numeroUno) && !isNaN(numeroDos) && numeroDos!=0){
         const resultado = numeroUno / numeroDos;
         response.status(203).send({division: `${resultado}`});
