@@ -106,6 +106,14 @@ let AppController = class AppController {
             respuesta.send(':(');
         }
     }
+    obtenerUsuario(peticion, respuesta) {
+        const nombreUsuario = peticion.cookies.usuario;
+        const resultado = Math.round(Math.random() * 100);
+        respuesta.send({
+            nombreUsuario: `${nombreUsuario}`,
+            resultado: `${resultado}`
+        });
+    }
 };
 __decorate([
     common_1.Get('/hello-world'),
@@ -169,6 +177,13 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "semilla", null);
+__decorate([
+    common_1.Get('usuario'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "obtenerUsuario", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])

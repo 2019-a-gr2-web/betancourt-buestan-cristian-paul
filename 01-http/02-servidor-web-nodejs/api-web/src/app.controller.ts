@@ -138,6 +138,17 @@ export class AppController {
         }else{
             respuesta.send(':(');
         }
+    }
+
+    @Get('usuario')
+    obtenerUsuario(@Request() peticion, @Response() respuesta){
+        const nombreUsuario = peticion.cookies.usuario;
+        const resultado = Math.round(Math.random()*100);
+        respuesta.send(
+            {
+                nombreUsuario: `${nombreUsuario}`,
+                resultado:  `${resultado}`
+            });
 
     }
 }
