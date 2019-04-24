@@ -6,6 +6,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cookieParser('Secreto'));
   //app.set('')
-  await app.listen(3001);
+  await app.listen(3000);
 }
 bootstrap();
