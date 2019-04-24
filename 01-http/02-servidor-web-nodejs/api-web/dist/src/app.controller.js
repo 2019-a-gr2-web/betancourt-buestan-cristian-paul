@@ -108,11 +108,22 @@ let AppController = class AppController {
     }
     obtenerUsuario(peticion, respuesta) {
         const nombreUsuario = peticion.cookies.usuario;
-        const resultado = Math.round(Math.random() * 100);
-        respuesta.send({
-            nombreUsuario: `${nombreUsuario}`,
-            resultado: `${resultado}`
-        });
+        const resultado = Math.round(Math.random() % 100);
+        console.log(nombreUsuario);
+        if (nombreUsuario) {
+            respuesta.send({
+                nombreUsuario: `${nombreUsuario}`,
+                resultado: `${resultado}`
+            });
+        }
+        else {
+            respuesta.send({
+                error: 'Usuario no definido'
+            });
+        }
+    }
+    inicio(respuesta) {
+        return respuesta.render('inicio');
     }
 };
 __decorate([
@@ -184,9 +195,50 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "obtenerUsuario", null);
+__decorate([
+    common_1.Get('inicio'),
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "inicio", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;
+function holaMundo() {
+    console.log('Hola mundo');
+}
+const respuestaHolaMundo = holaMundo();
+function suma(a, b) {
+    return a + b;
+}
+const respuestaSuma = suma(1, 2);
+console.log('Respuesta suma:', respuestaSuma);
+if ({}) {
+    console.log('Verdadero');
+}
+else {
+    console.log('Falso');
+}
+const arregloNumeros = [1, 2, 3, 4, 5, 6];
+const rForEach = arregloNumeros.forEach(valorActual => console.log(`Valor: ${valorActual}`));
+console.log("Respuesta forEach: ", rForEach);
+const arregloNumerosMap = [1, 2, 3, 4, 5, 6];
+const rMap = arregloNumerosMap.map(valorActual => {
+    const esPar = valorActual % 2;
+    if (esPar) {
+        return valorActual + 2;
+    }
+    else {
+        return valorActual + 1;
+    }
+});
+console.log("Respuesta map: ", rMap);
+const rFind = arregloNumeros.find(valorActual => valorActual == 10);
+console.log("Respuesta find: ", rFind);
+const arregloNumerosFilter = [1, 2, 3, 4, 5, 6];
+const rFilter = arregloNumerosFilter.filter(valorActual => valorActual < 5);
+console.log("Respuesta filter: ", rFilter);
 //# sourceMappingURL=app.controller.js.map

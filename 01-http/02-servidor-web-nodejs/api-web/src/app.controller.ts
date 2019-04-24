@@ -1,6 +1,7 @@
 import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Body,Response, Request} from '@nestjs/common';
 import { AppService } from './app.service';
 import * as Joi from '@hapi/joi';
+import {isNullOrUndefined} from "util";
 
 
 // http://192.168.1.10:3000/segmentoInicial
@@ -143,17 +144,110 @@ export class AppController {
     @Get('usuario')
     obtenerUsuario(@Request() peticion, @Response() respuesta){
         const nombreUsuario = peticion.cookies.usuario;
-        const resultado = Math.round(Math.random()*100);
-        respuesta.send(
-            {
-                nombreUsuario: `${nombreUsuario}`,
-                resultado:  `${resultado}`
-            });
+        const resultado = Math.round(Math.random()%100);
+        console.log(nombreUsuario);
+        if(nombreUsuario) {
+            respuesta.send(
+                {
+                    nombreUsuario: `${nombreUsuario}`,
+                    resultado: `${resultado}`
+                });
+        }else{
+            respuesta.send(
+                {
+                    error: 'Usuario no definido'
+                });
+        }
+    }
+
+        @Get('inicio')
+        inicio(@Response() respuesta){
+           return respuesta.render('inicio');
+        }
+
 
     }
-}
 
-/*const json = [
+    function holaMundo(){
+        console.log('Hola mundo');
+    }
+
+    const respuestaHolaMundo = holaMundo(); //undeffined
+
+    function suma(a: number, b: number): number{
+        return a + b;
+    }
+
+    const respuestaSuma = suma(1,2);
+    console.log('Respuesta suma:', respuestaSuma);
+
+    //Condicionales: truty falsy
+    if({}){
+       console.log('Verdadero');
+    }else{
+        console.log('Falso');
+    }
+
+    //Operadores de arreglos en JS
+    //const arregloNumeros = [1,'A', true,null,{},[]];
+    const arregloNumeros = [1,2,3,4,5,6];
+    //!)Imprimir en cosnola todos los elementos
+    const rForEach = arregloNumeros.forEach(
+            valorActual =>
+                console.log(`Valor: ${valorActual}`)
+            );
+    console.log("Respuesta forEach: ", rForEach);
+    //2) Sumar 2 a los pares y 1 a los impares
+    const arregloNumerosMap = [1,2,3,4,5,6];
+    const rMap= arregloNumerosMap.map(
+        valorActual => {
+            const esPar = valorActual%2;
+            if(esPar){
+                return valorActual+2;
+            }else{
+                return valorActual+1;
+            }
+        });
+    console.log("Respuesta map: ", rMap);
+
+    //3) Encuanten si hay el numero 4
+    const rFind = arregloNumeros.find(
+        valorActual => valorActual==10
+    );
+    console.log("Respuesta find: ", rFind);
+    //4) Filtrar los numeros menores a 5
+    const arregloNumerosFilter = [1,2,3,4,5,6];
+    const rFilter = arregloNumerosFilter.filter(
+        valorActual=> valorActual<5
+    );
+    console.log("Respuesta filter: ", rFilter);
+
+    //5) Todos los valores positivos
+    //6) Sumar todos los valores
+    //7) Sumar todos los valores
+    //8) Restar todos los valores de 100
+
+    //1.1) Sumen 10 a todos
+    //1.2) Filtren los mayores a 15
+    //1.3)) Si hay algun numero mayor a 30
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*const json = [
     {
         llave: 'valor',
         'nombre': "Cristian",
