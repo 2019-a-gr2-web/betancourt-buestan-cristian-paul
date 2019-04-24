@@ -15,6 +15,7 @@ function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
         app.use(cookieParser('Secreto'));
+        app.set('view engine', 'ejs');
         yield app.listen(3000);
     });
 }
