@@ -1,5 +1,18 @@
 Adios mundo
 <% const nombre = 'Paul'; %>
 <%= nombre%>
-<% const arreglo = [1,2,3,4,5] %>
-<% forEach() %>
+<% const arreglo = [1,2,3,4,5]; %>
+<% arreglo.forEach(valorActual=>{ %>
+<p>
+   Numero: <%= valorActual %>
+</p>
+<% });%>
+<oi>
+<% arreglo.forEach(valorActual=>{ %>
+    <li>
+        Numero: <%= valorActual %>
+    </li>
+<% });%>
+</oi>
+<% const objeto= {nombre: 'Adrian'}; %>
+<% objeto.nombre %>

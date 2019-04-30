@@ -241,4 +241,42 @@ console.log("Respuesta find: ", rFind);
 const arregloNumerosFilter = [1, 2, 3, 4, 5, 6];
 const rFilter = arregloNumerosFilter.filter(valorActual => valorActual < 5);
 console.log("Respuesta filter: ", rFilter);
+const arregloNumerosEvery = [1, 2, 3, 4, 5, 6];
+const respuestaEvery = arregloNumerosEvery.every(valorActual => valorActual > 0);
+console.log("Respuesta every: ", respuestaEvery);
+const arregloNumerosSome = [1, 2, 3, 4, 5, 6];
+const respuestaSome = arregloNumerosSome.some(valorActual => valorActual > 6);
+console.log("Respuesta some: ", respuestaSome);
+const arregloNumerosReduce = [1, 2, 3, 4, 5, 6];
+const valorInicioCalculo = 0;
+const respuestaReduce = arregloNumerosReduce.reduce((valorAcumulado, valorActual) => {
+    return valorAcumulado + valorActual;
+}, valorInicioCalculo);
+console.log("Respuesta reduce: ", respuestaReduce);
+const valorInicioCalculo2 = 0;
+const respuestaReduce2 = arregloNumerosReduce
+    .map(valorActual => {
+    if (valorActual < 4) {
+        return (valorActual * 1.1) + 5;
+    }
+    else {
+        return (valorActual * 1.15) + 3;
+    }
+})
+    .reduce((valorAcumulado, valorActual) => {
+    return valorAcumulado + valorActual;
+}, valorInicioCalculo2);
+console.log("Respuesta reduce2: ", respuestaReduce2);
+const arregloNumerosReduce3 = [1, 2, 3, 4, 5, 6];
+const valorInicioCalculo3 = 100;
+const respuestaReduce3 = arregloNumerosReduce3.reduce((valorAcumulado, valorActual) => {
+    return valorAcumulado - valorActual;
+}, valorInicioCalculo3);
+console.log("Respuesta reduce3: ", respuestaReduce3);
+const arregloEjercicio = [1, 2, 3, 4, 5, 6];
+const respuestaEjercicio = arregloEjercicio
+    .map(valorActual => valorActual + 10)
+    .filter(valorActual => valorActual > 15)
+    .some(valorActual => valorActual > 30);
+console.log("Respuesta ejercicio: ", respuestaEjercicio);
 //# sourceMappingURL=app.controller.js.map
