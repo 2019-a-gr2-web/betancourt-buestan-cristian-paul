@@ -1,5 +1,18 @@
-import {Controller, Delete, Get, HttpCode, Post, Put, Headers, Query, Param, Body,Response, Request} from '@nestjs/common';
-import { AppService } from './app.service';
+import {
+    Controller,
+    Delete,
+    Get,
+    HttpCode,
+    Post,
+    Put,
+    Headers,
+    Query,
+    Param,
+    Body,
+    Response,
+    Request
+} from '@nestjs/common';
+import {AppService} from './app.service';
 import * as Joi from '@hapi/joi';
 import {isNullOrUndefined} from "util";
 
@@ -24,7 +37,8 @@ Segmento inicial: api
 */
 
 export class AppController {
-    constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) {
+    }
 
     @Get('/hello-world')      //Método http
     helloWorld() {
@@ -33,99 +47,99 @@ export class AppController {
 
     @Post('/hola-mundo')     //Método http
     @HttpCode(201)
-    holaMundo(){
+    holaMundo() {
         return 'Hola mundo';
     }
 
     @Put('/salut-monde')     //Método http
     @HttpCode(202)
-    salutMonde(){
+    salutMonde() {
         return 'Salut monde';
     }
 
     @Delete('/ciao-mondo')     //Método http
     @HttpCode(203)
-    ciaoMondo(){
+    ciaoMondo() {
         return 'Ciao mondo';
     }
 
     @Get('/adivina')      //Método http
     adivina(@Headers() headers): string {
         console.log('Headers: ', headers);
-        const numeroRandomico = Math.round(Math.random()*10);
+        const numeroRandomico = Math.round(Math.random() * 10);
         const numeroCabecera = Number(headers.numero);
-        if (numeroCabecera == numeroRandomico){
+        if (numeroCabecera == numeroRandomico) {
             return 'ok';
-        }else{
+        } else {
             return ':(';
         }
     }
 
     @Get('/consultar')
-    consultar(@Query() queryParams){
+    consultar(@Query() queryParams) {
         console.log(queryParams);
-        if(queryParams.nombre){
+        if (queryParams.nombre) {
             return `Hola ${queryParams.nombre}`;
-        }else{
+        } else {
             return 'Hola extraño';
         }
     }
 
     @Get('/ciudad/:idCiudad')
-    ciudad(@Param() parametrosRuta){
-      switch (parametrosRuta.idCiudad.toLowerCase()) {
-          case 'quito':
-              return 'Que fueff';
-          case 'guayaquil':
-              return 'Que mashhh ñañoshh';
-          default:
-              return 'Buenas tardes';
-      }
+    ciudad(@Param() parametrosRuta) {
+        switch (parametrosRuta.idCiudad.toLowerCase()) {
+            case 'quito':
+                return 'Que fueff';
+            case 'guayaquil':
+                return 'Que mashhh ñañoshh';
+            default:
+                return 'Buenas tardes';
+        }
     }
 
     @Post('registroComida')
-    registroComida(@Body() parametrosCuerpo, @Response() respuesta){
+    registroComida(@Body() parametrosCuerpo, @Response() respuesta) {
         //Al utilizar @Response no se utilizan los returns
         //console.log(parametrosCuerpo);
         //console.log(request.body); @Request
-        if(parametrosCuerpo.nombre && parametrosCuerpo.cantidad){
+        if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad) {
             const cantidad = Number(parametrosCuerpo.cantidad);
-            if(cantidad>1) {
+            if (cantidad > 1) {
                 respuesta.set('premio', 'Guatita');
             }
-                return respuesta.send({mensaje:'Registro creado'});
-                //return 'Registro creado';
-        }else{
-            return respuesta.status(400).send({mensaje:'ERROR. no envía nombre y cantidad', error: 400});
+            return respuesta.send({mensaje: 'Registro creado'});
+            //return 'Registro creado';
+        } else {
+            return respuesta.status(400).send({mensaje: 'ERROR. no envía nombre y cantidad', error: 400});
             //return 'ERROR. no envía nombre y cantidad';
         }
     }
 
     @Get('semilla')
-    semilla(@Request() peticion, @Response() respuesta){
+    semilla(@Request() peticion, @Response() respuesta) {
         console.log(peticion.cookies);
         const cookies = peticion.cookies;
         const esquemaValidacionNumero = Joi.object().keys({
-          numero: Joi.number().integer().required()
+            numero: Joi.number().integer().required()
         });
 
         const objetoValidacion = {numero: cookies.numero};
-        const resultado = Joi.validate(objetoValidacion,esquemaValidacionNumero);
+        const resultado = Joi.validate(objetoValidacion, esquemaValidacionNumero);
 
-        if(resultado.error){
+        if (resultado.error) {
             console.log('Resultado: ', resultado)
-        }else{
+        } else {
             console.log('Numero valido');
         }
 
-        const cookieSegura= peticion.signedCookies.fechaServidor;
-        if (cookieSegura){
+        const cookieSegura = peticion.signedCookies.fechaServidor;
+        if (cookieSegura) {
             console.log('Cookie segura');
-        }else{
+        } else {
             console.log('Cookie insegura, no es valida')
         }
 
-        if(cookies.micookie) {
+        if (cookies.micookie) {
             const horaFechaServidor = new Date();
             const minutos = horaFechaServidor.getMinutes();
             respuesta.cookie('fechaServidor',       //nombre
@@ -134,25 +148,25 @@ export class AppController {
                     //expires: horaFechaServidor.setMinutes(minutos+1)
                     signed: true
                 }
-                );
+            );
             respuesta.send('ok');
-        }else{
+        } else {
             respuesta.send(':(');
         }
     }
 
     @Get('usuario')
-    obtenerUsuario(@Request() peticion, @Response() respuesta){
+    obtenerUsuario(@Request() peticion, @Response() respuesta) {
         const nombreUsuario = peticion.cookies.usuario;
-        const resultado = Math.round(Math.random()%100);
+        const resultado = Math.round(Math.random() % 100);
         console.log(nombreUsuario);
-        if(nombreUsuario) {
+        if (nombreUsuario) {
             respuesta.send(
                 {
                     nombreUsuario: `${nombreUsuario}`,
                     resultado: `${resultado}`
                 });
-        }else{
+        } else {
             respuesta.send(
                 {
                     error: 'Usuario no definido'
@@ -160,112 +174,165 @@ export class AppController {
         }
     }
 
-        @Get('inicio')
-        inicio(@Response() respuesta){
-           return respuesta.render('inicio');
+    @Get('inicio')
+    inicio(@Response() respuesta) {
+        return respuesta.render('inicio');
+    }
+
+
+}
+
+function holaMundo() {
+    console.log('Hola mundo');
+}
+
+const respuestaHolaMundo = holaMundo(); //undeffined
+
+function suma(a: number, b: number): number {
+    return a + b;
+}
+
+const respuestaSuma = suma(1, 2);
+console.log('Respuesta suma:', respuestaSuma);
+
+//Condicionales: truty falsy
+if ({}) {
+    console.log('Verdadero');
+} else {
+    console.log('Falso');
+}
+
+//Operadores de arreglos en JS
+//const arregloNumeros = [1,'A', true,null,{},[]];
+const arregloNumeros = [1, 2, 3, 4, 5, 6];
+//!)Imprimir en cosnola todos los elementos
+const rForEach = arregloNumeros.forEach(
+    valorActual =>
+        console.log(`Valor: ${valorActual}`)
+);
+console.log("Respuesta forEach: ", rForEach);
+//2) Sumar 2 a los pares y 1 a los impares
+const arregloNumerosMap = [1, 2, 3, 4, 5, 6];
+const rMap = arregloNumerosMap.map(
+    valorActual => {
+        const esPar = valorActual % 2;
+        if (esPar) {
+            return valorActual + 2;
+        } else {
+            return valorActual + 1;
         }
+    });
+console.log("Respuesta map: ", rMap);
 
+//3) Encuanten si hay el numero 4
+const rFind = arregloNumeros.find(
+    valorActual => valorActual == 10
+);
+console.log("Respuesta find: ", rFind);
+//4) Filtrar los numeros menores a 5
+const arregloNumerosFilter = [1, 2, 3, 4, 5, 6];
+const rFilter = arregloNumerosFilter.filter(
+    valorActual => valorActual < 5
+);
+console.log("Respuesta filter: ", rFilter);
 
-    }
+//5) Verificar si todos los elementos cumplen
+const arregloNumerosEvery = [1, 2, 3, 4, 5, 6];
+const respuestaEvery = arregloNumerosEvery.every(
+    //si todos cumplen TRUE
+    //si alguno no cumple FALSE
+    //AND
+    valorActual => valorActual > 0
+);
+console.log("Respuesta every: ", respuestaEvery);
 
-    function holaMundo(){
-        console.log('Hola mundo');
-    }
+//6) Verificar si algún elemento cumple
+const arregloNumerosSome = [1, 2, 3, 4, 5, 6];
+const respuestaSome = arregloNumerosSome.some(
+    //si alguno cumplen TRUE
+    //si todos no cumplem FALSE
+    //OR
+    valorActual => valorActual > 6
+);
+console.log("Respuesta some: ", respuestaSome);
 
-    const respuestaHolaMundo = holaMundo(); //undeffined
+//7) Reduce
+const arregloNumerosReduce = [1, 2, 3, 4, 5, 6];
+const valorInicioCalculo = 0;
+const respuestaReduce = arregloNumerosReduce.reduce(
+    (valorAcumulado, valorActual) => {
+        return valorAcumulado + valorActual;
+    }, valorInicioCalculo
+);
+console.log("Respuesta reduce: ", respuestaReduce);
 
-    function suma(a: number, b: number): number{
-        return a + b;
-    }
-
-    const respuestaSuma = suma(1,2);
-    console.log('Respuesta suma:', respuestaSuma);
-
-    //Condicionales: truty falsy
-    if({}){
-       console.log('Verdadero');
-    }else{
-        console.log('Falso');
-    }
-
-    //Operadores de arreglos en JS
-    //const arregloNumeros = [1,'A', true,null,{},[]];
-    const arregloNumeros = [1,2,3,4,5,6];
-    //!)Imprimir en cosnola todos los elementos
-    const rForEach = arregloNumeros.forEach(
-            valorActual =>
-                console.log(`Valor: ${valorActual}`)
-            );
-    console.log("Respuesta forEach: ", rForEach);
-    //2) Sumar 2 a los pares y 1 a los impares
-    const arregloNumerosMap = [1,2,3,4,5,6];
-    const rMap= arregloNumerosMap.map(
+// Si el numero es menor a 4
+// 10%+5
+// 15%+3
+const valorInicioCalculo2 = 0;
+const respuestaReduce2 = arregloNumerosReduce
+    .map(
         valorActual => {
-            const esPar = valorActual%2;
-            if(esPar){
-                return valorActual+2;
+            if(valorActual<4){
+                return (valorActual*1.1)+5
             }else{
-                return valorActual+1;
+                return (valorActual*1.15)+3
             }
-        });
-    console.log("Respuesta map: ", rMap);
+        })
+    .reduce(
+    (valorAcumulado, valorActual) => {
+        return valorAcumulado + valorActual;
+    }, valorInicioCalculo2
+);
+console.log("Respuesta reduce2: ", respuestaReduce2);
 
-    //3) Encuanten si hay el numero 4
-    const rFind = arregloNumeros.find(
-        valorActual => valorActual==10
-    );
-    console.log("Respuesta find: ", rFind);
-    //4) Filtrar los numeros menores a 5
-    const arregloNumerosFilter = [1,2,3,4,5,6];
-    const rFilter = arregloNumerosFilter.filter(
-        valorActual=> valorActual<5
-    );
-    console.log("Respuesta filter: ", rFilter);
+//
 
-    //5) Todos los valores positivos
-    //6) Sumar todos los valores
-    //7) Sumar todos los valores
-    //8) Restar todos los valores de 100
+//5) Todos los valores positivos
+//6) Sumar todos los valores
+//7) Sumar todos los
 
-    //1.1) Sumen 10 a todos
-    //1.2) Filtren los mayores a 15
-    //1.3)) Si hay algun numero mayor a 30
+//8) Restar todos los valores de 100
+const arregloNumerosReduce3 = [1, 2, 3, 4, 5, 6];
+const valorInicioCalculo3 = 100;
+const respuestaReduce3 = arregloNumerosReduce3.reduce(
+    (valorAcumulado, valorActual)=>{
+        return valorAcumulado-valorActual;
+    },valorInicioCalculo3
+);
+console.log("Respuesta reduce3: ", respuestaReduce3);
 
-
-
-
-
-
-
-
-
-
-
-
+//1.1) Sumen 10 a todos
+//1.2) Filtren los mayores a 15
+//1.3)) Si hay algun numero mayor a 30
+const arregloEjercicio= [1, 2, 3, 4, 5, 6];
+const respuestaEjercicio=arregloEjercicio
+    .map(valorActual=> valorActual+10)
+    .filter(valorActual=>valorActual>15)
+    .some(valorActual=>valorActual>30);
+console.log("Respuesta ejercicio: ", respuestaEjercicio);
 
 
 
-
-
-    /*const json = [
-    {
-        llave: 'valor',
-        'nombre': "Cristian",
-        "edad": 21,
-        sueldo: 2.2,
-        casado: false,
-        hijos: null,
-        mascotas: ["cachetas", 1, 1.25, false, null,
-            {
-                "nombre": "Cristian"
-            }
-        ]
-    }
+/*const json = [
+{
+    llave: 'valor',
+    'nombre': "Cristian",
+    "edad": 21,
+    sueldo: 2.2,
+    casado: false,
+    hijos: null,
+    mascotas: ["cachetas", 1, 1.25, false, null,
+        {
+            "nombre": "Cristian"
+        }
+    ]
+}
 ];
 
 let objeto : any = {
-    propiedad: 'valor',
-    propiedadDos: 'valorDos'
+propiedad: 'valor',
+propiedadDos: 'valorDos'
 };
 
 objeto.propiedad;
@@ -278,12 +345,12 @@ delete objeto.propiedadTres; // destruir
 objeto.propiedadTres = undefined; // destruir
 */
 
-        /*nombre: string = 'Cristian';
-        let edad = 21; //number
-        let sueldo = 1.20; //number
-        let casado = false; //boolean
-        let hijos = null; //null
-        let alas = undefined; //undefined*/
+/*nombre: string = 'Cristian';
+let edad = 21; //number
+let sueldo = 1.20; //number
+let casado = false; //boolean
+let hijos = null; //null
+let alas = undefined; //undefined*/
 
 /*class usuario{
 
