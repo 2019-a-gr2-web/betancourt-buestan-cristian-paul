@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/02-deberes/01-calculadora/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/01-calculadora/package-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,12 +15,24 @@
     <session id="-316704112">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="ejs" value="255" />
           <entry key="ts" value="788" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="EJS" value="255" />
           <entry key="TypeScript" value="788" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ejs" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="EJS" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -33,13 +43,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="313" selection-start-line="313" selection-end-line="313" />
-              <folding>
-                <element signature="e#0#123#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="230">
+              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -60,7 +67,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/02-deberes/01-calculadora" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -74,6 +81,7 @@
         <option value="$PROJECT_DIR$/02-deberes/01-calculadora/src/main.ts" />
         <option value="$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" />
       </list>
     </option>
   </component>
@@ -111,7 +119,22 @@
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -167,13 +190,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43114000" />
+    <option name="totallyTimeSpent" value="43955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="0" width="720" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" weight="0.28152493" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.28152493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -193,7 +216,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.28152493" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" weight="0.28152493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -205,7 +228,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32819074" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.7419355" visible="true" weight="0.22019635" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7419355" visible="true" weight="0.22019635" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2580645" side_tool="true" weight="0.47685835" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32235938" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -358,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="313" selection-start-line="313" selection-end-line="313" />
+        <state relative-caret-position="490">
+          <caret line="320" column="15" lean-forward="true" selection-start-line="320" selection-start-column="15" selection-end-line="320" selection-end-column="15" />
           <folding>
             <element signature="e#0#123#0" expanded="true" />
           </folding>
@@ -373,6 +396,13 @@
           <folding>
             <element signature="e#0#107#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
