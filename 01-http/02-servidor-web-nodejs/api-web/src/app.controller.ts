@@ -176,9 +176,17 @@ export class AppController {
 
     @Get('inicio')
     inicio(@Response() respuesta) {
-        return respuesta.render('inicio');
+        return respuesta.render('inicio', {
+            estaVivo:true
+        });
     }
 
+    @Get('peliculas')
+    pelicuñlas(@Response() respuesta) {
+        return respuesta.render('peliculas/inicio',
+            {
+                    });
+    }
 
 }
 
