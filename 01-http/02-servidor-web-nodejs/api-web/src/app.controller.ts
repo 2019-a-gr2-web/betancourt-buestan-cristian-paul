@@ -177,15 +177,20 @@ export class AppController {
     @Get('inicio')
     inicio(@Response() respuesta) {
         return respuesta.render('inicio', {
-            estaVivo:true
+            estaVivo: true
         });
     }
 
     @Get('peliculas')
-    pelicuñlas(@Response() respuesta) {
+    peliculas(@Response() respuesta) {
         return respuesta.render('peliculas/inicio',
-            {
-                    });
+            {});
+    }
+
+    @Get('estilos')
+    prueba(@Response() respuesta) {
+        return respuesta.render('peliculas/estilos',
+            {});
     }
 
 }
@@ -281,17 +286,17 @@ const valorInicioCalculo2 = 0;
 const respuestaReduce2 = arregloNumerosReduce
     .map(
         valorActual => {
-            if(valorActual<4){
-                return (valorActual*1.1)+5
-            }else{
-                return (valorActual*1.15)+3
+            if (valorActual < 4) {
+                return (valorActual * 1.1) + 5
+            } else {
+                return (valorActual * 1.15) + 3
             }
         })
     .reduce(
-    (valorAcumulado, valorActual) => {
-        return valorAcumulado + valorActual;
-    }, valorInicioCalculo2
-);
+        (valorAcumulado, valorActual) => {
+            return valorAcumulado + valorActual;
+        }, valorInicioCalculo2
+    );
 console.log("Respuesta reduce2: ", respuestaReduce2);
 
 //
@@ -304,22 +309,21 @@ console.log("Respuesta reduce2: ", respuestaReduce2);
 const arregloNumerosReduce3 = [1, 2, 3, 4, 5, 6];
 const valorInicioCalculo3 = 100;
 const respuestaReduce3 = arregloNumerosReduce3.reduce(
-    (valorAcumulado, valorActual)=>{
-        return valorAcumulado-valorActual;
-    },valorInicioCalculo3
+    (valorAcumulado, valorActual) => {
+        return valorAcumulado - valorActual;
+    }, valorInicioCalculo3
 );
 console.log("Respuesta reduce3: ", respuestaReduce3);
 
 //1.1) Sumen 10 a todos
 //1.2) Filtren los mayores a 15
 //1.3)) Si hay algun numero mayor a 30
-const arregloEjercicio= [1, 2, 3, 4, 5, 6];
-const respuestaEjercicio=arregloEjercicio
-    .map(valorActual=> valorActual+10)
-    .filter(valorActual=>valorActual>15)
-    .some(valorActual=>valorActual>30);
+const arregloEjercicio = [1, 2, 3, 4, 5, 6];
+const respuestaEjercicio = arregloEjercicio
+    .map(valorActual => valorActual + 10)
+    .filter(valorActual => valorActual > 15)
+    .some(valorActual => valorActual > 30);
 console.log("Respuesta ejercicio: ", respuestaEjercicio);
-
 
 
 /*const json = [

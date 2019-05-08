@@ -127,8 +127,11 @@ let AppController = class AppController {
             estaVivo: true
         });
     }
-    pelicuñlas(respuesta) {
+    peliculas(respuesta) {
         return respuesta.render('peliculas/inicio', {});
+    }
+    prueba(respuesta) {
+        return respuesta.render('peliculas/estilos', {});
     }
 };
 __decorate([
@@ -213,7 +216,14 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], AppController.prototype, "pelicu\u00F1las", null);
+], AppController.prototype, "peliculas", null);
+__decorate([
+    common_1.Get('estilos'),
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "prueba", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])
