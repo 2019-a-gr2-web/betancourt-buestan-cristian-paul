@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Estilos</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         /* .css */
         /*selector { p1:valor; p2: valor;}*/
@@ -29,36 +30,152 @@
             color: brown;
             background-color: cyan;
         }
-        p{
+
+        p {
             color: bisque;
             background-color: brown;
         }
 
-        .morado{
+        .morado {
             color: purple;
         }
 
-        .azul{
+        .azul {
             color: blue;
         }
 
-        .verde{
+        .verde {
             color: greenyellow;
         }
 
-        p.verde{
+        p.verde {
             color: orange
         }
-        
+
+        .modelo-cajas {
+            margin: 100px;
+            border-color: brown;
+            border-style: solid;
+            border-width: 10px;
+            border-right-width: 0px;
+            padding: 10px;
+        }
+
+        .separador {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr {
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: blue;
+            //border-bottom: 2px, blue, solid;
+        }
     </style>
 </head>
 <body>
+<!-- col sm/md/lg - # 1-12 -->
+<div class="container">
+    <div class="row">
+        <!-- EMMET -->
+        <!-- .col-sm-5*3-->
+        <!-- .col-sm-5*3>h1-->
+        <div class="col-sm-2">
+            <h1>LOGO</h1>
+        </div>
+        <div class="col-sm-7">
+            <h1>
+                MENÚ
+            </h1>
+        </div>
+        <div class="col-sm-3">
+            <h1>LOGIN</h1>
+        </div>
+
+        <!--<div class="col-sm-6">-->
+        <!--<h1>SM6</h1>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6">-->
+        <!--<h1>SM6</h1>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+        <!--<h1>MD6</h1>-->
+        <!--</div>-->
+        <!--<div class="col-md-6">-->
+        <!--<h1>MD6</h1>-->
+        <!--</div>-->
+        <!--<div class="col-lg-6">-->
+        <!--<h1>LG6</h1>-->
+        <!--</div>-->
+
+        <!--<div class="col-lg-6">-->
+        <!--<h1>LG6</h1>-->
+        <!--</div>-->
+
+
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <h1>Género de películas</h1>
+            <table>
+                <tr>
+                    <td>I</td>
+                    <td>Acción</td>
+                    <td>824</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>I</td>
+                    <td>Animación</td>
+                    <td>20</td>
+                </tr>
+                </tr>
+            </table>
+        </div>
+        <div class="col-sm-9">
+            <h1>Películas online</h1>
+            <p>Pelisplus.co es un sitio ideal para ver películas</p>
+            <!--.row>.col-sm-6*2-->
+            <div class="row">
+                <div class="col-sm-6"><h1>Columna 1</h1></div>
+                <div class="col-sm-6"><h1>Columna 2</h1></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<div class="container">-->
+<!--<div class="row">-->
+<!--<div class="col-sm-12">-->
+<!--<h1>COLUMNA 12</h1>-->
+<!--</div>-->
+<!--<div class="col-sm-6">-->
+<!--<h1>COLUMNA 6</h1>-->
+<!--</div>-->
+<!--<div class="col-sm-6">-->
+<!--<h1>COLUMNA 6</h1>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+
+<!--</div>-->
+<!--</div>-->
+
+
+<div class="separador"></div>
 <h1>Hola</h1>
 <h1 id="adios">Adios</h1>
 <h1 class="verde" style="color:orange;background-color: blue; ">Bienvenidos</h1>
 <p>Barcelona</p>
 <div>Liga</div>
 <div>Emelec</div>
+
 <p class="morado azul">hola mundo</p>
 <div class="verde">VERDE UNO</div>
 <p class="verde">VERDE DOS</p>
