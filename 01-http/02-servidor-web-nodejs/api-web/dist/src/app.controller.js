@@ -18,6 +18,7 @@ const Joi = require("@hapi/joi");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
+        this.arregloUsuarios = [];
     }
     helloWorld() {
         return 'Hello world';
@@ -133,6 +134,9 @@ let AppController = class AppController {
     prueba(respuesta) {
         return respuesta.render('peliculas/estilos', {});
     }
+    cinecalidad(respuesta) {
+        return respuesta.render('copia/cinecalidad', {});
+    }
 };
 __decorate([
     common_1.Get('/hello-world'),
@@ -224,6 +228,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "prueba", null);
+__decorate([
+    common_1.Get('cinecalidad'),
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "cinecalidad", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])
