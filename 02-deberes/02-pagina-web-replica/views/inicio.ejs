@@ -1,66 +1,308 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+
+    <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>
-        CINECALIDAD
+        Cinecalidad - Películas online
     </title>
 
     <style>
-        h2,	li {
+        .container {
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        #menu-categorias {
+            width: 100%;
+        }
+
+        .row {
+            margin-top: 15px;
+            margin-bottom: 1px;
+        }
+
+        h2 {
             float: left;
-            border-radius: 10px 10px 10px 10px;
-            -moz-border-radius: 10px 10px 10px 10px;
-            -webkit-border-radius: 10px 10px 10px 10px;
+            border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
             border: 5px solid #000000;
             color: white;
             background-color: black;
-            font-size: 70%;
+            font-size: 14px;
+            margin-right: 3px;
+        }
 
+        input {
+            margin: 2px 2px 2px 2px;
+        }
+
+        .peliculas {
+            margin: 10px 10px 10px 10px;
+            float: left;
+            width: 220px;
+            height: 320px;
+        }
+
+        .img-pelicula {
+            width: 200px;
+            height: 300px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border-color: #0b5e0d;
 
         }
-        .espacio{
-            text-indent: 2em;
+
+        #container-peliculas {
+            float: left;
         }
+
+        h3 {
+            border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border: 5px solid #000000;
+            color: white;
+            background-color: black;
+            font-size: 14px;
+            font-weight: bold;
+
+        }
+
+        p, ul {
+            font-size: 12px;
+            list-style-type: none;
+            margin-top: 5px;
+            padding: 0;
+        }
+
+        li {
+            font-size: 12px;
+            list-style-type: none;
+            color: #33c6a9;
+        }
+
+        button {
+            margin: 2px 2px 15px 2px;
+            width: 100%;
+            font-size: 15px;
+        }
+
+        #btn_success {
+            margin: 30px 0px 30px 0px;
+            padding: 0px 0px 0px 0px;
+            width: 120px;
+            height: 30px;
+        }
+
+        .pelicula-destacada {
+            float: left;
+            width: 110px;
+            height: 160px;
+            margin: 2px 2px 2px 2px;
+        }
+
+        .separador {
+            margin: 10px 10px 10px 10px;
+        }
+
+        span {
+            border: 1px solid #BFBFBF;
+            margin: 5px 2px 5px 3px;
+            color: dimgray;
+
+        }
+
+        .pagina {
+            padding: 3px 5px;
+            margin: 2px 5px 10px 2px;
+            color: #099c8c;
+            border-color: #BFBFBF;
+        }
+
+        .pie-pagina{
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            border-bottom: 1px solid grey;
+            border-top: 1px solid grey;
+            color: gray;
+        }
+
     </style>
 </head>
-
 <body>
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-3" align="left">
+        <div class="col-sm-4" align="left">
             Películas en excelente calidad Full HD.<br>
             Audio latino e inglés online.<br>
             1 link, 1 click.
         </div>
-        <div class="col-lg-6" align="center">
-            <img src="/imagenes/stark.png" alt="">
+        <div class="col-lg-4" align="center">
+            <img src="/images/logo.png" align="center">
         </div>
-        <div class="col-sm-3" align="right">
-            MUNDO
+        <div class="col-sm-4" align="right">
+            <div>
+                <img src="/images/ccbrasil.png" align="center">
+                <img src="/images/ccespania.png" align="center">
+            </div>
         </div>
     </div>
     <div class="row">
-        <table>
-
-        </table>
         <div id="menu-categorias" class="col-lg-9">
-            <h2>hola</h2>
-            <a class="espacio"></a>
-            <h2> mundo </h2>
-            <a class="espacio"></a>
+            <div class="menu-item"><h2>Acción</h2></div>
+            <div class="menu-item"><h2>Comedia</h2></div>
+            <div class="menu-item"><h2>Infantil</h2></div>
+            <div class="menu-item"><h2>Terror</h2></div>
+            <div class="menu-item"><h2>Ciencia ficción</h2></div>
+            <div class="menu-item"><h2>Aventura</h2></div>
+            <div class="menu-item"><h2>Suspenso</h2></div>
+            <div class="menu-item"><h2>Romance</h2></div>
+            <div class="menu-item"><h2>Fantasía</h2></div>
+            <div class="menu-item"><h2>Drama</h2></div>
+            <div class="menu-item"><h2>Animación</h2></div>
+            <div class="menu-item"><h2>☰ Menú</h2></div>
         </div>
-        <div class="col-md-3" align="center">.
-            HOLA
+        <div class="col-md-3">
+            <input type="text" placeholder="Buscar" class="form-control">
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-8" id="container-peliculas">
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/avatar.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/avengers-end-game.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/avengers-infinity-war.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/batman-vs-superman.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/capitana-marvel.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/doctor-strange.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/dragon-ball-super-broly.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/el-maestro-luchador.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/guardianes-de-la-galaxia-2.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/harry-potter-las-reliquias-de-la-muerte-2.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/los-ilusionistas-2.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/pantera-negra.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/shazam.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/son-como-ninios.jpg">
+            </div>
+            <div class="peliculas">
+                <img class="img-pelicula" src="/images/movies/spiderman-homecoming.jpg">
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div>
+                <div>
+                    <h3>Películas de calidad</h3>
+                </div>
+                <div>
+                    <p align="justify">
+                        Películas online en excelente calidad Bluray Full HD (1080p), audio latino,
+                        gratis, sin registro y con toda la información.</p>
+                    <ul align="justify">
+                        Dominios oficiales
+                        <li><a href="http://cinecalidad.to">cinecalidad.to</a></li>
+                        <li><a href="http://cinecalidad.is">cinecalidad.is</a></li>
+                    </ul>
+                </div>
 
+                <button type="button" class="btn btn-danger">Recibir notificaciones de nuevas películas</button>
+                <div>
+                    <input type="text" placeholder="Email" id="txt_email">
+                    <button type="button" class="btn btn-success" id="btn_success">Suscribirse</button>
+                </div>
+            </div>
+            <div class="peliculas-destacadas">
+                <div><h3>Destacadas</h3></div>
+                <div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/shazam.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/dragon-ball-super-broly.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/avatar.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada"
+                             src="/images/movies/harry-potter-las-reliquias-de-la-muerte-2.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/guardianes-de-la-galaxia-2.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/son-como-ninios.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/los-ilusionistas-2.jpg">
+                    </div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/spiderman-homecoming.jpg"></div>
+                    <div class="destacada">
+                        <img class="pelicula-destacada" src="/images/movies/avengers-infinity-war.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 id="mas-peliculas" align="center">Más películas</h3>
+            <div align="center">
+                <span> Pag. 1-10 </span>
+                <a href=""><span class="pagina"> 1</span></a>
+                <a href=""><span class="pagina"> 2</span></a>
+                <a href=""><span class="pagina"> 3 </span></a>
+                <a href=""><span class="pagina"> 4 </span></a>
+                <a href=""><span class="pagina"> 5 </span></a>
+                <a href=""><span class="pagina"> 6 </span></a>
+                <a href=""><span class="pagina"> 7 </span></a>
+                <a href=""><span class="pagina"> 8 </span></a>
+                <a href=""><span class="pagina" align="center"> 9 </span></a>
+                <a href=""><span class="pagina"> 10 </span></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="pie-pagina">
+            Descargar películas. Ver películas online. Cine en casa gratis. Películas online y para descargar en 1 link. Excelente calidad brrip (720p/1080p). Cinemaqualidade
+        </div>
 
+    </div>
 </div>
-
 </body>
-
 </html>
