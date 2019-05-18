@@ -7,6 +7,7 @@ import * as path from 'path';
 var cookieParser = require('cookie-parser');
 
 async function bootstrap() {
+
     const app = await NestFactory.create(AppModule);
     app.use(favicon(path.join(__dirname, '..', 'publico', 'imagenes', 'stark.ico')))
     app.use(cookieParser('Secreto'));

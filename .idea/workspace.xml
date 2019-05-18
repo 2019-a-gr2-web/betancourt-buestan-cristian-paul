@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="" />
+ <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -11,6 +14,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+ <component name="FUSProjectUsageTrigger">
+    <session id="-316704112">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="ejs" value="4072" />
+          <entry key="ts" value="1214" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="EJS" value="4072" />
+          <entry key="TypeScript" value="1214" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ejs" value="5" />
+          <entry key="ico" value="1" />
+          <entry key="ts" value="4" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="EJS" value="5" />
+          <entry key="Image" value="1" />
+          <entry key="TypeScript" value="4" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.62" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="betancourt-buestan-cristian-paul" />
   </component>
@@ -19,8 +69,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+           <state relative-caret-position="184">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/copia/cinecalidad.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
               </folding>
@@ -28,38 +98,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/views/inicio.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+            <state relative-caret-position="1173">
+              <caret line="172" column="32" lean-forward="true" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
+
             </state>
           </provider>
         </entry>
@@ -94,15 +138,28 @@
         <option value="$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
-        <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/.gitignore" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/copia/cinecalidad.ejs" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules" />
+    <handled-path value="$PROJECT_DIR$/02-deberes/01-calculadora/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" />
+      <path value="$PROJECT_DIR$/02-deberes/01-calculadora/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="720" />
@@ -115,7 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -156,6 +212,15 @@
               <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
               <item name="api-web" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="copia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="peliculas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -187,6 +252,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,20 +305,19 @@
       <workItem from="1556066688735" duration="2130000" />
       <workItem from="1556487457752" duration="12126000" />
       <workItem from="1557256617840" duration="6130000" />
-      <workItem from="1557341237903" duration="5444000" />
-      <workItem from="1557455048476" duration="43000" />
-      <workItem from="1558196361262" duration="2109000" />
+      <workItem from="1557341237903" duration="5828000" />
+      <workItem from="1557860584177" duration="4936000" />
+      <workItem from="1557947128220" duration="6316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57735000" />
+    <option name="totallyTimeSpent" value="67219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.22339723" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.22566995" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -262,11 +327,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32819074" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32784638" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7419355" weight="0.13529412" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.2580645" side_tool="true" weight="0.47685835" />
-      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32235938" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7411848" weight="0.21536352" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.25881523" side_tool="true" weight="0.21536352" />
+      <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32098764" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -464,48 +529,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/app.controller.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="191" column="30" selection-start-line="191" selection-start-column="30" selection-end-line="191" selection-end-column="30" />
+        <state relative-caret-position="23">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/views/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="45" column="10" selection-start-line="45" selection-start-column="10" selection-end-line="45" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="184">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="172" column="32" lean-forward="true" selection-start-line="172" selection-start-column="32" selection-end-line="172" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/copia/cinecalidad.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
         </state>
       </provider>
     </entry>

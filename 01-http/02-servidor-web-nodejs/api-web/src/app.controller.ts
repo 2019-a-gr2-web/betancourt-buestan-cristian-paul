@@ -37,6 +37,8 @@ Segmento inicial: api
 */
 
 export class AppController {
+    arregloUsuarios = [];
+
     constructor(private readonly appService: AppService) {
     }
 
@@ -190,6 +192,12 @@ export class AppController {
     @Get('estilos')
     prueba(@Response() respuesta) {
         return respuesta.render('peliculas/estilos',
+            {});
+    }
+
+    @Get('cinecalidad')
+    cinecalidad(@Response() respuesta) {
+        return respuesta.render('copia/cinecalidad',
             {});
     }
 
