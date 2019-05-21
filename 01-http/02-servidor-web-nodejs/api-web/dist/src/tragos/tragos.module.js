@@ -7,17 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const tragos_module_1 = require("./tragos/tragos.module");
-let AppModule = class AppModule {
+const tragos_services_1 = require("./tragos.services");
+const tragos_controller_1 = require("./tragos.controller");
+let TragosModule = class TragosModule {
 };
-AppModule = __decorate([
+TragosModule = __decorate([
     common_1.Module({
-        imports: [tragos_module_1.TragosModule],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService],
+        imports: [],
+        controllers: [tragos_controller_1.TragosController],
+        providers: [tragos_services_1.TragosService],
+        exports: [tragos_services_1.TragosService]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], TragosModule);
+exports.TragosModule = TragosModule;
+//# sourceMappingURL=tragos.module.js.map
