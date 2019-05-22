@@ -22,6 +22,21 @@ let TragosController = class TragosController {
         const arregloTragos = this._tragosService.bddTragos;
         res.render('tragos/lista-tragos', { arregloTragos: arregloTragos });
     }
+    crearTrago(res) {
+        res.render('tragos/crear-editar');
+    }
+    crearTragoPost(trago, res) {
+        trago.gradosAlcohol = Number(trago.gradosAlcohol);
+        trago.precio = Number(trago.precio);
+        trago.fechaCaducidad = new Date(trago.fechaCaducidad);
+        this._tragosService.crear(trago);
+        res.redirect('/api/traguito/lista');
+        console.log(trago);
+    }
+    eliminarTrago(res, id) {
+        this._tragosService.eliminar(id);
+        res.redirect('/api/traguito/lista');
+    }
 };
 __decorate([
     common_1.Get('lista'),
@@ -30,6 +45,29 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], TragosController.prototype, "listarTragos", null);
+__decorate([
+    common_1.Get('crear'),
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], TragosController.prototype, "crearTrago", null);
+__decorate([
+    common_1.Post('crear'),
+    __param(0, common_1.Body()),
+    __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], TragosController.prototype, "crearTragoPost", null);
+__decorate([
+    common_1.Post('eliminar'),
+    __param(0, common_1.Res()),
+    __param(1, common_1.Body('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Number]),
+    __metadata("design:returntype", void 0)
+], TragosController.prototype, "eliminarTrago", null);
 TragosController = __decorate([
     common_1.Controller('/api/traguito'),
     __metadata("design:paramtypes", [tragos_services_1.TragosService])
