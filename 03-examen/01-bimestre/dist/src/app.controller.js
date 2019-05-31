@@ -26,11 +26,16 @@ let AppController = class AppController {
             signed: true
         }).redirect('/api/sistemaOperativo');
     }
-    sistemaOperativo(req, res) {
+    sistemaOperativo(req, res, nombre) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
         let arregloSO;
-        arregloSO = this.__appService.sistemasOperativos;
+        if (nombre) {
+            arregloSO = this.__appService.buscarPorNombreSO(nombre);
+        }
+        else {
+            arregloSO = this.__appService.sistemasOperativos;
+        }
         res.render('lista-so', {
             usuario: usuario,
             arregloSO: arregloSO
@@ -43,7 +48,7 @@ let AppController = class AppController {
     enviarCrearSO(req, res) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
-        res.render('crear-so');
+        res.render('crear-so', { usuario: usuario });
     }
     crearSO(req, res, body) {
         const usuario = req.signedCookies.usuario;
@@ -60,6 +65,41 @@ let AppController = class AppController {
         this.cookieValida(res, usuario);
         this.__appService.eliminarSO(idSO);
         res.redirect('/api/sistemaOperativo');
+    }
+    aplicacion(req, res, param, nombre) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        let arregloApp;
+        const idSO = param.idSO;
+        if (nombre) {
+            arregloApp = this.__appService.buscarPorNombreApp(nombre, idSO);
+        }
+        else {
+            arregloApp = this.__appService.buscarApp(idSO);
+        }
+        res.render('lista-app', { usuario: usuario, idSO: idSO, arregloApp: arregloApp });
+    }
+    enviarCrearApp(req, res, idSO) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        res.render('crear-app', { usuario: usuario, idSO: idSO });
+    }
+    insertarDatosApp(req, res, app) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        app.sistemaOperativoId = Number(app.sistemaOperativoId);
+        app.version = Number(app.version);
+        app.fechaLanzamiento = new Date(app.fechaLanzamiento);
+        app.costo = Number(app.costo);
+        app.pesoEnGigas = Number(app.pesoEnGigas);
+        this.__appService.insertarApp(app);
+        res.redirect('/api/sistemaOperativo/gestion/' + app.sistemaOperativoId);
+    }
+    eliminarApp(req, res, idApp, idSO) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        this.__appService.eliminarApp(Number(idApp));
+        res.redirect('/api/sistemaOperativo/gestion/' + idSO);
     }
     cookieValida(res, usuario) {
         if (!usuario) {
@@ -83,9 +123,9 @@ __decorate([
 ], AppController.prototype, "usuario", null);
 __decorate([
     common_1.Get('sistemaOperativo'),
-    __param(0, common_1.Request()), __param(1, common_1.Response()),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Query('nombre')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, Object, String]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "sistemaOperativo", null);
 __decorate([
@@ -96,27 +136,55 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "cerrarSesion", null);
 __decorate([
-    common_1.Get('crearSO'),
+    common_1.Get('sistemaOperativo/crear'),
     __param(0, common_1.Request()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "enviarCrearSO", null);
 __decorate([
-    common_1.Post('crearSO'),
+    common_1.Post('sistemaOperativo/crear'),
     __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearSO", null);
 __decorate([
-    common_1.Post('eliminar'),
+    common_1.Post('sistemaOperativo/eliminar'),
     __param(0, common_1.Request()), __param(1, common_1.Response()),
     __param(2, common_1.Body('idSO')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, Number]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "eliminarTrago", null);
+__decorate([
+    common_1.Get('sistemaOperativo/gestion/:idSO'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Param()), __param(3, common_1.Query('nombre')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object, String]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "aplicacion", null);
+__decorate([
+    common_1.Post('sistemaOperativo/gestion/crear'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body('idSO')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, String]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "enviarCrearApp", null);
+__decorate([
+    common_1.Post('sistemaOperativo/gestion/insertar'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "insertarDatosApp", null);
+__decorate([
+    common_1.Post('sistemaoperativo/gestion/eliminar'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body('id')), __param(3, common_1.Body('idSO')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, String, String]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "eliminarApp", null);
 __decorate([
     __param(0, common_1.Response()),
     __metadata("design:type", Function),

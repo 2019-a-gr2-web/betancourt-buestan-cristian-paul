@@ -20,14 +20,18 @@
 
     </div>
     <div class="row">
-        <form action="/api/sistemaOperativo/crear" method="post">
+        <form action="/api/sistemaOperativo/gestion/insertar" method="post">
+            <div class="col-md-12">
+                <label for="soID">ID del sistema operativo</label> <h5><%= idSO %></h5>
+                <input id="soID" name="sistemaOperativoId" type="text" value="<%= idSO %>" hidden>
+            </div>
             <div class="col-md-12">
                 <label for="nombreID">Nombre</label>
                 <input id="nombreID" name="nombre" type="text">
             </div>
             <div class="col-md-12">
-                <label for="versionID">Version API</label>
-                <input id="versionID" name="versionApi" type="number" min="0">
+                <label for="versionID">Version</label>
+                <input id="versionID" name="version" type="number" min="0">
             </div>
             <div class="col-md-12">
                 <label for="fechaLanzamientoID">Fecha de lanzamiento</label>
@@ -37,17 +41,16 @@
                 <label for="pesoID">Peso (GB)</label>
                 <input id="pesoID" name="pesoEnGigas" type="number" min="0">
             </div>
-
             <div class="col-md-12">
-                <label for="instaladoID">Instalado</label>
-                <input type="checkbox" id="instaladoID" value="true">
-                <!--                <select name="instalado" id="instaladoID">-->
-                <!--                    <option value="true" selected>Si</option>-->
-                <!--                    <option value="false">No</option>-->
-                <!--                </select>-->
+                <label for="urlDescargaID">URL de descarga</label>
+                <input id="urlDescargaID" name="urlDescarga" type="text">
+            </div>
+            <div class="col-md-12">
+                <label for="costoID">Costo</label>
+                <input id="costoID" name="costo" type="number" min="0" step="0.01">
             </div>
             <div class="col-md-6">
-                <a href="/api/sistemaOperativo">
+                <a href="/api/sistemaOperativo/gestion/<%= idSO %>">
                     <button>Cancelar</button>
                 </a>
             </div>

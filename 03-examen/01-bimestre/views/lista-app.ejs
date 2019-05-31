@@ -20,12 +20,13 @@
 
     </div>
     <div class="row">
-        <a href="/api/sistemaOperativo/crear">
+        <form action="/api/sistemaOperativo/gestion/crear" method="post">
+            <input type="text" name="idSO" value="<%= idSO %>" hidden>
             <button>Crear</button>
-        </a>
+        </form>
     </div>
     <div class="row">
-        <form action="/api/sistemaOperativo" method="get">
+        <form action="/api/sistemaOperativo/gestion/<%= idSO %>" method="get">
             <div class="col-lg-8">
                 <label for="buscarID">Nombre: </label>
                 <input id="buscarID" name="nombre" type="text">
@@ -35,35 +36,33 @@
             </div>
         </form>
     </div>
-    <div class="row">'
+    <div class="row">
+
         <table>
             <tr>
                 <th>Nombre</th>
-                <th>Version API</th>
+                <th>Version</th>
                 <th>Fecha de lanzamiento</th>
                 <th>Peso (GB)</th>
-                <th>Instalado</th>
-                <th></th>
+                <th>URL de descarga</th>
+                <th>Costo</th>
+                <!--        <th>SO id</th>-->
                 <th></th>
             </tr>
-            <% arregloSO.forEach((so)=>{ %>
+            <% arregloApp.forEach((app)=>{ %>
                 <tr>
-                    <td> <%= so.nombre %> </td>
-                    <td> <%= so.versionApi %> </td>
-                    <td> <%= so.fechaLanzamiento %> </td>
-                    <td> <%= so.pesoEnGigas %> </td>
-                    <td> <%= so.instalado %> </td>
-
+                    <td> <%= app.nombre %> </td>
+                    <td> <%= app.version %> </td>
+                    <td> <%= app.fechaLanzamiento %> </td>
+                    <td> <%= app.pesoEnGigas %> </td>
+                    <td> <%= app.urlDescarga %> </td>
+                    <td> <%= app.costo %> </td>
                     <td>
-                        <form action="/api/sistemaOperativo/eliminar" method="post">
-                            <input id="id" name="id" type="number" value="<% so.id %>" hidden>
+                        <form action="/api/sistemaoperativo/gestion/eliminar" method="post">
+                            <input id="soId" name="idSo" type="number" value="<%=app.sistemaOperativoId%>" hidden>
+                            <input id="appId" name="idApp" type="number" value="<%=app.id%>" hidden>
                             <button>Eliminar</button>
                         </form>
-                    </td>
-                    <td>
-                        <a href="/api/sistemaOperativo/gestion/<%= so.id %>">
-                            <button>Gestionar aplicaciones</button>
-                        </a>
                     </td>
                 </tr>
             <% }) %>

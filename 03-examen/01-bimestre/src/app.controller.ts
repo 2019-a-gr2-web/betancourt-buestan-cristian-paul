@@ -1,6 +1,6 @@
-import {Body, Controller, Get, Post, Request, Response} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, Query, Request, Response} from '@nestjs/common';
 import {AppService} from './app.service';
-import {SistemaOperativo} from "./interfaces/interfaces";
+import {Aplicacion, SistemaOperativo} from "./interfaces/interfaces";
 
 // @ts-ignore
 @Controller('api')
@@ -26,12 +26,15 @@ export class AppController {
     }
 
     @Get('sistemaOperativo')
-    sistemaOperativo(@Request() req, @Response() res) {
+    sistemaOperativo(@Request() req, @Response() res, @Query('nombre') nombre?: string) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
         let arregloSO;
-        arregloSO = this.__appService.sistemasOperativos;
-
+        if (nombre) {
+            arregloSO = this.__appService.buscarPorNombreSO(nombre);
+        } else {
+            arregloSO = this.__appService.sistemasOperativos;
+        }
         res.render('lista-so', {
             usuario: usuario,
             arregloSO: arregloSO
@@ -44,14 +47,14 @@ export class AppController {
         res.redirect('/api/inicio');
     }
 
-    @Get('crearSO')
+    @Get('sistemaOperativo/crear')
     enviarCrearSO(@Request() req, @Response() res) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
-        res.render('crear-so');
+        res.render('crear-so', {usuario: usuario});
     }
 
-    @Post('crearSO')
+    @Post('sistemaOperativo/crear')
     crearSO(@Request() req, @Response() res, @Body() body: SistemaOperativo) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
@@ -63,13 +66,56 @@ export class AppController {
         res.redirect('/api/sistemaOperativo')
     }
 
-    @Post('eliminar')
+    @Post('sistemaOperativo/eliminar')
     eliminarTrago(@Request() req, @Response() res,
                   @Body('idSO') idSO: number) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
         this.__appService.eliminarSO(idSO);
         res.redirect('/api/sistemaOperativo');
+    }
+
+    @Get('sistemaOperativo/gestion/:idSO')
+    aplicacion(@Request() req, @Response() res, @Param() param, @Query('nombre') nombre?: string) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        let arregloApp;
+        const idSO: number = param.idSO;
+        if (nombre) {
+            arregloApp = this.__appService.buscarPorNombreApp(nombre, idSO);
+        } else {
+            arregloApp = this.__appService.buscarApp(idSO);
+        }
+        res.render('lista-app', {usuario: usuario, idSO: idSO, arregloApp: arregloApp});
+    }
+
+    @Post('sistemaOperativo/gestion/crear')
+    enviarCrearApp(@Request() req, @Response() res, @Body('idSO') idSO: string) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        res.render('crear-app', {usuario: usuario, idSO: idSO});
+
+    }
+
+    @Post('sistemaOperativo/gestion/insertar')
+    insertarDatosApp(@Request() req, @Response() res, @Body() app: Aplicacion) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        app.sistemaOperativoId = Number(app.sistemaOperativoId);
+        app.version = Number(app.version);
+        app.fechaLanzamiento = new Date(app.fechaLanzamiento);
+        app.costo = Number(app.costo);
+        app.pesoEnGigas = Number(app.pesoEnGigas);
+        this.__appService.insertarApp(app);
+        res.redirect('/api/sistemaOperativo/gestion/' + app.sistemaOperativoId)
+    }
+
+    @Post('sistemaoperativo/gestion/eliminar')
+    eliminarApp(@Request() req, @Response() res, @Body('id') idApp: string, @Body('idSO') idSO: string) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        this.__appService.eliminarApp(Number(idApp));
+        res.redirect('/api/sistemaOperativo/gestion/' + idSO);
     }
 
     cookieValida(@Response() res, usuario: string) {

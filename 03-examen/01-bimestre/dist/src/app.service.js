@@ -14,11 +14,22 @@ let AppService = class AppService {
     constructor() {
         this.aplicaciones = [];
         this.sistemasOperativos = [];
-        this.idSO = 0;
+        this.idSO = 1;
+        this.idApp = 0;
+        this.sistemasOperativos.push(new class {
+            constructor() {
+                this.fechaLanzamiento = new Date();
+                this.id = 0;
+                this.instalado = true;
+                this.nombre = 'Linux';
+                this.pesoEnGigas = 4;
+                this.versionApi = 5;
+            }
+        });
     }
     buscarPorNombreSO(nombre) {
-        return this.sistemasOperativos.find(so => {
-            return so.nombre == nombre.toUpperCase().trim();
+        return this.sistemasOperativos.filter(so => {
+            return so.nombre.toUpperCase() == nombre.toUpperCase().trim();
         });
     }
     insertarSO(so) {
@@ -34,6 +45,29 @@ let AppService = class AppService {
         this.aplicaciones = this.aplicaciones.filter(app => {
             return app.sistemaOperativoId != idSO;
         });
+    }
+    buscarPorNombreApp(nombre, idSO) {
+        return this.aplicaciones.filter(app => {
+            return ((app.nombre.toUpperCase().trim() === nombre.toUpperCase().trim())
+                && (app.sistemaOperativoId == idSO));
+        });
+    }
+    buscarApp(idSO) {
+        return this.aplicaciones.filter(app => {
+            return app.sistemaOperativoId == idSO;
+        });
+    }
+    insertarApp(app) {
+        app.id = this.idApp;
+        this.idApp++;
+        this.aplicaciones.push(app);
+        console.log(this.aplicaciones.length);
+    }
+    eliminarApp(idApp) {
+        const indice = this.aplicaciones.findIndex(app => {
+            return app.id == idApp;
+        });
+        this.aplicaciones.splice(indice, 1);
     }
 };
 AppService = __decorate([
