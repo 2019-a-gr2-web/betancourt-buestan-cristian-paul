@@ -9,8 +9,8 @@ export class AppController {
     constructor(private readonly __appService: AppService) {
     }
 
-    @Get('inicio')
-    inicio(@Response() res) {
+    @Get('login')
+    login(@Response() res) {
         res.render('login')
     }
 
@@ -21,8 +21,15 @@ export class AppController {
             usuario,               //valor
             {                                   //opciones
                 signed: true
-            }).redirect('/api/sistemaOperativo');
+            }).redirect('/api/inicio');
 
+    }
+
+    @Get('inicio')
+    inicio(@Request() req, @Response() res) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        res.render('gestion-so',{ usuario: usuario});
     }
 
     @Get('sistemaOperativo')
@@ -44,7 +51,7 @@ export class AppController {
     @Get('cerrar')
     cerrarSesion(@Request() req, @Response() res) {
         res.clearCookie('usuario');
-        res.redirect('/api/inicio');
+        res.redirect('/api/login');
     }
 
     @Get('sistemaOperativo/crear')
@@ -111,7 +118,7 @@ export class AppController {
     }
 
     @Post('sistemaoperativo/gestion/eliminar')
-    eliminarApp(@Request() req, @Response() res, @Body('id') idApp: string, @Body('idSO') idSO: string) {
+    eliminarApp(@Request() req, @Response() res, @Body('idApp') idApp: string, @Body('idSO') idSO: string) {
         const usuario = req.signedCookies.usuario;
         this.cookieValida(res, usuario);
         this.__appService.eliminarApp(Number(idApp));

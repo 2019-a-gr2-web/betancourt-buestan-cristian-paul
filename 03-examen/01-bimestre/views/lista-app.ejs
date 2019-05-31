@@ -59,7 +59,7 @@
                     <td> <%= app.costo %> </td>
                     <td>
                         <form action="/api/sistemaoperativo/gestion/eliminar" method="post">
-                            <input id="soId" name="idSo" type="number" value="<%=app.sistemaOperativoId%>" hidden>
+                            <input id="soId" name="idSO" type="number" value="<%=app.sistemaOperativoId%>" hidden> <%=app.sistemaOperativoId%>
                             <input id="appId" name="idApp" type="number" value="<%=app.id%>" hidden>
                             <button>Eliminar</button>
                         </form>
