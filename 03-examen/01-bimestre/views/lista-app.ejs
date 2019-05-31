@@ -55,16 +55,14 @@
         </div>
     </div>
     <div class="row" id="buscar">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <form action="/api/sistemaOperativo/gestion/<%= idSO %>" method="get">
                 <label for="buscarID">Nombre: </label>
                 <input id="buscarID" name="nombre" type="text">
                 <button class="btn btn-info">Buscar</button>
             </form>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-6">
             <form action="/api/sistemaOperativo/gestion/crear" method="post">
                 <input type="text" name="idSO" value="<%= idSO %>" hidden>
                 <button class="btn btn-success">Crear</button>
