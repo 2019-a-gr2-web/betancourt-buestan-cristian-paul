@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        div {
+            margin: 15px 0px 15px 0px;
+            width: 100%;
+        }
+
+        div#sesion {
+            margin: 40px 0px 40px 0px;
+            border: 1px solid #99e1d9;
+            background: #99e1d9;
+            padding: 10px 10px 10px 10px;
+
+        }
+
+        h3, #cerrar {
+            text-align: left;
+            float: right;
+            color: #FFFFFF;
+        }
+
+
+        #buscar {
+            float: right;
+            width: 100%;
+        }
+
+        form {
+            float: left;
+            width: 100%;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <div class="row" id="sesion">
         <div class="col-sm-6">
             <h3>
                 <%= usuario %>
@@ -14,29 +52,30 @@
         </div>
         <div class="col-sm-6">
             <form action="/api/cerrar" method="get">
-                <button>Cerrar sesión</button>
+                <button class="btn btn-primary" id="cerrar">Cerrar sesión</button>
             </form>
         </div>
 
     </div>
-    <div class="row">
-        <a href="/api/sistemaOperativo/crear">
-            <button>Crear</button>
-        </a>
-    </div>
-    <div class="row">
-        <form action="/api/sistemaOperativo" method="get">
-            <div class="col-lg-8">
+    <div class="row" id="buscar">
+        <div class="col-md-6" id="">
+            <form action="/api/sistemaOperativo" method="get">
                 <label for="buscarID">Nombre: </label>
                 <input id="buscarID" name="nombre" type="text">
-            </div>
-            <div class="col-md-4">
-                <button>Buscar</button>
-            </div>
-        </form>
+                <button class="btn btn-info">Buscar</button>
+            </form>
+        </div>
+
+
+        <div class="col-md-6" id="crear">
+            <a href="/api/sistemaOperativo/crear">
+                <button class="btn btn-success">Crear</button>
+            </a>
+        </div>
     </div>
-    <div class="row">'
-        <table>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Version API</th>
@@ -46,7 +85,9 @@
                 <th></th>
                 <th></th>
             </tr>
+            </thead>
             <% arregloSO.forEach((so)=>{ %>
+                <thead class="thead-light">
                 <tr>
                     <td> <%= so.nombre %> </td>
                     <td> <%= so.versionApi %> </td>
@@ -57,15 +98,16 @@
                     <td>
                         <form action="/api/sistemaOperativo/eliminar" method="post">
                             <input id="id" name="id" type="number" value="<% so.id %>" hidden>
-                            <button>Eliminar</button>
+                            <button class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>
                     <td>
                         <a href="/api/sistemaOperativo/gestion/<%= so.id %>">
-                            <button>Gestionar aplicaciones</button>
+                            <button class="btn btn-warning">Gestionar aplicaciones</button>
                         </a>
                     </td>
                 </tr>
+                </thead>
             <% }) %>
         </table>
     </div>

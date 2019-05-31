@@ -3,10 +3,46 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div {
+            margin: 15px 0px 15px 0px;
+            width: 100%;
+        }
+
+        div#sesion {
+            margin: 40px 0px 40px 0px;
+            border: 1px solid #99e1d9;
+            background: #99e1d9;
+            padding: 10px 10px 10px 10px;
+
+        }
+
+        h3, #cerrar {
+            text-align: left;
+            float: right;
+            color: #FFFFFF;
+        }
+
+
+        #buscar {
+            float: right;
+            width: 100%;
+        }
+
+        form {
+            float: left;
+            width: 100%;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <div class="row" id="sesion">
         <div class="col-sm-6">
             <h3>
                 <%= usuario %>
@@ -14,31 +50,29 @@
         </div>
         <div class="col-sm-6">
             <form action="/api/cerrar" method="get">
-                <button>Cerrar sesión</button>
+                <button class="btn btn-primary" id="cerrar">Cerrar sesión</button>
             </form>
         </div>
-
     </div>
-    <div class="row">
-        <form action="/api/sistemaOperativo/gestion/crear" method="post">
-            <input type="text" name="idSO" value="<%= idSO %>" hidden>
-            <button>Crear</button>
-        </form>
-    </div>
-    <div class="row">
-        <form action="/api/sistemaOperativo/gestion/<%= idSO %>" method="get">
-            <div class="col-lg-8">
+    <div class="row" id="buscar">
+        <div class="col-md-6">
+            <form action="/api/sistemaOperativo/gestion/<%= idSO %>" method="get">
                 <label for="buscarID">Nombre: </label>
                 <input id="buscarID" name="nombre" type="text">
-            </div>
-            <div class="col-md-4">
-                <button>Buscar</button>
-            </div>
-        </form>
+                <button class="btn btn-info">Buscar</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form action="/api/sistemaOperativo/gestion/crear" method="post">
+                <input type="text" name="idSO" value="<%= idSO %>" hidden>
+                <button class="btn btn-success">Crear</button>
+            </form>
+        </div>
     </div>
     <div class="row">
 
-        <table>
+        <table class="table">
+            <thead class="thead-dark">
             <tr>
                 <th>Nombre</th>
                 <th>Version</th>
@@ -49,7 +83,9 @@
                 <!--        <th>SO id</th>-->
                 <th></th>
             </tr>
+            </thead>
             <% arregloApp.forEach((app)=>{ %>
+                <thead class="thead-light">
                 <tr>
                     <td> <%= app.nombre %> </td>
                     <td> <%= app.version %> </td>
@@ -59,12 +95,13 @@
                     <td> <%= app.costo %> </td>
                     <td>
                         <form action="/api/sistemaoperativo/gestion/eliminar" method="post">
-                            <input id="soId" name="idSO" type="number" value="<%=app.sistemaOperativoId%>" hidden> <%=app.sistemaOperativoId%>
-                            <input id="appId" name="idApp" type="number" value="<%=app.id%>" hidden>
-                            <button>Eliminar</button>
+                            <input id="soId" name="idSO" type="number" value="<%= app.sistemaOperativoId %>" hidden>
+                            <input id="appId" name="idApp" type="number" value="<%= app.id %>" hidden>
+                            <button class="btn btn-danger">Eliminar</button>
                         </form>
                     </td>
                 </tr>
+                </thead>
             <% }) %>
         </table>
     </div>

@@ -3,10 +3,31 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div#sesion {
+            margin: 40px 0px 40px 0px;
+            border: 1px solid #99e1d9;
+            background: #99e1d9;
+            padding: 10px 10px 10px 10px;
+        }
+
+        h3, #cerrar {
+            float: right;
+            color: #FFFFFF;
+        }
+
+        #datos {
+            text-align: center;
+        }
+
+        button {
+            margin: 10px 0px 10px 0px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <div class="row" id="sesion">
         <div class="col-sm-6">
             <h3>
                 <%= usuario %>
@@ -14,50 +35,50 @@
         </div>
         <div class="col-sm-6">
             <form action="/api/cerrar" method="get">
-                <button>Cerrar sesión</button>
+                <button class="btn btn-primary" id="cerrar">Cerrar sesión</button>
             </form>
         </div>
-
     </div>
-    <div class="row">
+    <div class="row" id="datos">
         <form action="/api/sistemaOperativo/gestion/insertar" method="post">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="soID">ID del sistema operativo</label> <h5><%= idSO %></h5>
                 <input id="soID" name="sistemaOperativoId" type="text" value="<%= idSO %>" hidden>
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="nombreID">Nombre</label>
                 <input id="nombreID" name="nombre" type="text">
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="versionID">Version</label>
                 <input id="versionID" name="version" type="number" min="0">
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="fechaLanzamientoID">Fecha de lanzamiento</label>
                 <input id="fechaLanzamientoID" name="fechaLanzamiento" type="date">
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="pesoID">Peso (GB)</label>
                 <input id="pesoID" name="pesoEnGigas" type="number" min="0">
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="urlDescargaID">URL de descarga</label>
                 <input id="urlDescargaID" name="urlDescarga" type="text">
             </div>
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <label for="costoID">Costo</label>
                 <input id="costoID" name="costo" type="number" min="0" step="0.01">
             </div>
-            <div class="col-md-6">
-                <a href="/api/sistemaOperativo/gestion/<%= idSO %>">
-                    <button>Cancelar</button>
-                </a>
+            <div class="col-lg-12">
+                <button class="btn btn-success">Crear</button>
             </div>
-            <div class="col-md-6">
-                <button>Crear</button>
-            </div>
+
         </form>
+        <div class="col-lg-12">
+            <a href="/api/sistemaOperativo/gestion/<%= idSO %>">
+                <button class="btn btn-danger">Cancelar</button>
+            </a>
+        </div>
     </div>
 </div>
 </body>

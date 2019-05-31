@@ -3,10 +3,30 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div#sesion {
+            margin: 40px 0px 40px 0px;
+            border: 1px solid #99e1d9;
+            background: #99e1d9;
+            padding: 10px 10px 10px 10px;
+
+        }
+
+        h3, #cerrar {
+            float: right;
+            color: #FFFFFF;
+        }
+
+        #gestion{
+            text-align: center;
+
+        }
+
+    </style>
 </head>
 <body>
 <div class="container">
-    <div class="row">
+    <div class="row" id="sesion">
         <div class="col-sm-6">
             <h3>
                 <%= usuario %>
@@ -14,14 +34,16 @@
         </div>
         <div class="col-sm-6">
             <form action="/api/cerrar" method="get">
-                <button>Cerrar sesión</button>
+                <button class="btn btn-primary" id="cerrar">Cerrar sesión</button>
             </form>
         </div>
     </div>
-    <div class="row">
-        <a href="/api/sistemaOperativo">
-            <button>Gestionar sistemas operativos</button>
-        </a>
+    <div class="row" id="panel">
+        <div class="col-lg-12" id="gestion">
+            <a href="/api/sistemaOperativo">
+                <button class="btn btn-info">Gestionar sistemas operativos</button>
+            </a>
+        </div>
     </div>
 </div>
 </body>
