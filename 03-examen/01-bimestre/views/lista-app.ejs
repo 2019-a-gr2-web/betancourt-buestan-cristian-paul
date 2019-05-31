@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>
+                <%= usuario %>
+            </h3>
+        </div>
+        <div class="col-sm-6">
+            <form action="/api/cerrar" method="get">
+                <button>Cerrar sesión</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+        <form action="/api/sistemaOperativo/gestion/crear" method="post">
+            <input type="text" name="idSO" value="<%= idSO %>" hidden>
+            <button>Crear</button>
+        </form>
+    </div>
+    <div class="row">
+        <form action="/api/sistemaOperativo/gestion/<%= idSO %>" method="get">
+            <div class="col-lg-8">
+                <label for="buscarID">Nombre: </label>
+                <input id="buscarID" name="nombre" type="text">
+            </div>
+            <div class="col-md-4">
+                <button>Buscar</button>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Version</th>
+                <th>Fecha de lanzamiento</th>
+                <th>Peso (GB)</th>
+                <th>URL de descarga</th>
+                <th>Costo</th>
+                <!--        <th>SO id</th>-->
+                <th></th>
+            </tr>
+            <% arregloApp.forEach((app)=>{ %>
+                <tr>
+                    <td> <%= app.nombre %> </td>
+                    <td> <%= app.version %> </td>
+                    <td> <%= app.fechaLanzamiento %> </td>
+                    <td> <%= app.pesoEnGigas %> </td>
+                    <td> <%= app.urlDescarga %> </td>
+                    <td> <%= app.costo %> </td>
+                    <td>
+                        <form action="/api/sistemaoperativo/gestion/eliminar" method="post">
+                            <input id="soId" name="idSo" type="number" value="<%=app.sistemaOperativoId%>" hidden>
+                            <input id="appId" name="idApp" type="number" value="<%=app.id%>" hidden>
+                            <button>Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</div>
+</body>
+</html>

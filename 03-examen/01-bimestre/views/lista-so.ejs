@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>
+                <%= usuario %>
+            </h3>
+        </div>
+        <div class="col-sm-6">
+            <form action="/api/cerrar" method="get">
+                <button>Cerrar sesión</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="row">
+        <a href="/api/sistemaOperativo/crear">
+            <button>Crear</button>
+        </a>
+    </div>
+    <div class="row">
+        <form action="/api/sistemaOperativo" method="get">
+            <div class="col-lg-8">
+                <label for="buscarID">Nombre: </label>
+                <input id="buscarID" name="nombre" type="text">
+            </div>
+            <div class="col-md-4">
+                <button>Buscar</button>
+            </div>
+        </form>
+    </div>
+    <div class="row">'
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Version API</th>
+                <th>Fecha de lanzamiento</th>
+                <th>Peso (GB)</th>
+                <th>Instalado</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <% arregloSO.forEach((so)=>{ %>
+                <tr>
+                    <td> <%= so.nombre %> </td>
+                    <td> <%= so.versionApi %> </td>
+                    <td> <%= so.fechaLanzamiento %> </td>
+                    <td> <%= so.pesoEnGigas %> </td>
+                    <td> <%= so.instalado %> </td>
+
+                    <td>
+                        <form action="/api/sistemaOperativo/eliminar" method="post">
+                            <input id="id" name="id" type="number" value="<% so.id %>" hidden>
+                            <button>Eliminar</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="/api/sistemaOperativo/gestion/<%= so.id %>">
+                            <button>Gestionar aplicaciones</button>
+                        </a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</div>
+</body>
+</html>
