@@ -18,13 +18,18 @@ let AppController = class AppController {
     constructor(__appService) {
         this.__appService = __appService;
     }
-    inicio(res) {
+    login(res) {
         res.render('login');
     }
     usuario(usuario, res) {
         res.cookie('usuario', usuario, {
             signed: true
-        }).redirect('/api/sistemaOperativo');
+        }).redirect('/api/inicio');
+    }
+    inicio(req, res) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        res.render('gestion-so', { usuario: usuario });
     }
     sistemaOperativo(req, res, nombre) {
         const usuario = req.signedCookies.usuario;
@@ -43,7 +48,7 @@ let AppController = class AppController {
     }
     cerrarSesion(req, res) {
         res.clearCookie('usuario');
-        res.redirect('/api/inicio');
+        res.redirect('/api/login');
     }
     enviarCrearSO(req, res) {
         const usuario = req.signedCookies.usuario;
@@ -108,12 +113,12 @@ let AppController = class AppController {
     }
 };
 __decorate([
-    common_1.Get('inicio'),
+    common_1.Get('login'),
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
-], AppController.prototype, "inicio", null);
+], AppController.prototype, "login", null);
 __decorate([
     common_1.Post('usuario'),
     __param(0, common_1.Body('usuario')), __param(1, common_1.Response()),
@@ -121,6 +126,13 @@ __decorate([
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "usuario", null);
+__decorate([
+    common_1.Get('inicio'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "inicio", null);
 __decorate([
     common_1.Get('sistemaOperativo'),
     __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Query('nombre')),
@@ -180,7 +192,7 @@ __decorate([
 ], AppController.prototype, "insertarDatosApp", null);
 __decorate([
     common_1.Post('sistemaoperativo/gestion/eliminar'),
-    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body('id')), __param(3, common_1.Body('idSO')),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body('idApp')), __param(3, common_1.Body('idSO')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object, String, String]),
     __metadata("design:returntype", void 0)

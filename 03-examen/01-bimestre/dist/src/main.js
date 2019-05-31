@@ -16,7 +16,7 @@ function bootstrap() {
         const app = yield core_1.NestFactory.create(app_module_1.AppModule);
         app.use(cookieParser('examen'));
         app.set('view engine', 'ejs');
-        yield app.listen(3000);
+        yield app.listen(3001);
     });
 }
 bootstrap();
