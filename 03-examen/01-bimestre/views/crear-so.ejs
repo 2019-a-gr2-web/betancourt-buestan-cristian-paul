@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <form action="/api/crearSO" method="post">
+            <div class="col-md-12">
+                <label for="nombreID">Nombre</label>
+                <input id="nombreID" name="nombre" type="text">
+            </div>
+            <div class="col-md-12">
+                <label for="versionID">Version API</label>
+                <input id="versionID" name="versionApi" type="number" min="0">
+            </div>
+            <div class="col-md-12">
+                <label for="fechaLanzamientoID">Fecha de lanzamiento</label>
+                <input id="fechaLanzamientoID" name="fechaLanzamiento" type="date">
+            </div>
+            <div class="col-md-12">
+                <label for="pesoID">Peso (GB)</label>
+                <input id="pesoID" name="pesoEnGigas" type="number" min="0">
+            </div>
+
+            <div class="col-md-12">
+                <label for="instaladoID">Instalado</label>
+                <select name="instalado" id="instaladoID">
+                    <option value="true" selected>Si</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <a href="/api/sistemaOperativo" type="button">Cancelar</a>
+            </div>
+            <div class="col-md-6">
+              <button>Crear</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
