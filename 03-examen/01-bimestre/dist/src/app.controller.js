@@ -28,30 +28,43 @@ let AppController = class AppController {
     }
     sistemaOperativo(req, res) {
         const usuario = req.signedCookies.usuario;
-        if (this.cookieValida(usuario)) {
-            console.log(usuario);
-            let arregloSO;
-            arregloSO = this.__appService.sistemasOperativos;
-            res.render('lista-so', {
-                usuario: usuario,
-                arregloSO: arregloSO
-            });
-        }
-        else {
-            res.redirect('/api/cerrar');
-        }
+        this.cookieValida(res, usuario);
+        let arregloSO;
+        arregloSO = this.__appService.sistemasOperativos;
+        res.render('lista-so', {
+            usuario: usuario,
+            arregloSO: arregloSO
+        });
     }
     cerrarSesion(req, res) {
         res.clearCookie('usuario');
         res.redirect('/api/inicio');
     }
     enviarCrearSO(req, res) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
         res.render('crear-so');
     }
-    crearSO() {
+    crearSO(req, res, body) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        body.versionApi = Number(body.versionApi);
+        body.fechaLanzamiento = new Date(body.fechaLanzamiento);
+        body.pesoEnGigas = Number(body.pesoEnGigas);
+        body.instalado = Boolean(body.instalado);
+        this.__appService.insertarSO(body);
+        res.redirect('/api/sistemaOperativo');
     }
-    cookieValida(usuario) {
-        return !!usuario;
+    eliminarTrago(req, res, idSO) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        this.__appService.eliminarSO(idSO);
+        res.redirect('/api/sistemaOperativo');
+    }
+    cookieValida(res, usuario) {
+        if (!usuario) {
+            res.redirect('/api/cerrar');
+        }
     }
 };
 __decorate([
@@ -91,10 +104,25 @@ __decorate([
 ], AppController.prototype, "enviarCrearSO", null);
 __decorate([
     common_1.Post('crearSO'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()), __param(2, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [Object, Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearSO", null);
+__decorate([
+    common_1.Post('eliminar'),
+    __param(0, common_1.Request()), __param(1, common_1.Response()),
+    __param(2, common_1.Body('idSO')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Number]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "eliminarTrago", null);
+__decorate([
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, String]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "cookieValida", null);
 AppController = __decorate([
     common_1.Controller('api'),
     __metadata("design:paramtypes", [app_service_1.AppService])

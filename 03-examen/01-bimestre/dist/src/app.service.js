@@ -14,10 +14,25 @@ let AppService = class AppService {
     constructor() {
         this.aplicaciones = [];
         this.sistemasOperativos = [];
+        this.idSO = 0;
     }
     buscarPorNombreSO(nombre) {
         return this.sistemasOperativos.find(so => {
             return so.nombre == nombre.toUpperCase().trim();
+        });
+    }
+    insertarSO(so) {
+        so.id = this.idSO;
+        this.idSO++;
+        this.sistemasOperativos.push(so);
+    }
+    eliminarSO(idSO) {
+        const indice = this.sistemasOperativos.findIndex(so => {
+            return so.id === idSO;
+        });
+        this.sistemasOperativos.splice(indice, 1);
+        this.aplicaciones = this.aplicaciones.filter(app => {
+            return app.sistemaOperativoId != idSO;
         });
     }
 };

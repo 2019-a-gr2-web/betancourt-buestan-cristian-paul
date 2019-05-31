@@ -1,8 +1,11 @@
 import {Body, Controller, Get, Post, Request, Response} from '@nestjs/common';
 import {AppService} from './app.service';
+import {SistemaOperativo} from "./interfaces/interfaces";
 
+// @ts-ignore
 @Controller('api')
 export class AppController {
+
     constructor(private readonly __appService: AppService) {
     }
 
@@ -25,19 +28,14 @@ export class AppController {
     @Get('sistemaOperativo')
     sistemaOperativo(@Request() req, @Response() res) {
         const usuario = req.signedCookies.usuario;
-        if (this.cookieValida(usuario)) {
-            console.log(usuario);
-            let arregloSO;
+        this.cookieValida(res, usuario);
+        let arregloSO;
+        arregloSO = this.__appService.sistemasOperativos;
 
-            arregloSO = this.__appService.sistemasOperativos;
-
-            res.render('lista-so', {
-                usuario: usuario,
-                arregloSO: arregloSO
-            });
-        } else {
-            res.redirect('/api/cerrar');
-        }
+        res.render('lista-so', {
+            usuario: usuario,
+            arregloSO: arregloSO
+        });
     }
 
     @Get('cerrar')
@@ -48,16 +46,35 @@ export class AppController {
 
     @Get('crearSO')
     enviarCrearSO(@Request() req, @Response() res) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
         res.render('crear-so');
     }
 
     @Post('crearSO')
-    crearSO() {
-
-
+    crearSO(@Request() req, @Response() res, @Body() body: SistemaOperativo) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        body.versionApi = Number(body.versionApi);
+        body.fechaLanzamiento = new Date(body.fechaLanzamiento);
+        body.pesoEnGigas = Number(body.pesoEnGigas);
+        body.instalado = Boolean(body.instalado);
+        this.__appService.insertarSO(body);
+        res.redirect('/api/sistemaOperativo')
     }
 
-    cookieValida(usuario: string): boolean {
-        return !!usuario;
+    @Post('eliminar')
+    eliminarTrago(@Request() req, @Response() res,
+                  @Body('idSO') idSO: number) {
+        const usuario = req.signedCookies.usuario;
+        this.cookieValida(res, usuario);
+        this.__appService.eliminarSO(idSO);
+        res.redirect('/api/sistemaOperativo');
+    }
+
+    cookieValida(@Response() res, usuario: string) {
+        if (!usuario) {
+            res.redirect('/api/cerrar');
+        }
     }
 }
