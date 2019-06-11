@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+          #login {
+            margin: 300px 40px 40px 40px;
+            border: 1px solid #99e1d9;
+            background: #99e1d9;
+        }
+        .row{
+            margin: 20px 0px 20px 0px;
+                   }
+        input, label{
+            width: 100%;
+            color: #444545;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <form action="/api/usuario" method="post">
+        <div id="login">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="usuarioId">Nombre de usuario</label>
+                </div>
+                <div class="col-md-6">
+                    <input id="usuarioId" name="usuario" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <button class="btn btn-primary">Ingresar</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

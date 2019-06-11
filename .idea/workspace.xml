@@ -18,91 +18,47 @@
     <favorites_list name="betancourt-buestan-cristian-paul" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45823574">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="192">
-                  <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="9" selection-end-column="32" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/gestion-so.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="18" selection-start-line="18" selection-end-line="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-so.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="49" selection-start-line="49" selection-end-line="49" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-app.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="24" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
-                  <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/main.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="216">
-                  <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-                  <folding>
-                    <element signature="e#0#43#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-app.ejs">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+              <folding>
+                <element signature="e#0#92#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-515">
+              <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-552">
+              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="38" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,6 +74,8 @@
       <find>f</find>
       <find>render</find>
       <find>rende</find>
+      <find>SistemaOperativo</find>
+      <find>titulo_compras</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -160,16 +118,25 @@
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/src/main.ts" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/gestion-so.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/crear-app.ejs" />
-        <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/lista-so.ejs" />
+        <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.gitignore" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/inicio.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-zapato.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="950" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -193,73 +160,45 @@
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
+              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="01-calculadora" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="01-calculadora" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="02-pagina-web-replica" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
@@ -287,13 +226,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="interfaces" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="03-examen" type="462c0819:PsiDirectoryNode" />
-              <item name="01-bimestre" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -304,19 +236,20 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/03-examen/01-bimestre/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="ts.external.directory.path" value="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\01-bimestre\views" />
-      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\views\peliculas" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images\movies" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\views" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\01-bimestre\views" />
+      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\views\peliculas" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,20 +302,25 @@
       <workItem from="1559318470378" duration="88000" />
       <workItem from="1559321608237" duration="2864000" />
       <workItem from="1559330715045" duration="1951000" />
+      <workItem from="1559342041326" duration="722000" />
+      <workItem from="1559391948344" duration="116000" />
+      <workItem from="1560206859918" duration="404000" />
+      <workItem from="1560210099456" duration="6614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133502000" />
+    <option name="totallyTimeSpent" value="141358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.15333775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.21017845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.23382352" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49966952" weight="0.23382352" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25441176" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -390,8 +328,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32647058" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.6768011" visible="true" weight="0.21911764" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32319894" side_tool="true" weight="0.21470588" />
+      <window_info anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.6761401" visible="true" weight="0.22058824" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50033045" side_tool="true" weight="0.23382352" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32098764" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -402,121 +340,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/node_modules/express/lib/response.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="169" column="11" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/node_modules/@nestjs/core/exceptions/exceptions-handler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/imagenes/stark.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/app.controller.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/public/images/ccbrasil.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/public/images/ccespania.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/public/images/favicon.ico">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/public/images/movies/el-maestro-luchador.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2297">
-          <caret line="172" column="20" selection-start-line="172" selection-start-column="20" selection-end-line="172" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/copia/cinecalidad.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/sectional.rnc" />
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/trago.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/sistemaOperativo.ts" />
-    <entry file="file://$PROJECT_DIR$/02-deberes/02-pagina-web-replica/views/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4014">
-          <caret line="296" column="18" selection-start-line="296" selection-start-column="18" selection-end-line="296" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.spec.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -647,76 +470,213 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/interfaces.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-336">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="9" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/gestion-so.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="432">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-so.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-app.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-so.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="59" column="33" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.controller.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/interfaces.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="14" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-so.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/gestion-so.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-so.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="95" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="6" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-app.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-app.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1272">
+          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/inicio.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="95" lean-forward="true" selection-start-line="6" selection-start-column="95" selection-end-line="6" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="69" lean-forward="true" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-zapato.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-cliente.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="38" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-515">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
         </state>
       </provider>
     </entry>
