@@ -5,6 +5,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        #principal {
+            margin: 50px 150px 50px 250px;
+            text-align: left;
+        }
+
+        #titulo_clientes {
+            color: #245FAD;
+            margin: 45px 30px 20px 30px;
+            text-align: center;
+        }
+
+        #botones {
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        #btn_insertar {
+            color: #FFFFFF;
+        }
+
+        input {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -16,8 +41,37 @@
         </nav>
     </div>
     <div class="row">
-
+        <div id="titulo_clientes" class="col-lg-12"><h1>Registro cliente</h1></div>
     </div>
+    <form action="/shoes/clientes/crear" method="post">
+        <div id="principal" class="row justify-content-md-center">
+            <div class="col-lg-4">
+                <label for="nombreID">Nombre</label>
+            </div>
+            <div class="col-lg-8">
+                <input id="nombreID" class="form-control" name="nombre" type="text" required>
+            </div>
+            <div class="col-lg-4">
+                <label for="apellidoID">Apellido</label>
+            </div>
+            <div class="col-lg-8">
+                <input id="apellidoID" class="form-control" name="apellido" type="text" required>
+            </div>
+            <div class="col-lg-4">
+                <label for="cedulaID">Cédula</label>
+            </div>
+            <div class="col-lg-8">
+                <input id="cedulaID" class="form-control" name="cedula" type="number" required>
+            </div>
+            <div id="botones" class="col-lg-12">
+                <button id="btn_insertar" type="submit" class="btn btn-warning">Insertar</button>
+                <a href="/shoes/clientes">
+                    <button type="button" class="btn btn-danger">Cancelar</button>
+                </a>
+            </div>
+        </div>
+    </form>
+
 </div>
 </body>
 </html>

@@ -33,6 +33,13 @@ let AppController = class AppController {
     crearCliente(res) {
         res.render('crear-cliente');
     }
+    insertarCliente(cliente, res) {
+        cliente.nombre = cliente.nombre.toString();
+        cliente.apellido = cliente.nombre.toString();
+        cliente.cedula = cliente.cedula.toString();
+        console.log(`${cliente.nombre} ${cliente.apellido} ${cliente.cedula}`);
+        res.redirect('/shoes/clientes');
+    }
     listaCompras(res) {
         const listaClientes = [];
         res.render('lista-compras', { listaClientes: listaClientes });
@@ -46,6 +53,16 @@ let AppController = class AppController {
     }
     crearZapato(res) {
         res.render('crear-zapato');
+    }
+    insertarZapato(zapato, res) {
+        zapato.marca = zapato.marca.toString();
+        zapato.color = zapato.color.toString();
+        zapato.talla = Number(zapato.talla);
+        zapato.cantidad = Number(zapato.cantidad);
+        zapato.precio = Number(zapato.precio);
+        zapato.tipo = zapato.tipo.toString();
+        console.log(`${zapato.marca} ${zapato.color} ${zapato.talla} ${zapato.cantidad} ${zapato.precio} ${zapato.tipo}`);
+        res.redirect('/shoes/zapatos');
     }
     inicio(res) {
         res.render('inicio', {});
@@ -85,6 +102,13 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearCliente", null);
 __decorate([
+    common_1.Post('clientes/crear'),
+    __param(0, common_1.Body()), __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "insertarCliente", null);
+__decorate([
     common_1.Get('compras'),
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
@@ -112,6 +136,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearZapato", null);
+__decorate([
+    common_1.Post('zapatos/crear'),
+    __param(0, common_1.Body()), __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "insertarZapato", null);
 __decorate([
     common_1.Get('inicio'),
     __param(0, common_1.Response()),
