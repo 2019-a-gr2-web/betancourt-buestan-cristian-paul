@@ -9,11 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const tragos_services_1 = require("./tragos.services");
 const tragos_controller_1 = require("./tragos.controller");
+const typeorm_1 = require("@nestjs/typeorm");
+const tragos_entity_1 = require("./tragos.entity");
 let TragosModule = class TragosModule {
 };
 TragosModule = __decorate([
     common_1.Module({
-        imports: [],
+        imports: [
+            typeorm_1.TypeOrmModule.forFeature([
+                tragos_entity_1.TragosEntity
+            ], 'default')
+        ],
         controllers: [tragos_controller_1.TragosController],
         providers: [tragos_services_1.TragosService],
         exports: [tragos_services_1.TragosService]
