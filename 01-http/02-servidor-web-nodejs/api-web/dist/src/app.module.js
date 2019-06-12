@@ -10,11 +10,26 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const tragos_module_1 = require("./tragos/tragos.module");
+const typeorm_1 = require("@nestjs/typeorm");
+const tragos_entity_1 = require("./tragos/tragos.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [tragos_module_1.TragosModule],
+        imports: [tragos_module_1.TragosModule,
+            typeorm_1.TypeOrmModule.forRoot({
+                name: 'default',
+                type: 'mysql',
+                host: 'localhost',
+                port: 3306,
+                username: 'root',
+                password: 'password',
+                database: 'test',
+                entities: [tragos_entity_1.TragosEntity],
+                synchronize: true,
+                insecureAuth: true
+            }),
+        ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
