@@ -33,7 +33,7 @@
     <div class="row">
         <div id="btn_agregar" class="col">
             <a href="/shoes/zapatos/crear">
-            <button type="button" class="btn btn-success">Agregar</button>
+                <button type="button" class="btn btn-success">Agregar</button>
             </a>
         </div>
     </div>
@@ -41,6 +41,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
+                <th></th>
                 <th></th>
                 <th>Código zapato</th>
                 <th>Marca</th>
@@ -53,7 +54,19 @@
             </thead>
             <tbody>
             <tr>
-                <td></td>
+                <td>
+                    <a href="/shoes/zapatos/actualizar/1">
+                        <input type="image" src="/images/editar.png" align="center" width="30" height="30"
+                               alt="Submit Form">
+                    </a>
+                </td>
+                <td>
+                    <form action="/shoes/zapatos/borrar" method="post">
+                        <input type="text" id="zapatoID" name="codigoZap" value="1" hidden>
+                        <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
+                               alt="Submit Form">
+                    </form>
+                </td>
                 <td>1</td>
                 <td>Puma</td>
                 <td>Verde</td>

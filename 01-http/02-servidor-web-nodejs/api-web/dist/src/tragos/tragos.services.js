@@ -12,6 +12,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var _a;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const tragos_entity_1 = require("./tragos.entity");
@@ -70,7 +71,7 @@ let TragosService = class TragosService {
 TragosService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(tragos_entity_1.TragosEntity)),
-    __metadata("design:paramtypes", [typeorm_2.Repository])
+    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _a : Object])
 ], TragosService);
 exports.TragosService = TragosService;
 //# sourceMappingURL=tragos.services.js.map

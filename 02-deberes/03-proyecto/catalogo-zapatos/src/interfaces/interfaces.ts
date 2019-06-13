@@ -5,7 +5,7 @@ export interface Cliente {
     apellido: string;
 }
 
-export interface Compra {
+export interface Compras {
     codigoCom?: number
     codigoZap: string
     codigoCli: number

@@ -45,12 +45,8 @@ let AppController = class AppController {
         res.redirect('/shoes/clientes');
     }
     actualizarCliente(res, par) {
-        const codigoCli = par.codigoCli;
-        res.render('actualizar-cliente', { codigoCli: codigoCli });
-    }
-    ejecutarActualizarCliente(cliente, res) {
-        console.log(`${cliente.codigoCli} ${cliente.nombre} ${cliente.apellido}`);
-        res.redirect('/shoes/clientes');
+        const idCli = par.idCli;
+        res.render('actualizar-cliente', { idCli: idCli });
     }
     listaCompras(res) {
         const listaClientes = [];
@@ -77,17 +73,7 @@ let AppController = class AppController {
         res.redirect('/shoes/zapatos');
     }
     actualizarZapato(param, res) {
-        const codigoZap = param.codigoZap;
-        res.render('actualizar-zapato', { codigoZap: codigoZap });
-    }
-    ejecutarActualizarZapato(zapato, res) {
-        console.log(`${zapato.codigoZap} ${zapato.talla} ${zapato.tipo} ${zapato.color} ${zapato.precio} ${zapato.cantidad} ${zapato.marca}`);
-        res.redirect('/shoes/zapatos');
-    }
-    eliminarZapato(res, zapato) {
-        console.log(zapato.codigoZap.toString());
-        console.log(`${zapato.codigoZap}`);
-        res.redirect('/shoes/zapatos');
+        res.render('actualizar-zapatos');
     }
     inicio(res) {
         res.render('inicio', {});
@@ -141,19 +127,12 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "eliminarCliente", null);
 __decorate([
-    common_1.Get('clientes/actualizar/:codigoCli'),
+    common_1.Get('clientes/actualizar/:idCli'),
     __param(0, common_1.Response()), __param(1, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "actualizarCliente", null);
-__decorate([
-    common_1.Post('clientes/actualizar'),
-    __param(0, common_1.Body()), __param(1, common_1.Response()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "ejecutarActualizarCliente", null);
 __decorate([
     common_1.Get('compras'),
     __param(0, common_1.Response()),
@@ -196,20 +175,6 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "actualizarZapato", null);
-__decorate([
-    common_1.Post('zapatos/actualizar'),
-    __param(0, common_1.Body()), __param(1, common_1.Response()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "ejecutarActualizarZapato", null);
-__decorate([
-    common_1.Post('zapatos/borrar'),
-    __param(0, common_1.Response()), __param(1, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "eliminarZapato", null);
 __decorate([
     common_1.Get('inicio'),
     __param(0, common_1.Response()),
