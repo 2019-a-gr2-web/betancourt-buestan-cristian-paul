@@ -11,8 +11,8 @@
             text-align: left;
         }
 
-        #titulo_zapatos {
-            color: #24AD46;
+        #titulo_clientes {
+            color: #245FAD;
             margin: 45px 30px 20px 30px;
             text-align: center;
         }
@@ -22,8 +22,12 @@
             text-align: right;
         }
 
-        #btn_insertar {
+        #btn_actualizar {
             color: #FFFFFF;
+        }
+
+        input {
+            width: 100%;
         }
     </style>
 </head>
@@ -37,57 +41,38 @@
         </nav>
     </div>
     <div class="row">
-        <div id="titulo_zapatos" class="col-lg-12"><h1>Registro zapato</h1></div>
+        <div id="titulo_clientes" class="col-lg-12"><h1>Actualizar cliente</h1></div>
     </div>
-    <form action="/shoes/zapatos/crear" method="post">
+    <form action="/shoes/clientes/actualizar" method="post">
         <div id="principal" class="row justify-content-md-center">
+            <input id="clienteID" type="text" value="<%= codigoCli %>" name="codigoCli" hidden>
             <div class="col-lg-4">
-                <label for="marcaID">Marca</label>
+                <label for="nombreID">Nombre</label>
             </div>
             <div class="col-lg-8">
-                <input id="marcaID" class="form-control" name="marca" type="text" required>
+                <input id="nombreID" class="form-control" name="nombre" type="text" required>
             </div>
             <div class="col-lg-4">
-                <label for="colorID">Color</label>
+                <label for="apellidoID">Apellido</label>
             </div>
             <div class="col-lg-8">
-                <input id="colorID" class="form-control" name="color" type="color" required>
+                <input id="apellidoID" class="form-control" name="apellido" type="text" required>
             </div>
             <div class="col-lg-4">
-                <label for="tallaID">Talla</label>
+                <label for="cedulaID">Cédula</label>
             </div>
             <div class="col-lg-8">
-                <input id="tallaID" class="form-control" name="talla" type="number" min="20" max="43" step="1" required>
-            </div>
-            <div class="col-lg-4">
-                <label for="tipoID">Tipo</label>
-            </div>
-            <div class="col-lg-8">
-                <select id="tipoID" class="form-control" name="tipo" type="text" required>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                </select>
-            </div>
-            <div class="col-lg-4">
-                <label for="cantidadID">Cantidad</label>
-            </div>
-            <div class="col-lg-8">
-                <input id="cantidadID" class="form-control" name="cantidad" type="number" required>
-            </div>
-            <div class="col-lg-4">
-                <label for="precioID">Precio</label>
-            </div>
-            <div class="col-lg-8">
-                <input id="precioID" class="form-control" name="precio" type="number" step="0.01" required>
+                <input id="cedulaID" class="form-control" name="cedula" type="number" required>
             </div>
             <div id="botones" class="col-lg-12">
-                <button id="btn_insertar" type="submit" class="btn btn-warning">Insertar</button>
-                <a href="/shoes/zapatos">
+                <button id="btn_actualizar" type="submit" class="btn btn-primary">Agregar cambios</button>
+                <a href="/shoes/clientes">
                     <button type="button" class="btn btn-danger">Cancelar</button>
                 </a>
             </div>
         </div>
     </form>
+
 </div>
 </body>
 </html>

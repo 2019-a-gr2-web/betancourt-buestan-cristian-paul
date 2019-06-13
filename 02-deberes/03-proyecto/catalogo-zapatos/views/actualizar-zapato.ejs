@@ -12,7 +12,7 @@
         }
 
         #titulo_zapatos {
-            color: #24AD46;
+            color: #245FAD;
             margin: 45px 30px 20px 30px;
             text-align: center;
         }
@@ -22,7 +22,7 @@
             text-align: right;
         }
 
-        #btn_insertar {
+        #btn_actualizar {
             color: #FFFFFF;
         }
     </style>
@@ -37,10 +37,11 @@
         </nav>
     </div>
     <div class="row">
-        <div id="titulo_zapatos" class="col-lg-12"><h1>Registro zapato</h1></div>
+        <div id="titulo_zapatos" class="col-lg-12"><h1>Actualizar zapato</h1></div>
     </div>
-    <form action="/shoes/zapatos/crear" method="post">
+    <form action="/shoes/zapatos/actualizar" method="post">
         <div id="principal" class="row justify-content-md-center">
+            <input id="codigoZap" type="text" name="codigoZap" value="<%=codigoZap%>" hidden>
             <div class="col-lg-4">
                 <label for="marcaID">Marca</label>
             </div>
@@ -81,7 +82,7 @@
                 <input id="precioID" class="form-control" name="precio" type="number" step="0.01" required>
             </div>
             <div id="botones" class="col-lg-12">
-                <button id="btn_insertar" type="submit" class="btn btn-warning">Insertar</button>
+                <button id="btn_actualizar" type="submit" class="btn btn-warning">Agregar cambios</button>
                 <a href="/shoes/zapatos">
                     <button type="button" class="btn btn-danger">Cancelar</button>
                 </a>

@@ -30,8 +30,7 @@ export class AppController {
     @Get('clientes')
     listaClientes(@Response() res) {
         //leer lista de clientes del servicio
-        const listaClientes: string[] = []
-        res.render('lista-clientes', {listaClientes: listaClientes})
+        res.render('lista-clientes')
     }
 
     @Get('clientes/crear')
@@ -44,7 +43,8 @@ export class AppController {
         cliente.nombre = cliente.nombre.toString()
         cliente.apellido = cliente.nombre.toString()
         cliente.cedula = cliente.cedula.toString()
-        console.log(`${cliente.nombre} ${cliente.apellido} ${cliente.cedula}`)
+        const resp = this.__appService.insertarCliente(cliente)
+        console.log(resp)
         //llamar al servicio que inserte a la base de datos
         res.redirect('/shoes/clientes')
     }
@@ -55,17 +55,23 @@ export class AppController {
         res.redirect('/shoes/clientes')
     }
 
-    @Get('clientes/actualizar/:idCli')
+    @Get('clientes/actualizar/:codigoCli')
     actualizarCliente(@Response() res, @Param() par) {
-        const idCli = par.idCli
+        const codigoCli = par.codigoCli
         //buscar cliente y enviar en JSON
-        res.render('actualizar-cliente', {idCli: idCli})
+        res.render('actualizar-cliente', {codigoCli: codigoCli})
+    }
+
+    @Post('clientes/actualizar')
+    ejecutarActualizarCliente(@Body() cliente: Cliente, @Response() res) {
+        console.log(`${cliente.codigoCli} ${cliente.nombre} ${cliente.apellido}`)
+        res.redirect('/shoes/clientes')
     }
 
     ////COMPRAS///////////////////////////////////////////////////////////////////////////////////
     @Get('compras')
     listaCompras(@Response() res) {
-        const listaClientes: string[] = []
+        const listaClientes: Cliente[] = []
         res.render('lista-compras', {listaClientes: listaClientes})
     }
 
@@ -94,10 +100,32 @@ export class AppController {
         zapato.cantidad = Number(zapato.cantidad)
         zapato.precio = Number(zapato.precio)
         zapato.tipo = zapato.tipo.toString()
-// añadir a la base de datos
-        console.log(`${zapato.marca} ${zapato.color} ${zapato.talla} ${zapato.cantidad} ${zapato.precio} ${zapato.tipo}`)
+        console.log(this.__appService.insertarZapato(zapato))
         res.redirect('/shoes/zapatos')
     }
+
+    @Get('zapatos/actualizar/:codigoZap')
+    actualizarZapato(@Param() param, @Response() res) {
+        //obtener por id el zapato completo
+        //enviar el zapato
+        const codigoZap = param.codigoZap
+        res.render('actualizar-zapato', {codigoZap: codigoZap})
+    }
+
+    @Post('zapatos/actualizar')
+    ejecutarActualizarZapato(@Body() zapato: Zapato, @Response() res) {
+        console.log(`${zapato.codigoZap} ${zapato.talla} ${zapato.tipo} ${zapato.color} ${zapato.precio} ${zapato.cantidad} ${zapato.marca}`)
+        res.redirect('/shoes/zapatos')
+    }
+
+    @Post('zapatos/borrar')
+    eliminarZapato(@Response()res, @Body() zapato: Zapato) {
+        console.log(zapato.codigoZap.toString())
+        console.log(`${zapato.codigoZap}`)
+        res.redirect('/shoes/zapatos')
+    }
+
+    /////////////////////////////////////////////////////////////
 
     @Get('inicio')
     inicio(@Response() res) {
