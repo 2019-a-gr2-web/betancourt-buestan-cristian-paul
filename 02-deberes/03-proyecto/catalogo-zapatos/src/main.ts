@@ -9,6 +9,7 @@ async function bootstrap() {
   app.use(cookieParser('examen'));
   // @ts-ignore
   app.set('view engine', 'ejs');
+  app.use(express.static('public'));
   await app.listen(3000);
 }
 bootstrap();

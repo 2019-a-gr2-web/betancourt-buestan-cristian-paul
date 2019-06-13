@@ -40,6 +40,14 @@ let AppController = class AppController {
         console.log(`${cliente.nombre} ${cliente.apellido} ${cliente.cedula}`);
         res.redirect('/shoes/clientes');
     }
+    eliminarCliente(res, cliente) {
+        console.log(cliente.codigoCli.toString());
+        res.redirect('/shoes/clientes');
+    }
+    actualizarCliente(res, par) {
+        const idCli = par.idCli;
+        res.render('actualizar-cliente', { idCli: idCli });
+    }
     listaCompras(res) {
         const listaClientes = [];
         res.render('lista-compras', { listaClientes: listaClientes });
@@ -108,6 +116,20 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "insertarCliente", null);
+__decorate([
+    common_1.Post('clientes/borrar'),
+    __param(0, common_1.Response()), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "eliminarCliente", null);
+__decorate([
+    common_1.Get('clientes/actualizar/:idCli'),
+    __param(0, common_1.Response()), __param(1, common_1.Param()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "actualizarCliente", null);
 __decorate([
     common_1.Get('compras'),
     __param(0, common_1.Response()),

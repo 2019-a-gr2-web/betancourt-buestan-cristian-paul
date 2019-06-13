@@ -16,7 +16,6 @@ export class AppController {
         res.render('login')
     }
 
-
     @Post('usuario')
     usuario(@Body('usuario') usuario: String, @Response() res) {
         res.cookie(
@@ -25,7 +24,6 @@ export class AppController {
             {                                   //opciones
                 signed: true
             }).redirect('/api/inicio');
-
     }
 
     ////CLIENTES///////////////////////////////////////////////////////////////////////////////////
@@ -49,6 +47,19 @@ export class AppController {
         console.log(`${cliente.nombre} ${cliente.apellido} ${cliente.cedula}`)
         //llamar al servicio que inserte a la base de datos
         res.redirect('/shoes/clientes')
+    }
+
+    @Post('clientes/borrar')
+    eliminarCliente(@Response()res, @Body() cliente: Cliente) {
+        console.log(cliente.codigoCli.toString())
+        res.redirect('/shoes/clientes')
+    }
+
+    @Get('clientes/actualizar/:idCli')
+    actualizarCliente(@Response() res, @Param() par) {
+        const idCli = par.idCli
+        //buscar cliente y enviar en JSON
+        res.render('actualizar-cliente', {idCli: idCli})
     }
 
     ////COMPRAS///////////////////////////////////////////////////////////////////////////////////
