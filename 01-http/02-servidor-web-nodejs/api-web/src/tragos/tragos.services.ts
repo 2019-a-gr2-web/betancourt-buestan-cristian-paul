@@ -64,16 +64,16 @@ export class TragosService {
             }
         );
     }
-
-    eliminar(id: number): Trago[] {
-        const indice = this.bddTragos.findIndex(
-            trago => {
-                return trago.id === id;
-            });
-
-        this.bddTragos.splice(indice, 1);
-        return this.bddTragos;
-    }
+    //
+    // eliminar(id: number): Trago[] {
+    //     const indice = this.bddTragos.findIndex(
+    //         trago => {
+    //             return trago.id === id;
+    //         });
+    //
+    //     this.bddTragos.splice(indice, 1);
+    //     return this.bddTragos;
+    // }
 
     actualizar(tragoActualizado: Trago, id: number): Trago[] {
         const indice = this.bddTragos.findIndex(
@@ -83,5 +83,12 @@ export class TragosService {
         tragoActualizado.id = this.bddTragos[indice].id;
         return this.bddTragos;
     }
+
+    buscar(parametrosBusqueda?): Promise<Trago[]> {
+        return this._tragosRepository.find(parametrosBusqueda)
+    }
+    // eliminar(parametroBusqueda): Promise<Trago>{
+    //     //return this._tragosRepository.delete();
+    // }
 
 }

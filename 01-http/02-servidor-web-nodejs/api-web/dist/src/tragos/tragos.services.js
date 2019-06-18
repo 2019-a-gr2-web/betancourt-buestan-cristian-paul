@@ -57,19 +57,15 @@ let TragosService = class TragosService {
             return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
         });
     }
-    eliminar(id) {
-        const indice = this.bddTragos.findIndex(trago => {
-            return trago.id === id;
-        });
-        this.bddTragos.splice(indice, 1);
-        return this.bddTragos;
-    }
     actualizar(tragoActualizado, id) {
         const indice = this.bddTragos.findIndex(trago => {
             return trago.id === id;
         });
         tragoActualizado.id = this.bddTragos[indice].id;
         return this.bddTragos;
+    }
+    buscar(parametrosBusqueda) {
+        return this._tragosRepository.find(parametrosBusqueda);
     }
 };
 TragosService = __decorate([

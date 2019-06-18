@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/zapato.entity.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-cliente.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.services.js" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.services.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.services.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/src/app.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-zapato.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-zapato.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,11 +13,143 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-316704112">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="ts" value="543" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="TypeScript" value="543" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ts" value="11" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="TypeScript" value="11" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="betancourt-buestan-cristian-paul" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.services.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.entity.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.entity.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,15 +176,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/02-deberes/01-calculadora/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/copia/cinecalidad.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/trago.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/SistemaOperativo.ts" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/sistemaOperativo.ts" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/src/interfaces/aplicacion.ts" />
@@ -99,10 +204,7 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-cliente.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.services.ts" />
         <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts" />
@@ -117,8 +219,22 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-cliente.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.entity.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.module.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.module.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.services.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.entity.ts" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
@@ -132,6 +248,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +281,24 @@
               <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
               <item name="api-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="distribuidor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
+              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fiesta" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
@@ -262,7 +397,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,15 +409,17 @@
     <property name="ts.external.directory.path" value="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\distribuidor" />
+      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\fiesta" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\views" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\01-bimestre\views" />
+      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\views\peliculas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images\movies" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\views" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\01-bimestre\views" />
-      <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\views\peliculas" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,12 +484,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165168000" />
+    <option name="totallyTimeSpent" value="167913000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.21877065" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.21861777" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -365,7 +502,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32647058" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.5730337" visible="true" weight="0.31617647" />
+      <window_info anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.5730337" visible="true" weight="0.31550068" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.42696628" side_tool="true" weight="0.22058824" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32098764" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -377,20 +514,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-app.ejs" />
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-app.ejs" />
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/common/interfaces/modules/module-metadata.interface.d.ts" />
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
@@ -421,23 +544,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="215" column="33" selection-start-line="215" selection-start-column="33" selection-end-line="215" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#174#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/tragos.entity.ts" />
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/interfaces/trago.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -456,9 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -490,49 +597,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/core/injector/injector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4296">
-          <caret line="179" column="18" selection-start-line="179" selection-start-column="18" selection-end-line="179" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="48" lean-forward="true" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/core/injector/injector.js" />
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -541,9 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -551,44 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.services.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="29" selection-start-line="29" selection-end-line="30" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/ejs/lib/ejs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="481" column="9" selection-start-line="481" selection-start-column="9" selection-end-line="481" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="134" column="7" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="591" column="2" selection-start-line="591" selection-start-column="2" selection-end-line="591" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/core/router/router-execution-context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/ejs/lib/ejs.js" />
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/view.js" />
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/application.js" />
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/core/router/router-execution-context.js" />
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1244">
@@ -596,13 +626,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/protocol/Protocol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/protocol/Protocol.js" />
     <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1128">
@@ -614,9 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,9 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,13 +655,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/Connection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="526" column="4" lean-forward="true" selection-start-line="526" selection-start-column="4" selection-end-line="526" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/Connection.js" />
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-264">
@@ -676,9 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,6 +709,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" lean-forward="true" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.services.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="51" column="1" lean-forward="true" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

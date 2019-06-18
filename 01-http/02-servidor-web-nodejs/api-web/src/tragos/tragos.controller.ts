@@ -8,8 +8,8 @@ export class TragosController {
     }
 
     @Get('lista')
-    listarTragos(@Response() res) {
-        const arregloTragos = this._tragosService.bddTragos;
+    async listarTragos(@Response() res) {
+        const arregloTragos = await this._tragosService.buscar();
         res.render('tragos/lista-tragos', {arregloTragos: arregloTragos})
     }
 
@@ -45,14 +45,12 @@ export class TragosController {
             console.log('Error: ', e)
             res.status(500).send({mensaje: 'Error, code 500'})
         }
-
-
     }
 
     @Post('eliminar')
     eliminarTrago(@Res() res,
                   @Body('id') id: number) {
-        this._tragosService.eliminar(id);
+        //this._tragosService.eliminar(id);
         res.redirect('/api/traguito/lista');
     }
 }
