@@ -21,20 +21,32 @@ export class TragosService {
         this.crear(traguito);
 
         const objetoEntidad = this._tragosRepository.create(traguito)
-        this._tragosRepository.save(objetoEntidad).then(datos => {
-            console.log('Dato creado:', datos)
-        }).catch(
+        console.log('Linea 1')
+        this._tragosRepository
+            .save(objetoEntidad)
+            .then(datos => {
+                console.log('Linea 2')
+                console.log('Dato creado:', datos)
+            }).catch(
             error => {
+                console.log('Linea 3')
                 console.log('Error', error)
             }
         )
+        console.log('Linea 4')
     }
 
-    crear(nuevoTrago: Trago): Trago {
-        nuevoTrago.id = this.recnum;
-        this.recnum++;
-        this.bddTragos.push(nuevoTrago);
-        return nuevoTrago;
+    crear(nuevoTrago: Trago): Promise<Trago> {
+        // nuevoTrago.id = this.recnum;
+        // this.recnum++;
+        // this.bddTragos.push(nuevoTrago);
+        // return nuevoTrago;
+
+        // crear instancia de la entidad
+        const objetoEntidad = this._tragosRepository
+            .create(nuevoTrago)
+        return this._tragosRepository.save(objetoEntidad)    //Promesa
+
     }
 
     buscarPorId(id: number): Trago {

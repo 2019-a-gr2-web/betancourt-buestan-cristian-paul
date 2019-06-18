@@ -19,7 +19,7 @@ export class TragosController {
     }
 
     @Post('crear')
-    crearTragoPost(
+    async crearTragoPost(
         @Body() trago: Trago,
         @Response() res
         // @Body('nombre') nombre: string,
@@ -37,14 +37,21 @@ export class TragosController {
         trago.gradosAlcohol = Number(trago.gradosAlcohol);
         trago.precio = Number(trago.precio);
         trago.fechaCaducidad = new Date(trago.fechaCaducidad);
-        this._tragosService.crear(trago);
-        res.redirect('/api/traguito/lista');
-        console.log(trago);
+        try {
+            const respuestaCrear = await this._tragosService.crear(trago);
+            console.log('RESPUESTA: ', respuestaCrear)
+            res.redirect('/api/traguito/lista');
+        } catch (e) {
+            console.log('Error: ', e)
+            res.status(500).send({mensaje: 'Error, code 500'})
+        }
+
+
     }
 
     @Post('eliminar')
     eliminarTrago(@Res() res,
-        @Body('id') id: number) {
+                  @Body('id') id: number) {
         this._tragosService.eliminar(id);
         res.redirect('/api/traguito/lista');
     }
