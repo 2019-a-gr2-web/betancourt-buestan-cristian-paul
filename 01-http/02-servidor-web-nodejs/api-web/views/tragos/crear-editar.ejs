@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 </head>
 <body>
+<% const existeMensaje = mensaje %>
+<% if (existeMensaje){ %>
+    <p>ERROR EN FORMULARIO
+        <%= mensaje %>
+    </p>
+<% } %>
 <h1>Formulario de Creación</h1>
 <p>Crear un nuevo trago.</p>
 <form action="/api/traguito/crear" method="post">

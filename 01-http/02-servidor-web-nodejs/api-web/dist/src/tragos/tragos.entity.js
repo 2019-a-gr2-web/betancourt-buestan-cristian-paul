@@ -47,11 +47,13 @@ __decorate([
     typeorm_1.Column({
         type: 'date',
         name: 'fecha_caducidad',
+        default: '2019-06-19'
     }),
     __metadata("design:type", Date)
 ], TragosEntity.prototype, "fechaCaducidad", void 0);
 __decorate([
     typeorm_1.Column({
+        nullable: true,
         type: 'decimal',
         precision: 10,
         scale: 2,

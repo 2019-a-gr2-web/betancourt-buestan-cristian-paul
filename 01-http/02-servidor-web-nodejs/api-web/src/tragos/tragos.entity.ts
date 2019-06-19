@@ -33,10 +33,12 @@ export class TragosEntity {
     @Column({
         type: 'date',
         name: 'fecha_caducidad',
+        default: '2019-06-19'
     })
     fechaCaducidad: Date;
 
     @Column({
+        nullable: true,
         type: 'decimal',
         precision: 10,
         scale: 2,
@@ -45,8 +47,8 @@ export class TragosEntity {
     precio: number;
 
     @ManyToOne(type => DistribuidorEntity, distribuidor => distribuidor.tragos)
-    distribuidorID: DistribuidorEntity
+    distribuidorID: DistribuidorEntity;
 
     @OneToMany(type => FiestaEntity, fiesta => fiesta)
-    fiestas: FiestaEntity[]
+    fiestas: FiestaEntity[];
 }

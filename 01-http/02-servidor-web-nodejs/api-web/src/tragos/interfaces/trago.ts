@@ -4,6 +4,6 @@ export interface Trago {
     tipo: 'Ron' | 'Vodka' | 'Whiskey' | 'Tequila' | 'Puntas' | 'Cerveza';
     gradosAlcohol: number;
     fechaCaducidad: Date;
-    precio: number
+    precio: number;
 
 }
