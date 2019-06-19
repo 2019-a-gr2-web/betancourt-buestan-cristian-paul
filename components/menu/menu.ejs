@@ -1,0 +1,11 @@
+<ul>
+    <li>Inicio</li>
+    <li>Login</li>
+</ul>
+<% const existeNombre = typeof nombre !== "undefined"; %>
+<p>Bienvenido: <%= if (existeNombre){ %>
+    <%= nombre %>
+    <% }else{ %>
+        Usuario
+    <% } %>
+</p>
