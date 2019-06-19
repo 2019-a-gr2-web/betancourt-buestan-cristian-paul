@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _a;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const tragos_entity_1 = require("./tragos.entity");
@@ -31,17 +30,22 @@ let TragosService = class TragosService {
         };
         this.crear(traguito);
         const objetoEntidad = this._tragosRepository.create(traguito);
-        this._tragosRepository.save(objetoEntidad).then(datos => {
+        console.log('Linea 1');
+        this._tragosRepository
+            .save(objetoEntidad)
+            .then(datos => {
+            console.log('Linea 2');
             console.log('Dato creado:', datos);
         }).catch(error => {
+            console.log('Linea 3');
             console.log('Error', error);
         });
+        console.log('Linea 4');
     }
     crear(nuevoTrago) {
-        nuevoTrago.id = this.recnum;
-        this.recnum++;
-        this.bddTragos.push(nuevoTrago);
-        return nuevoTrago;
+        const objetoEntidad = this._tragosRepository
+            .create(nuevoTrago);
+        return this._tragosRepository.save(objetoEntidad);
     }
     buscarPorId(id) {
         return this.bddTragos.find(trago => {
@@ -53,13 +57,6 @@ let TragosService = class TragosService {
             return trago.nombre.toUpperCase().includes(nombre.toUpperCase());
         });
     }
-    eliminar(id) {
-        const indice = this.bddTragos.findIndex(trago => {
-            return trago.id === id;
-        });
-        this.bddTragos.splice(indice, 1);
-        return this.bddTragos;
-    }
     actualizar(tragoActualizado, id) {
         const indice = this.bddTragos.findIndex(trago => {
             return trago.id === id;
@@ -67,11 +64,14 @@ let TragosService = class TragosService {
         tragoActualizado.id = this.bddTragos[indice].id;
         return this.bddTragos;
     }
+    buscar(parametrosBusqueda) {
+        return this._tragosRepository.find(parametrosBusqueda);
+    }
 };
 TragosService = __decorate([
     common_1.Injectable(),
     __param(0, typeorm_1.InjectRepository(tragos_entity_1.TragosEntity)),
-    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_2.Repository !== "undefined" && typeorm_2.Repository) === "function" ? _a : Object])
+    __metadata("design:paramtypes", [typeorm_2.Repository])
 ], TragosService);
 exports.TragosService = TragosService;
 //# sourceMappingURL=tragos.services.js.map
