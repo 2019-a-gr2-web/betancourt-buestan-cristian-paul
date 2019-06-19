@@ -3,6 +3,7 @@
 <head>
 </head>
 <body>
+<%- include('../components/menu/menu') %>
 <% const existeMensaje = mensaje %>
 <% if (existeMensaje){ %>
     <p>ERROR EN FORMULARIO
@@ -45,5 +46,6 @@
     <!--<button type="submit">Submit</button>-->
     <button>Enviar información</button>
 </form>
+<%- include('../components/footer/footer') %>
 </body>
 </html>
