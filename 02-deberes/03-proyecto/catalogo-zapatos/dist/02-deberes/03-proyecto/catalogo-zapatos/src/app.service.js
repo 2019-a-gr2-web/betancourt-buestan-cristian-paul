@@ -25,23 +25,63 @@ let AppService = class AppService {
         this._comprasRepository = _comprasRepository;
     }
     insertarCliente(cliente) {
-        this._clienteRepository.save(this._clienteRepository.create(cliente))
-            .then(datos => {
-            return `Cliente creado exitosamente`;
-        }).catch(error => {
-            return `Error: ${error}`;
-        });
+        const objetoEntidad = this._clienteRepository
+            .create(cliente);
+        return this._clienteRepository.save(objetoEntidad);
     }
-    obtenerClientes() {
-        return this._clienteRepository.find({ order: { codigoCli: "DESC" } })[0];
+    obtenerClientes(parametrosBusqueda) {
+        return this._clienteRepository.find(parametrosBusqueda);
+    }
+    actualizarCliente(cliente) {
+        return this._clienteRepository.createQueryBuilder()
+            .update(cliente)
+            .set({ nombre: `${cliente.nombre}`, apellido: `${cliente.apellido}`, cedula: `${cliente.cedula}` })
+            .where("codigoCli = :id", { id: cliente.codigoCli })
+            .execute();
+    }
+    borrarCliente(cliente) {
+        return this._clienteRepository
+            .createQueryBuilder()
+            .delete()
+            .from('cliente')
+            .where("codigoCli = :id", { id: cliente.codigoCli })
+            .execute();
     }
     insertarZapato(zapato) {
-        this._zapatoRepository.save(this._zapatoRepository.create(zapato))
-            .then(datos => {
-            return `Cliente creado exitosamente`;
-        }).catch(error => {
-            return `Error: ${error}`;
-        });
+        const objetoEntidad = this._zapatoRepository
+            .create(zapato);
+        return this._zapatoRepository.save(objetoEntidad);
+    }
+    obtenerZapatos(parametrosBusqueda) {
+        return this._zapatoRepository.find(parametrosBusqueda);
+    }
+    actualizarZapato(zapato) {
+        return this._zapatoRepository.createQueryBuilder()
+            .update(zapato)
+            .set({
+            codigoZap: zapato.codigoZap,
+            talla: zapato.talla,
+            tipo: `${zapato.tipo}`,
+            color: `${zapato.color}`,
+            precio: zapato.precio,
+            cantidad: zapato.cantidad,
+            marca: `${zapato.marca}`
+        })
+            .where("codigoZap = :id", {
+            id: zapato.codigoZap
+        })
+            .execute();
+    }
+    borrarZapato(zapato) {
+        return this._zapatoRepository
+            .createQueryBuilder()
+            .delete()
+            .from('zapato')
+            .where("codigoZap = :id", { id: zapato.codigoZap })
+            .execute();
+    }
+    obtenerCompras(parametrosBusqueda) {
+        return this._comprasRepository.find(parametrosBusqueda);
     }
 };
 AppService = __decorate([

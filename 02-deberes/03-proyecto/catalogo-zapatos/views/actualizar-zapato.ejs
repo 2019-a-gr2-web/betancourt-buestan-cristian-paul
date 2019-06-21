@@ -36,35 +36,38 @@
             <a class="navbar-brand" href="/shoes/zapatos">Zapatos</a>
         </nav>
     </div>
+    <%const c = arregloZapatos.find(zapato=> zapato.codigoZap= codigoZap)%>
+
     <div class="row">
         <div id="titulo_zapatos" class="col-lg-12"><h1>Actualizar zapato</h1></div>
     </div>
     <form action="/shoes/zapatos/actualizar" method="post">
         <div id="principal" class="row justify-content-md-center">
-            <input id="codigoZap" type="text" name="codigoZap" value="<%=codigoZap%>" hidden>
+            <input type="hidden" name="_method" value="PUT">
+            <input id="codigoZap" type="text" name="codigoZap" value="<%= c.codigoZap %>" hidden>
             <div class="col-lg-4">
                 <label for="marcaID">Marca</label>
             </div>
             <div class="col-lg-8">
-                <input id="marcaID" class="form-control" name="marca" type="text" required>
+                <input id="marcaID" class="form-control" name="marca" type="text" value="<%= c.marca %>" required>
             </div>
             <div class="col-lg-4">
                 <label for="colorID">Color</label>
             </div>
             <div class="col-lg-8">
-                <input id="colorID" class="form-control" name="color" type="color" required>
+                <input id="colorID" class="form-control" name="color" type="color" value="<%= c.color%>" required>
             </div>
             <div class="col-lg-4">
                 <label for="tallaID">Talla</label>
             </div>
             <div class="col-lg-8">
-                <input id="tallaID" class="form-control" name="talla" type="number" min="20" max="43" step="1" required>
+                <input id="tallaID" class="form-control" name="talla" type="number" value="<%= c.talla %>" min="20" max="43" step="1" required>
             </div>
             <div class="col-lg-4">
                 <label for="tipoID">Tipo</label>
             </div>
             <div class="col-lg-8">
-                <select id="tipoID" class="form-control" name="tipo" type="text" required>
+                <select id="tipoID" class="form-control" name="tipo" type="text" value="<%= c.tipo %>" required>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                 </select>
@@ -73,13 +76,13 @@
                 <label for="cantidadID">Cantidad</label>
             </div>
             <div class="col-lg-8">
-                <input id="cantidadID" class="form-control" name="cantidad" type="number" required>
+                <input id="cantidadID" class="form-control" name="cantidad" type="number" value="<%= c.cantidad %>"required>
             </div>
             <div class="col-lg-4">
                 <label for="precioID">Precio</label>
             </div>
             <div class="col-lg-8">
-                <input id="precioID" class="form-control" name="precio" type="number" step="0.01" required>
+                <input id="precioID" class="form-control" name="precio" type="number"  value="<%= c.precio %>" step="0.01" required>
             </div>
             <div id="botones" class="col-lg-12">
                 <button id="btn_actualizar" type="submit" class="btn btn-warning">Agregar cambios</button>

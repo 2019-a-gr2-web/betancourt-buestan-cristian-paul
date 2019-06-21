@@ -54,26 +54,28 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                    <a href="/shoes/clientes/actualizar/1">
-                        <input type="image" src="/images/editar.png" align="center" width="30" height="30"
-                               alt="Submit Form">
-                    </a>
-                </td>
-                <td>
-                    <form action="/shoes/clientes/borrar" method="post">
-                        <input type="text" id="clienteID" name="codigoCli" value="0" hidden>
-                        <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
-                               alt="Submit Form">
-                    </form>
-                </td>
-                <td>1</td>
-                <td>Cristian</td>
-                <td>Betancourt</td>
-                <td>1718057688</td>
-            </tr>
-
+            <% arregloClientes.forEach( cliente=> { %>
+                <tr>
+                    <td>
+                        <a href="/shoes/clientes/actualizar/<%= cliente.codigoCli %>">
+                            <input type="image" src="/images/editar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </a>
+                    </td>
+                    <td>
+                        <form action="/shoes/clientes/actualizar" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="text" id="clienteID" name="codigoCli" value="<%= cliente.codigoCli %>" hidden>
+                            <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </form>
+                    </td>
+                    <td><%= cliente.codigoCli %></td>
+                    <td><%= cliente.nombre %></td>
+                    <td><%= cliente.apellido %></td>
+                    <td><%= cliente.cedula %></td>
+                </tr>
+            <% }) %>
             </tbody>
         </table>
     </div>

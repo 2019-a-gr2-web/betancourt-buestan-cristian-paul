@@ -10,43 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const compras_entity_1 = require("./compras.entity");
-let ClienteEntity = class ClienteEntity {
+const typeorm_2 = require("typeorm");
+const tragos_entity_1 = require("../tragos/tragos.entity");
+let DistribuidorEntity = class DistribuidorEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], ClienteEntity.prototype, "codigoCli", void 0);
+], DistribuidorEntity.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column({
-        type: 'varchar',
-        length: 10,
-        name: 'nombre',
-    }),
+    typeorm_1.Column(),
     __metadata("design:type", String)
-], ClienteEntity.prototype, "nombre", void 0);
+], DistribuidorEntity.prototype, "nombre", void 0);
 __decorate([
-    typeorm_1.Column({
-        type: 'varchar',
-        length: 15,
-        name: 'apellido',
-    }),
-    __metadata("design:type", String)
-], ClienteEntity.prototype, "apellido", void 0);
-__decorate([
-    typeorm_1.Column({
-        type: 'varchar',
-        length: 15,
-        name: 'cedula',
-    }),
-    __metadata("design:type", String)
-], ClienteEntity.prototype, "cedula", void 0);
-__decorate([
-    typeorm_1.OneToMany(type => compras_entity_1.ComprasEntity, compras => compras),
+    typeorm_2.OneToMany(type => tragos_entity_1.TragosEntity, trago => trago.id),
     __metadata("design:type", Array)
-], ClienteEntity.prototype, "compras", void 0);
-ClienteEntity = __decorate([
-    typeorm_1.Entity('Cliente')
-], ClienteEntity);
-exports.ClienteEntity = ClienteEntity;
-//# sourceMappingURL=cliente.entity.js.map
+], DistribuidorEntity.prototype, "tragos", void 0);
+DistribuidorEntity = __decorate([
+    typeorm_1.Entity('bd_distribuidor')
+], DistribuidorEntity);
+exports.DistribuidorEntity = DistribuidorEntity;
+//# sourceMappingURL=distribuidor.entity.js.map

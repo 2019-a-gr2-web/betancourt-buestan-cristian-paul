@@ -40,29 +40,31 @@
             <a class="navbar-brand" href="/shoes/zapatos">Zapatos</a>
         </nav>
     </div>
+    <%const c = arregloClientes.find(cliente => cliente.codigoCli= codigoCli)%>
     <div class="row">
         <div id="titulo_clientes" class="col-lg-12"><h1>Actualizar cliente</h1></div>
     </div>
     <form action="/shoes/clientes/actualizar" method="post">
         <div id="principal" class="row justify-content-md-center">
-            <input id="clienteID" type="text" value="<%= codigoCli %>" name="codigoCli" hidden>
+            <input type="hidden" name="_method" value="PUT">
+            <input id="clienteID" type="text" value="<%= c.codigoCli %>" name="codigoCli" hidden>
             <div class="col-lg-4">
                 <label for="nombreID">Nombre</label>
             </div>
             <div class="col-lg-8">
-                <input id="nombreID" class="form-control" name="nombre" type="text" required>
+                <input id="nombreID" class="form-control" name="nombre" type="text" value="<%= c.nombre %>" required>
             </div>
             <div class="col-lg-4">
                 <label for="apellidoID">Apellido</label>
             </div>
             <div class="col-lg-8">
-                <input id="apellidoID" class="form-control" name="apellido" type="text" required>
+                <input id="apellidoID" class="form-control" name="apellido" type="text" value="<%= c.apellido %>" required>
             </div>
             <div class="col-lg-4">
                 <label for="cedulaID">Cédula</label>
             </div>
             <div class="col-lg-8">
-                <input id="cedulaID" class="form-control" name="cedula" type="number" required>
+                <input id="cedulaID" class="form-control" name="cedula" type="number" value="<%= c.cedula %>" required>
             </div>
             <div id="botones" class="col-lg-12">
                 <button id="btn_actualizar" type="submit" class="btn btn-primary">Agregar cambios</button>

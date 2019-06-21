@@ -1,9 +1,6 @@
-import {Body, Controller, Get, Param, Post, Query, Request, Response} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, Put, Query, Request, Response} from '@nestjs/common';
 import {AppService} from './app.service';
 import {Cliente, Zapato} from "./interfaces/interfaces";
-
-//import {Aplicacion, SistemaOperativo} from "./interfaces/interfaces";
-
 
 @Controller('shoes')
 export class AppController {
@@ -28,9 +25,9 @@ export class AppController {
 
     ////CLIENTES///////////////////////////////////////////////////////////////////////////////////
     @Get('clientes')
-    listaClientes(@Response() res) {
-        //leer lista de clientes del servicio
-        res.render('lista-clientes')
+    async listaClientes(@Response() res) {
+        const arregloClientes = await this.__appService.obtenerClientes();
+        res.render('lista-clientes', {arregloClientes: arregloClientes})
     }
 
     @Get('clientes/crear')
@@ -39,13 +36,11 @@ export class AppController {
     }
 
     @Post('clientes/crear')
-    insertarCliente(@Body() cliente: Cliente, @Response() res) {
+    async insertarCliente(@Body() cliente: Cliente, @Response() res) {
         cliente.nombre = cliente.nombre.toString()
-        cliente.apellido = cliente.nombre.toString()
+        cliente.apellido = cliente.apellido.toString()
         cliente.cedula = cliente.cedula.toString()
-        const resp = this.__appService.insertarCliente(cliente)
-        console.log(resp)
-        //llamar al servicio que inserte a la base de datos
+        const resp = await this.__appService.insertarCliente(cliente)
         res.redirect('/shoes/clientes')
     }
 
@@ -56,23 +51,48 @@ export class AppController {
     }
 
     @Get('clientes/actualizar/:codigoCli')
-    actualizarCliente(@Response() res, @Param() par) {
+    async actualizarCliente(@Response() res, @Param() par) {
         const codigoCli = par.codigoCli
-        //buscar cliente y enviar en JSON
-        res.render('actualizar-cliente', {codigoCli: codigoCli})
+        //const parametroBusqueda = `{where:{codigoCli:${codigoCli}}}`
+        const arregloClientes = await this.__appService.obtenerClientes()
+        res.render('actualizar-cliente', {arregloClientes: arregloClientes, codigoCli: codigoCli})
     }
 
     @Post('clientes/actualizar')
-    ejecutarActualizarCliente(@Body() cliente: Cliente, @Response() res) {
-        console.log(`${cliente.codigoCli} ${cliente.nombre} ${cliente.apellido}`)
+    async ejecutarCambioCliente(@Body('_method') metodo,
+                                @Response() res,
+                                @Body('codigoCli') codigoCli: string,
+                                @Body('nombre') nombre?: string,
+                                @Body('apellido') apellido?: string,
+                                @Body('cedula') cedula?: string,
+    ) {
+        const cliente: Cliente = {} as Cliente
+        cliente.codigoCli = Number(codigoCli)
+        if (metodo == "DELETE") {
+            await this.__appService.borrarCliente(cliente)
+        } else {
+            cliente.nombre = nombre
+            cliente.apellido = apellido
+            cliente.cedula = cedula
+            await this.__appService.actualizarCliente(cliente)
+        }
         res.redirect('/shoes/clientes')
     }
 
     ////COMPRAS///////////////////////////////////////////////////////////////////////////////////
     @Get('compras')
-    listaCompras(@Response() res) {
-        const listaClientes: Cliente[] = []
-        res.render('lista-compras', {listaClientes: listaClientes})
+    async listaCompras(@Response() res) {
+        const arregloZapatos = await this.__appService.obtenerZapatos();
+        // const arregloClientes = await this.__appService.obtenerClientes();
+        const arregloCompras = await this.__appService.obtenerCompras();
+
+        res.render('lista-compras',
+            {
+                 // arregloClientes: arregloClientes,
+                arregloZapatos: arregloZapatos,
+                arregloCompras: arregloCompras,
+            }
+        )
     }
 
     @Get('compras/crear')
@@ -80,48 +100,64 @@ export class AppController {
         res.render('crear-compra')
     }
 
-    @Get('zapatos')
-    listaZapatos(@Response() res) {
-        const listaClientes: string[] = []
-        res.render('lista-zapatos', {listaClientes: listaClientes})
-    }
 
     ////ZAPATOS///////////////////////////////////////////////////////////////////////////////////
+    @Get('zapatos')
+    async listaZapatos(@Response() res) {
+        const arregloZapatos = await this.__appService.obtenerZapatos();
+        res.render('lista-zapatos', {arregloZapatos: arregloZapatos})
+    }
+
     @Get('zapatos/crear')
     crearZapato(@Response() res) {
         res.render('crear-zapato')
     }
 
     @Post('zapatos/crear')
-    insertarZapato(@Body() zapato: Zapato, @Response() res) {
+    async insertarZapato(@Body() zapato: Zapato, @Response() res) {
         zapato.marca = zapato.marca.toString()
         zapato.color = zapato.color.toString()
         zapato.talla = Number(zapato.talla)
         zapato.cantidad = Number(zapato.cantidad)
         zapato.precio = Number(zapato.precio)
         zapato.tipo = zapato.tipo.toString()
-        console.log(this.__appService.insertarZapato(zapato))
+        await this.__appService.insertarZapato(zapato)
         res.redirect('/shoes/zapatos')
     }
 
     @Get('zapatos/actualizar/:codigoZap')
-    actualizarZapato(@Param() param, @Response() res) {
-        //obtener por id el zapato completo
-        //enviar el zapato
-        const codigoZap = param.codigoZap
-        res.render('actualizar-zapato', {codigoZap: codigoZap})
+    async actualizarZapato(@Param() par, @Response() res) {
+        const codigoZap = par.codigoZap
+        const arregloZapatos = await this.__appService.obtenerZapatos()
+        res.render('actualizar-zapato', {arregloZapatos: arregloZapatos, codigoZap: codigoZap})
     }
 
     @Post('zapatos/actualizar')
-    ejecutarActualizarZapato(@Body() zapato: Zapato, @Response() res) {
-        console.log(`${zapato.codigoZap} ${zapato.talla} ${zapato.tipo} ${zapato.color} ${zapato.precio} ${zapato.cantidad} ${zapato.marca}`)
-        res.redirect('/shoes/zapatos')
-    }
-
-    @Post('zapatos/borrar')
-    eliminarZapato(@Response()res, @Body() zapato: Zapato) {
-        console.log(zapato.codigoZap.toString())
-        console.log(`${zapato.codigoZap}`)
+    async ejecutarCambioZapato(@Body('_method') metodo,
+                               @Response() res,
+                               @Body('codigoZap') codigoZap: string,
+                               @Body('talla') talla?: string,
+                               @Body('tipo') tipo?: string,
+                               @Body('color') color?: string,
+                               @Body('precio') precio?: string,
+                               @Body('cantidad') cantidad?: string,
+                               @Body('marca') marca?: string
+    ) {
+        console.log("///////////// ",metodo)
+        const zapato: Zapato = {} as Zapato
+        zapato.codigoZap = Number(codigoZap)
+        if (metodo == "DELETE") {
+            await this.__appService.borrarZapato(zapato)
+        } else {
+            zapato.codigoZap = Number(codigoZap)
+            zapato.talla = Number(talla)
+            zapato.marca = marca
+            zapato.color = color
+            zapato.cantidad = Number(cantidad)
+            zapato.precio = Number(precio)
+            zapato.tipo = tipo
+            await this.__appService.actualizarZapato(zapato)
+        }
         res.redirect('/shoes/zapatos')
     }
 
