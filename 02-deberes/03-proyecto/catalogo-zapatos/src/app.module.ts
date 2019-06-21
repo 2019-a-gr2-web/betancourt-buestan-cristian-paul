@@ -16,16 +16,18 @@ import {ComprasEntity} from "./compras.entity";
             username: 'CRISTIAN',
             password: 'password',
             database: 'catalogo_zapatos',
-            entities: [ClienteEntity,ZapatoEntity,ComprasEntity],
+            entities: [ClienteEntity, ZapatoEntity, ComprasEntity],
             synchronize: true,
-            insecureAuth: true
+            insecureAuth: true,
+            dropSchema: true
         }),
+
         TypeOrmModule.forFeature(
             [
-                ClienteEntity,ZapatoEntity,ComprasEntity
-            ],'default'
-        )
+                ClienteEntity, ZapatoEntity, ComprasEntity
 
+            ], 'default'
+        )
     ],
     controllers: [AppController],
     providers: [AppService],

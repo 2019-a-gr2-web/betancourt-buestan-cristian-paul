@@ -1,5 +1,8 @@
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
+import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
 import {Compras} from "./interfaces/interfaces";
+import {TragosEntity} from "../../../../01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity";
+import {ZapatoEntity} from "./zapato.entity";
+import {ClienteEntity} from "./cliente.entity";
 
 @Entity('Compras') // Nombre tabla
 export class ComprasEntity {
@@ -34,9 +37,10 @@ export class ComprasEntity {
     })
     validez: number;
 
-    // @OneToMany(type => Compras, compra => compra.cliente)
-    // co
-    //     :
-    //     Photo[];
+    @ManyToOne( type => ZapatoEntity, zapato=>zapato.compras)
+    ComZapId: ZapatoEntity;
+
+    @ManyToOne( type => ClienteEntity, cliente=>cliente.compras)
+    ComCliId: ClienteEntity;
 }
 

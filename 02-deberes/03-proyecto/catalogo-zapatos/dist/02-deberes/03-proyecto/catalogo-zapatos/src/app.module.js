@@ -28,7 +28,8 @@ AppModule = __decorate([
                 database: 'catalogo_zapatos',
                 entities: [cliente_entity_1.ClienteEntity, zapato_entity_1.ZapatoEntity, compras_entity_1.ComprasEntity],
                 synchronize: true,
-                insecureAuth: true
+                insecureAuth: true,
+                dropSchema: true
             }),
             typeorm_1.TypeOrmModule.forFeature([
                 cliente_entity_1.ClienteEntity, zapato_entity_1.ZapatoEntity, compras_entity_1.ComprasEntity

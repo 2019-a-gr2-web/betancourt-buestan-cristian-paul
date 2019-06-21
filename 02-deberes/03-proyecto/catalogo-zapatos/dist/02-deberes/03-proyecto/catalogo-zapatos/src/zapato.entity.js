@@ -10,67 +10,66 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const typeorm_2 = require("typeorm");
-const distribuidor_entity_1 = require("../distribuidor/distribuidor.entity");
-const fiesta_entity_1 = require("../fiesta/fiesta.entity");
-const typeorm_3 = require("typeorm");
-let TragosEntity = class TragosEntity {
+const compras_entity_1 = require("./compras.entity");
+let ZapatoEntity = class ZapatoEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], TragosEntity.prototype, "id", void 0);
+], ZapatoEntity.prototype, "codigoZap", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
-        length: 70,
-        name: 'nombre_trago',
+        length: 15,
+        name: 'marca',
     }),
     __metadata("design:type", String)
-], TragosEntity.prototype, "nombre", void 0);
+], ZapatoEntity.prototype, "marca", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'varchar',
-        length: 10,
-        name: 'tipo_trago',
+        length: 15,
+        name: 'color',
     }),
     __metadata("design:type", String)
-], TragosEntity.prototype, "tipo", void 0);
+], ZapatoEntity.prototype, "color", void 0);
 __decorate([
     typeorm_1.Column({
         type: 'int',
-        name: 'grados_alcohol',
+        name: 'talla',
     }),
     __metadata("design:type", Number)
-], TragosEntity.prototype, "gradosAlcohol", void 0);
+], ZapatoEntity.prototype, "talla", void 0);
 __decorate([
     typeorm_1.Column({
-        type: 'date',
-        name: 'fecha_caducidad',
-        default: '2019-06-19'
+        type: 'varchar',
+        length: 6,
+        name: 'tipo',
     }),
-    __metadata("design:type", Date)
-], TragosEntity.prototype, "fechaCaducidad", void 0);
+    __metadata("design:type", String)
+], ZapatoEntity.prototype, "tipo", void 0);
 __decorate([
     typeorm_1.Column({
-        nullable: true,
+        type: 'int',
+        name: 'cantidad',
+    }),
+    __metadata("design:type", Number)
+], ZapatoEntity.prototype, "cantidad", void 0);
+__decorate([
+    typeorm_1.Column({
         type: 'decimal',
         precision: 10,
         scale: 2,
         name: 'precio',
     }),
     __metadata("design:type", Number)
-], TragosEntity.prototype, "precio", void 0);
+], ZapatoEntity.prototype, "precio", void 0);
 __decorate([
-    typeorm_2.ManyToOne(type => distribuidor_entity_1.DistribuidorEntity, distribuidor => distribuidor.tragos),
-    __metadata("design:type", distribuidor_entity_1.DistribuidorEntity)
-], TragosEntity.prototype, "distribuidorID", void 0);
-__decorate([
-    typeorm_3.OneToMany(type => fiesta_entity_1.FiestaEntity, fiesta => fiesta),
+    typeorm_1.OneToMany(type => compras_entity_1.ComprasEntity, compras => compras),
     __metadata("design:type", Array)
-], TragosEntity.prototype, "fiestas", void 0);
-TragosEntity = __decorate([
-    typeorm_1.Entity('bd_trago')
-], TragosEntity);
-exports.TragosEntity = TragosEntity;
-//# sourceMappingURL=tragos.entity.js.map
+], ZapatoEntity.prototype, "compras", void 0);
+ZapatoEntity = __decorate([
+    typeorm_1.Entity('Zapato')
+], ZapatoEntity);
+exports.ZapatoEntity = ZapatoEntity;
+//# sourceMappingURL=zapato.entity.js.map

@@ -44,25 +44,46 @@
                 <th></th>
                 <th>Código</th>
                 <th>Cédula</th>
-                <th>Código cliente</th>
+                <th>Zapato</th>
                 <th>Fecha</th>
                 <th>Cantidad</th>
                 <th>Total</th>
                 <th>Validez</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td></td>
-                <td>1</td>
-                <td>Cristian</td>
-                <td>Betancourt</td>
-                <td>1718057688</td>
-                <td>1718057688</td>
-                <td>1718057688</td>
-                <td>1718057688</td>
-            </tr>
-            </tbody>
+            <% arregloCompras.forEach(compra=> { %>
+                <tbody>
+                <tr>
+                    <td>
+                        <form action="/shoes/compras/actualizar" method="post">
+                            <input type="text" id="compraID" name="codigoCli" value="<%= compra.codigoCom %>" hidden>
+                            <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/shoes/compras/actualizar" method="post">
+                            <input type="text" id="compraID" name="codigoCli" value="<%= compra.codigoCom %>" hidden>
+                            <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </form>
+                    </td>
+                    <td><%= compra.codigoCom %></td>
+                    <% const cliente = arregloClientes.find(c => {
+                        compra.codigoCli = c.codigoCli
+                    }) %>
+                    <td><%= cliente.cedula %></td>
+                    <% const zapato = arregloZapatos.find(z => {
+                        compra.ComZapId = z.codigoZap
+                    }) %>
+                    <td><%= zapato.codigoZap %></td>
+                    <td><%= compra.fecha %></td>
+                    <td><%= compra.cantidad %></td>
+                    <td><%= compra.total %></td>
+                    <td><%= compra.validez %></td>
+                </tr>
+                </tbody>
+            <% }) %>
         </table>
     </div>
 </div>

@@ -4,8 +4,7 @@ import {InjectRepository} from "@nestjs/typeorm";
 import {ClienteEntity} from "./cliente.entity";
 import {ZapatoEntity} from "./zapato.entity";
 import {ComprasEntity} from "./compras.entity";
-import {Cliente, Zapato} from "./interfaces/interfaces";
-import {promises} from "fs";
+import {Cliente, Compras, Zapato} from "./interfaces/interfaces";
 
 @Injectable()
 export class AppService {
@@ -20,34 +19,78 @@ export class AppService {
     }
 
     //CLIENTE//////////////////////////////
-    insertarCliente(cliente: Cliente) {
-        this._clienteRepository.save(this._clienteRepository.create(cliente))
-            .then(datos => {
-                return `Cliente creado exitosamente`
-            }).catch(
-            error => {
-                return `Error: ${error}`
-            }
-        )
+    insertarCliente(cliente: Cliente): Promise<ClienteEntity> {
+        const objetoEntidad = this._clienteRepository
+            .create(cliente)
+        return this._clienteRepository.save(objetoEntidad)
     }
 
-    obtenerClientes() {
-        return this._clienteRepository.find(
-            {order: {codigoCli: "DESC"}}
-        )[0] as Cliente[]
+    obtenerClientes(parametrosBusqueda?): Promise<ClienteEntity[]> {
+        return this._clienteRepository.find(parametrosBusqueda)
+    }
+
+    actualizarCliente(cliente: Cliente) {
+        return this._clienteRepository.createQueryBuilder()
+            .update(cliente)
+            .set({nombre: `${cliente.nombre}`, apellido: `${cliente.apellido}`, cedula: `${cliente.cedula}`})
+            .where("codigoCli = :id", {id: cliente.codigoCli})
+            .execute();
+    }
+
+    borrarCliente(cliente: Cliente) {
+        return this._clienteRepository
+            .createQueryBuilder()
+            .delete()
+            .from('cliente')
+            .where("codigoCli = :id", {id: cliente.codigoCli})
+            .execute();
     }
 
     //ZAPATOS/////////////////////////////
-    insertarZapato(zapato: Zapato) {
-        this._zapatoRepository.save(this._zapatoRepository.create(zapato))
-            .then(datos => {
-                return `Cliente creado exitosamente`
-            }).catch(
-            error => {
-                return `Error: ${error}`
-            }
-        )
+    insertarZapato(zapato: Zapato): Promise<ZapatoEntity> {
+        const objetoEntidad = this._zapatoRepository
+            .create(zapato)
+        return this._zapatoRepository.save(objetoEntidad)
     }
 
-    //COMPRA/////////////////////////////
+    obtenerZapatos(parametrosBusqueda?): Promise<ZapatoEntity[]> {
+        return this._zapatoRepository.find(parametrosBusqueda)
+    }
+
+    actualizarZapato(zapato: Zapato) {
+        return this._zapatoRepository.createQueryBuilder()
+            .update(zapato)
+            .set({
+                    codigoZap: zapato.codigoZap,
+                    talla: zapato.talla,
+                    tipo: `${zapato.tipo}`,
+                    color: `${zapato.color}`,
+                    precio: zapato.precio,
+                    cantidad: zapato.cantidad,
+                    marca: `${zapato.marca}`
+                }
+            )
+            .where(
+                "codigoZap = :id"
+                , {
+                    id: zapato.codigoZap
+                }
+            )
+            .execute();
+    }
+
+    borrarZapato(zapato: Zapato) {
+        return this._zapatoRepository
+            .createQueryBuilder()
+            .delete()
+            .from('zapato')
+            .where("codigoZap = :id", {id: zapato.codigoZap})
+            .execute();
+    }
+
+//COMPRA/////////////////////////////
+
+    obtenerCompras(parametrosBusqueda?): Promise<ComprasEntity[]> {
+        return this._comprasRepository.find(parametrosBusqueda)
+    }
 }

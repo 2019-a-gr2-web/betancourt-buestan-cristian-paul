@@ -11,6 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
@@ -27,53 +35,111 @@ let AppController = class AppController {
         }).redirect('/api/inicio');
     }
     listaClientes(res) {
-        res.render('lista-clientes');
+        return __awaiter(this, void 0, void 0, function* () {
+            const arregloClientes = yield this.__appService.obtenerClientes();
+            res.render('lista-clientes', { arregloClientes: arregloClientes });
+        });
     }
     crearCliente(res) {
         res.render('crear-cliente');
     }
     insertarCliente(cliente, res) {
-        cliente.nombre = cliente.nombre.toString();
-        cliente.apellido = cliente.nombre.toString();
-        cliente.cedula = cliente.cedula.toString();
-        const resp = this.__appService.insertarCliente(cliente);
-        console.log(resp);
-        res.redirect('/shoes/clientes');
+        return __awaiter(this, void 0, void 0, function* () {
+            cliente.nombre = cliente.nombre.toString();
+            cliente.apellido = cliente.apellido.toString();
+            cliente.cedula = cliente.cedula.toString();
+            const resp = yield this.__appService.insertarCliente(cliente);
+            res.redirect('/shoes/clientes');
+        });
     }
     eliminarCliente(res, cliente) {
         console.log(cliente.codigoCli.toString());
         res.redirect('/shoes/clientes');
     }
     actualizarCliente(res, par) {
-        const idCli = par.idCli;
-        res.render('actualizar-cliente', { idCli: idCli });
+        return __awaiter(this, void 0, void 0, function* () {
+            const codigoCli = par.codigoCli;
+            const arregloClientes = yield this.__appService.obtenerClientes();
+            res.render('actualizar-cliente', { arregloClientes: arregloClientes, codigoCli: codigoCli });
+        });
+    }
+    ejecutarCambioCliente(metodo, res, codigoCli, nombre, apellido, cedula) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const cliente = {};
+            cliente.codigoCli = Number(codigoCli);
+            if (metodo == "DELETE") {
+                yield this.__appService.borrarCliente(cliente);
+            }
+            else {
+                cliente.nombre = nombre;
+                cliente.apellido = apellido;
+                cliente.cedula = cedula;
+                yield this.__appService.actualizarCliente(cliente);
+            }
+            res.redirect('/shoes/clientes');
+        });
     }
     listaCompras(res) {
-        const listaClientes = [];
-        res.render('lista-compras', { listaClientes: listaClientes });
+        return __awaiter(this, void 0, void 0, function* () {
+            const arregloZapatos = yield this.__appService.obtenerZapatos();
+            const arregloCompras = yield this.__appService.obtenerCompras();
+            res.render('lista-compras', {
+                arregloZapatos: arregloZapatos,
+                arregloCompras: arregloCompras,
+            });
+        });
     }
     crearCompra(res) {
         res.render('crear-compra');
     }
     listaZapatos(res) {
-        const listaClientes = [];
-        res.render('lista-zapatos', { listaClientes: listaClientes });
+        return __awaiter(this, void 0, void 0, function* () {
+            const arregloZapatos = yield this.__appService.obtenerZapatos();
+            res.render('lista-zapatos', { arregloZapatos: arregloZapatos });
+        });
     }
     crearZapato(res) {
         res.render('crear-zapato');
     }
     insertarZapato(zapato, res) {
-        zapato.marca = zapato.marca.toString();
-        zapato.color = zapato.color.toString();
-        zapato.talla = Number(zapato.talla);
-        zapato.cantidad = Number(zapato.cantidad);
-        zapato.precio = Number(zapato.precio);
-        zapato.tipo = zapato.tipo.toString();
-        console.log(this.__appService.insertarZapato(zapato));
-        res.redirect('/shoes/zapatos');
+        return __awaiter(this, void 0, void 0, function* () {
+            zapato.marca = zapato.marca.toString();
+            zapato.color = zapato.color.toString();
+            zapato.talla = Number(zapato.talla);
+            zapato.cantidad = Number(zapato.cantidad);
+            zapato.precio = Number(zapato.precio);
+            zapato.tipo = zapato.tipo.toString();
+            yield this.__appService.insertarZapato(zapato);
+            res.redirect('/shoes/zapatos');
+        });
     }
-    actualizarZapato(param, res) {
-        res.render('actualizar-zapatos');
+    actualizarZapato(par, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const codigoZap = par.codigoZap;
+            const arregloZapatos = yield this.__appService.obtenerZapatos();
+            res.render('actualizar-zapato', { arregloZapatos: arregloZapatos, codigoZap: codigoZap });
+        });
+    }
+    ejecutarCambioZapato(metodo, res, codigoZap, talla, tipo, color, precio, cantidad, marca) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log("///////////// ", metodo);
+            const zapato = {};
+            zapato.codigoZap = Number(codigoZap);
+            if (metodo == "DELETE") {
+                yield this.__appService.borrarZapato(zapato);
+            }
+            else {
+                zapato.codigoZap = Number(codigoZap);
+                zapato.talla = Number(talla);
+                zapato.marca = marca;
+                zapato.color = color;
+                zapato.cantidad = Number(cantidad);
+                zapato.precio = Number(precio);
+                zapato.tipo = tipo;
+                yield this.__appService.actualizarZapato(zapato);
+            }
+            res.redirect('/shoes/zapatos');
+        });
     }
     inicio(res) {
         res.render('inicio', {});
@@ -103,7 +169,7 @@ __decorate([
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "listaClientes", null);
 __decorate([
     common_1.Get('clientes/crear'),
@@ -117,7 +183,7 @@ __decorate([
     __param(0, common_1.Body()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "insertarCliente", null);
 __decorate([
     common_1.Post('clientes/borrar'),
@@ -127,18 +193,30 @@ __decorate([
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "eliminarCliente", null);
 __decorate([
-    common_1.Get('clientes/actualizar/:idCli'),
+    common_1.Get('clientes/actualizar/:codigoCli'),
     __param(0, common_1.Response()), __param(1, common_1.Param()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "actualizarCliente", null);
+__decorate([
+    common_1.Post('clientes/actualizar'),
+    __param(0, common_1.Body('_method')),
+    __param(1, common_1.Response()),
+    __param(2, common_1.Body('codigoCli')),
+    __param(3, common_1.Body('nombre')),
+    __param(4, common_1.Body('apellido')),
+    __param(5, common_1.Body('cedula')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, String, String, String, String]),
+    __metadata("design:returntype", Promise)
+], AppController.prototype, "ejecutarCambioCliente", null);
 __decorate([
     common_1.Get('compras'),
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "listaCompras", null);
 __decorate([
     common_1.Get('compras/crear'),
@@ -152,7 +230,7 @@ __decorate([
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "listaZapatos", null);
 __decorate([
     common_1.Get('zapatos/crear'),
@@ -166,15 +244,30 @@ __decorate([
     __param(0, common_1.Body()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "insertarZapato", null);
 __decorate([
     common_1.Get('zapatos/actualizar/:codigoZap'),
     __param(0, common_1.Param()), __param(1, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "actualizarZapato", null);
+__decorate([
+    common_1.Post('zapatos/actualizar'),
+    __param(0, common_1.Body('_method')),
+    __param(1, common_1.Response()),
+    __param(2, common_1.Body('codigoZap')),
+    __param(3, common_1.Body('talla')),
+    __param(4, common_1.Body('tipo')),
+    __param(5, common_1.Body('color')),
+    __param(6, common_1.Body('precio')),
+    __param(7, common_1.Body('cantidad')),
+    __param(8, common_1.Body('marca')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, String, String, String, String, String, String, String]),
+    __metadata("design:returntype", Promise)
+], AppController.prototype, "ejecutarCambioZapato", null);
 __decorate([
     common_1.Get('inicio'),
     __param(0, common_1.Response()),

@@ -53,28 +53,33 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>
-                    <a href="/shoes/zapatos/actualizar/1">
-                        <input type="image" src="/images/editar.png" align="center" width="30" height="30"
-                               alt="Submit Form">
-                    </a>
-                </td>
-                <td>
-                    <form action="/shoes/zapatos/borrar" method="post">
-                        <input type="text" id="zapatoID" name="codigoZap" value="1" hidden>
-                        <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
-                               alt="Submit Form">
-                    </form>
-                </td>
-                <td>1</td>
-                <td>Puma</td>
-                <td>Verde</td>
-                <td>25</td>
-                <td>Hombre</td>
-                <td>10</td>
-                <td>$10</td>
-            </tr>
+            <% arregloZapatos.forEach(zapato=>{ %>
+                <tr>
+                    <td>
+                        <a href="/shoes/zapatos/actualizar/<%= zapato.codigoZap %>">
+                            <input type="image" src="/images/editar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </a>
+                    </td>
+                    <td>
+                        <form action="/shoes/zapatos/actualizar" method="post">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="text" id="zapatoID" name="codigoZap" value="<%= zapato.codigoZap %>" hidden>
+                            <input type="image" src="/images/borrar.png" align="center" width="30" height="30"
+                                   alt="Submit Form">
+                        </form>
+                    </td>
+                    <td><%= zapato.codigoZap %></td>
+                    <td><%= zapato.marca %></td>
+                    <td>
+                        <label style="color:<%= zapato.color %>; background: <%= zapato.color %>"><%= zapato.color %></label>
+                    </td>
+                    <td><%= zapato.talla %></td>
+                    <td><%= zapato.tipo %></td>
+                    <td><%= zapato.cantidad %></td>
+                    <td>$<%= zapato.precio %></td>
+                </tr>
+            <% }) %>
             </tbody>
         </table>
     </div>
