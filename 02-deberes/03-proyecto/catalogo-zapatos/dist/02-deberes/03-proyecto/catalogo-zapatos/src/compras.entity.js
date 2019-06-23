@@ -47,7 +47,7 @@ __decorate([
         name: 'validez',
         default: true
     }),
-    __metadata("design:type", Number)
+    __metadata("design:type", Boolean)
 ], ComprasEntity.prototype, "validez", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => zapato_entity_1.ZapatoEntity, zapato => zapato.compras),

@@ -83,6 +83,11 @@ let AppService = class AppService {
     obtenerCompras(parametrosBusqueda) {
         return this._comprasRepository.find(parametrosBusqueda);
     }
+    insertarCompra(compra) {
+        const objetoEntidad = this._comprasRepository
+            .create(compra);
+        return this._comprasRepository.save(objetoEntidad);
+    }
 };
 AppService = __decorate([
     common_1.Injectable(),

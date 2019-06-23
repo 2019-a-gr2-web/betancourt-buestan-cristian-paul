@@ -36,8 +36,7 @@
             <a class="navbar-brand" href="/shoes/zapatos">Zapatos</a>
         </nav>
     </div>
-    <%const c = arregloZapatos.find(zapato=> zapato.codigoZap= codigoZap)%>
-
+    <% const c = arregloZapatos.find(zapato => zapato.codigoZap = codigoZap) %>
     <div class="row">
         <div id="titulo_zapatos" class="col-lg-12"><h1>Actualizar zapato</h1></div>
     </div>
@@ -55,13 +54,14 @@
                 <label for="colorID">Color</label>
             </div>
             <div class="col-lg-8">
-                <input id="colorID" class="form-control" name="color" type="color" value="<%= c.color%>" required>
+                <input id="colorID" class="form-control" name="color" type="color" value="<%= c.color %>" required>
             </div>
             <div class="col-lg-4">
                 <label for="tallaID">Talla</label>
             </div>
             <div class="col-lg-8">
-                <input id="tallaID" class="form-control" name="talla" type="number" value="<%= c.talla %>" min="20" max="43" step="1" required>
+                <input id="tallaID" class="form-control" name="talla" type="number" value="<%= c.talla %>" min="20"
+                       max="43" step="1" required>
             </div>
             <div class="col-lg-4">
                 <label for="tipoID">Tipo</label>
@@ -76,13 +76,15 @@
                 <label for="cantidadID">Cantidad</label>
             </div>
             <div class="col-lg-8">
-                <input id="cantidadID" class="form-control" name="cantidad" type="number" value="<%= c.cantidad %>"required>
+                <input id="cantidadID" class="form-control" name="cantidad" type="number" value="<%= c.cantidad %>"
+                       required>
             </div>
             <div class="col-lg-4">
                 <label for="precioID">Precio</label>
             </div>
             <div class="col-lg-8">
-                <input id="precioID" class="form-control" name="precio" type="number"  value="<%= c.precio %>" step="0.01" required>
+                <input id="precioID" class="form-control" name="precio" type="number" value="<%= c.precio %>"
+                       step="0.01" required>
             </div>
             <div id="botones" class="col-lg-12">
                 <button id="btn_actualizar" type="submit" class="btn btn-warning">Agregar cambios</button>

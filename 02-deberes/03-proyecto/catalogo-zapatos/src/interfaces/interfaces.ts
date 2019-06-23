@@ -6,12 +6,12 @@ export interface Cliente {
 }
 
 export interface Compras {
-    codigoCom?: number
-    codigoZap: string
-    codigoCli: number
+    codigoCom: number
+    comZapIdCodigoZap: number
+    comCliIdCodigoCli: number
     fecha: Date
     cantidad: number
-    total: boolean
+    total: number
     validez: boolean
 }
 

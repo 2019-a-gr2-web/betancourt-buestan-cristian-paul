@@ -93,4 +93,10 @@ export class AppService {
     obtenerCompras(parametrosBusqueda?): Promise<ComprasEntity[]> {
         return this._comprasRepository.find(parametrosBusqueda)
     }
+
+    insertarCompra(compra: Compras): Promise<ComprasEntity> {
+        const objetoEntidad = this._comprasRepository
+            .create(compra)
+        return this._comprasRepository.save(objetoEntidad)
+    }
 }
