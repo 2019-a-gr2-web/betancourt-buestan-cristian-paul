@@ -52,10 +52,6 @@ let AppController = class AppController {
             res.redirect('/shoes/clientes');
         });
     }
-    eliminarCliente(res, cliente) {
-        console.log(cliente.codigoCli.toString());
-        res.redirect('/shoes/clientes');
-    }
     actualizarCliente(res, par) {
         return __awaiter(this, void 0, void 0, function* () {
             const codigoCli = par.codigoCli;
@@ -90,7 +86,28 @@ let AppController = class AppController {
         });
     }
     crearCompra(res) {
-        res.render('crear-compra');
+        return __awaiter(this, void 0, void 0, function* () {
+            res.render('crear-compra');
+        });
+    }
+    insertarCompra(res, codigoCli, codigoZap, fecha, cantidad) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const compra = {};
+            compra.cantidad = Number(cantidad);
+            compra.comCliIdCodigoCli = Number(codigoCli);
+            compra.comZapIdCodigoZap = Number(codigoZap);
+            compra.fecha = new Date(fecha);
+            compra.validez = true;
+            const arregloZapatos = yield this.__appService.obtenerZapatos();
+            arregloZapatos.forEach(zapato => {
+                if (zapato.codigoZap == compra.comZapIdCodigoZap) {
+                    compra.total = zapato.precio * compra.cantidad;
+                }
+            });
+            console.log(`${compra.comCliIdCodigoCli} ${compra.comZapIdCodigoZap} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`);
+            const resp = yield this.__appService.insertarCompra(compra);
+            res.redirect('/shoes/compras/crear');
+        });
     }
     listaZapatos(res) {
         return __awaiter(this, void 0, void 0, function* () {
@@ -122,7 +139,6 @@ let AppController = class AppController {
     }
     ejecutarCambioZapato(metodo, res, codigoZap, talla, tipo, color, precio, cantidad, marca) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("///////////// ", metodo);
             const zapato = {};
             zapato.codigoZap = Number(codigoZap);
             if (metodo == "DELETE") {
@@ -186,13 +202,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "insertarCliente", null);
 __decorate([
-    common_1.Post('clientes/borrar'),
-    __param(0, common_1.Response()), __param(1, common_1.Body()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "eliminarCliente", null);
-__decorate([
     common_1.Get('clientes/actualizar/:codigoCli'),
     __param(0, common_1.Response()), __param(1, common_1.Param()),
     __metadata("design:type", Function),
@@ -223,8 +232,19 @@ __decorate([
     __param(0, common_1.Response()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], AppController.prototype, "crearCompra", null);
+__decorate([
+    common_1.Post('compras/crear'),
+    __param(0, common_1.Response()),
+    __param(1, common_1.Body('codigoCli')),
+    __param(2, common_1.Body('codigoZap')),
+    __param(3, common_1.Body('fecha')),
+    __param(4, common_1.Body('cantidad')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Number, Number, Date, Number]),
+    __metadata("design:returntype", Promise)
+], AppController.prototype, "insertarCompra", null);
 __decorate([
     common_1.Get('zapatos'),
     __param(0, common_1.Response()),

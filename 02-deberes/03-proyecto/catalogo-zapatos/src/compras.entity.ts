@@ -35,7 +35,7 @@ export class ComprasEntity {
         name: 'validez',
         default: true
     })
-    validez: number;
+    validez: boolean;
 
     @ManyToOne( type => ZapatoEntity, zapato=>zapato.compras)
     ComZapId: ZapatoEntity;

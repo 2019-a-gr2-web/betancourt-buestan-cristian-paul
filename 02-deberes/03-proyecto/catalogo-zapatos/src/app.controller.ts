@@ -1,9 +1,11 @@
 import {Body, Controller, Get, Param, Post, Put, Query, Request, Response} from '@nestjs/common';
 import {AppService} from './app.service';
-import {Cliente, Zapato} from "./interfaces/interfaces";
+import {Cliente, Compras, Zapato} from "./interfaces/interfaces";
 
 @Controller('shoes')
 export class AppController {
+
+    cons
 
     constructor(private readonly __appService: AppService) {
     }
@@ -41,12 +43,6 @@ export class AppController {
         cliente.apellido = cliente.apellido.toString()
         cliente.cedula = cliente.cedula.toString()
         const resp = await this.__appService.insertarCliente(cliente)
-        res.redirect('/shoes/clientes')
-    }
-
-    @Post('clientes/borrar')
-    eliminarCliente(@Response()res, @Body() cliente: Cliente) {
-        console.log(cliente.codigoCli.toString())
         res.redirect('/shoes/clientes')
     }
 
@@ -88,7 +84,7 @@ export class AppController {
 
         res.render('lista-compras',
             {
-                 // arregloClientes: arregloClientes,
+                // arregloClientes: arregloClientes,
                 arregloZapatos: arregloZapatos,
                 arregloCompras: arregloCompras,
             }
@@ -96,8 +92,35 @@ export class AppController {
     }
 
     @Get('compras/crear')
-    crearCompra(@Response() res) {
-        res.render('crear-compra')
+    async crearCompra(@Response() res) {
+        res.render('crear-compra',
+        )
+    }
+
+
+    @Post('compras/crear')
+    async insertarCompra(
+        @Response() res,
+        @Body('codigoCli') codigoCli: number,
+        @Body('codigoZap') codigoZap: number,
+        @Body('fecha') fecha: Date,
+        @Body('cantidad') cantidad: number,
+    ) {
+        const compra: Compras = {} as Compras
+        compra.cantidad = Number(cantidad)
+        compra.comCliIdCodigoCli = Number(codigoCli)
+        compra.comZapIdCodigoZap = Number(codigoZap)
+        compra.fecha = new Date(fecha)
+        compra.validez = true
+        const arregloZapatos = await this.__appService.obtenerZapatos();
+        arregloZapatos.forEach(zapato => {
+            if (zapato.codigoZap == compra.comZapIdCodigoZap) {
+                compra.total = zapato.precio * compra.cantidad
+            }
+        })
+        console.log(`${compra.comCliIdCodigoCli} ${compra.comZapIdCodigoZap} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`)
+        const resp = await this.__appService.insertarCompra(compra)
+        res.redirect('/shoes/compras/crear')
     }
 
 
@@ -143,7 +166,7 @@ export class AppController {
                                @Body('cantidad') cantidad?: string,
                                @Body('marca') marca?: string
     ) {
-        console.log("///////////// ",metodo)
+
         const zapato: Zapato = {} as Zapato
         zapato.codigoZap = Number(codigoZap)
         if (metodo == "DELETE") {
