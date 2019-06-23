@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
-              <caret line="110" column="52" lean-forward="true" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
+            <state relative-caret-position="44">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
             </state>
           </provider>
         </entry>
@@ -42,17 +32,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="226">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -60,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="-24">
               <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -72,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="274">
+              <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -81,13 +80,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+            <state relative-caret-position="322">
+              <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/lista-compras.ejs">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -145,7 +161,6 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-cliente.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
         <option value="$PROJECT_DIR$/02-deberes/02-pagina-web-replica/src/main.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-zapato.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.entity.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.module.ts" />
@@ -168,14 +183,15 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" />
       </list>
     </option>
   </component>
@@ -352,17 +368,17 @@
     <property name="ts.external.directory.path" value="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images\movies" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\tragos\dto" />
       <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\distribuidor" />
       <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\fiesta" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\views" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\01-bimestre\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\02-pagina-web-replica\public\images\movies" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -429,10 +445,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197237000" />
+    <option name="totallyTimeSpent" value="198035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.19233312" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
@@ -458,10 +475,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/@nestjs/core/injector/injector.js" />
-    <entry file="file://$PROJECT_DIR$/03-examen/01-bimestre/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/ejs/lib/ejs.js" />
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/view.js" />
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/express/lib/application.js" />
@@ -472,7 +485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/protocol/Protocol.js" />
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/Connection.js" />
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/distribuidor/distribuidor.module.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -644,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/cliente.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="576">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
@@ -676,13 +688,6 @@
           <folding>
             <element signature="e#0#174#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="73" column="19" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -721,7 +726,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
+        <state relative-caret-position="-24">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -729,41 +734,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts">
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="288">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="226">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-205">
-          <caret line="110" column="52" lean-forward="true" selection-start-line="110" selection-start-column="52" selection-end-line="110" selection-end-column="52" />
+        <state relative-caret-position="418">
+          <caret line="77" column="6" selection-start-line="77" selection-start-column="6" selection-end-line="77" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
+    <entry file="file://$USER_HOME$/Desktop/lista-compras.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/node_modules/mysql/lib/protocol/Protocol.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="37" column="20" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+        <state relative-caret-position="163">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="100" column="5" lean-forward="true" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
         </state>
       </provider>
     </entry>

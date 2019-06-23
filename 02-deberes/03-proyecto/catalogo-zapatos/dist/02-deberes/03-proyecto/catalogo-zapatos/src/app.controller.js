@@ -90,21 +90,20 @@ let AppController = class AppController {
             res.render('crear-compra');
         });
     }
-    insertarCompra(res, codigoCli, codigoZap, fecha, cantidad) {
+    insertarCompra(res, compra) {
         return __awaiter(this, void 0, void 0, function* () {
-            const compra = {};
-            compra.cantidad = Number(cantidad);
-            compra.comCliIdCodigoCli = Number(codigoCli);
-            compra.comZapIdCodigoZap = Number(codigoZap);
-            compra.fecha = new Date(fecha);
+            compra.cantidad = Number(compra.cantidad);
+            compra.comCliId = Number(compra.comCliId);
+            compra.comZapId = Number(compra.comZapId);
+            compra.fecha = new Date(compra.fecha);
             compra.validez = true;
             const arregloZapatos = yield this.__appService.obtenerZapatos();
             arregloZapatos.forEach(zapato => {
-                if (zapato.codigoZap == compra.comZapIdCodigoZap) {
+                if (zapato.codigoZap == compra.comZapId) {
                     compra.total = zapato.precio * compra.cantidad;
                 }
             });
-            console.log(`${compra.comCliIdCodigoCli} ${compra.comZapIdCodigoZap} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`);
+            console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`);
             const resp = yield this.__appService.insertarCompra(compra);
             res.redirect('/shoes/compras/crear');
         });
@@ -237,12 +236,9 @@ __decorate([
 __decorate([
     common_1.Post('compras/crear'),
     __param(0, common_1.Response()),
-    __param(1, common_1.Body('codigoCli')),
-    __param(2, common_1.Body('codigoZap')),
-    __param(3, common_1.Body('fecha')),
-    __param(4, common_1.Body('cantidad')),
+    __param(1, common_1.Body()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Number, Number, Date, Number]),
+    __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "insertarCompra", null);
 __decorate([
