@@ -101,24 +101,25 @@ export class AppController {
     @Post('compras/crear')
     async insertarCompra(
         @Response() res,
-        @Body('codigoCli') codigoCli: number,
-        @Body('codigoZap') codigoZap: number,
-        @Body('fecha') fecha: Date,
-        @Body('cantidad') cantidad: number,
+        @Body() compra : Compras
+        // @Body('codigoCli') codigoCli: number,
+        // @Body('codigoZap') codigoZap: number,
+        // @Body('fecha') fecha: Date,
+        // @Body('cantidad') cantidad: number,
     ) {
-        const compra: Compras = {} as Compras
-        compra.cantidad = Number(cantidad)
-        compra.comCliIdCodigoCli = Number(codigoCli)
-        compra.comZapIdCodigoZap = Number(codigoZap)
-        compra.fecha = new Date(fecha)
+        // const compra: Compras = {} as Compras
+        compra.cantidad = Number(compra.cantidad)
+        compra.comCliId = Number(compra.comCliId)
+        compra.comZapId = Number(compra.comZapId)
+        compra.fecha = new Date(compra.fecha)
         compra.validez = true
         const arregloZapatos = await this.__appService.obtenerZapatos();
         arregloZapatos.forEach(zapato => {
-            if (zapato.codigoZap == compra.comZapIdCodigoZap) {
+            if (zapato.codigoZap == compra.comZapId) {
                 compra.total = zapato.precio * compra.cantidad
             }
         })
-        console.log(`${compra.comCliIdCodigoCli} ${compra.comZapIdCodigoZap} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`)
+        console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`)
         const resp = await this.__appService.insertarCompra(compra)
         res.redirect('/shoes/compras/crear')
     }

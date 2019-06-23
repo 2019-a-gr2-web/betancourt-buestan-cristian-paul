@@ -18,7 +18,7 @@ function bootstrap() {
         app.use(cookieParser('examen'));
         app.set('view engine', 'ejs');
         app.use(express.static('public'));
-        yield app.listen(3000);
+        yield app.listen(3001);
     });
 }
 bootstrap();

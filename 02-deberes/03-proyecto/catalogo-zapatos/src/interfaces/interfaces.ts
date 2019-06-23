@@ -7,8 +7,8 @@ export interface Cliente {
 
 export interface Compras {
     codigoCom: number
-    comZapIdCodigoZap: number
-    comCliIdCodigoCli: number
+    comZapId: number
+    comCliId: number
     fecha: Date
     cantidad: number
     total: number

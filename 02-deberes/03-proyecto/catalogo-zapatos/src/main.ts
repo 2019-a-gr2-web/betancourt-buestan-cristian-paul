@@ -10,6 +10,6 @@ async function bootstrap() {
   // @ts-ignore
   app.set('view engine', 'ejs');
   app.use(express.static('public'));
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();
