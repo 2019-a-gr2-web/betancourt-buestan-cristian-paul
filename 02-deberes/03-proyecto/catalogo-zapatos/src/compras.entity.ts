@@ -38,9 +38,9 @@ export class ComprasEntity {
     validez: boolean;
 
     @ManyToOne( type => ZapatoEntity, zapato=>zapato.compras)
-    ComZapId: ZapatoEntity;
+    comZapId: ZapatoEntity;
 
     @ManyToOne( type => ClienteEntity, cliente=>cliente.compras)
-    ComCliId: ClienteEntity;
+    comCliId: ClienteEntity;
 }
 

@@ -52,11 +52,11 @@ __decorate([
 __decorate([
     typeorm_1.ManyToOne(type => zapato_entity_1.ZapatoEntity, zapato => zapato.compras),
     __metadata("design:type", zapato_entity_1.ZapatoEntity)
-], ComprasEntity.prototype, "ComZapId", void 0);
+], ComprasEntity.prototype, "comZapId", void 0);
 __decorate([
     typeorm_1.ManyToOne(type => cliente_entity_1.ClienteEntity, cliente => cliente.compras),
     __metadata("design:type", cliente_entity_1.ClienteEntity)
-], ComprasEntity.prototype, "ComCliId", void 0);
+], ComprasEntity.prototype, "comCliId", void 0);
 ComprasEntity = __decorate([
     typeorm_1.Entity('Compras')
 ], ComprasEntity);

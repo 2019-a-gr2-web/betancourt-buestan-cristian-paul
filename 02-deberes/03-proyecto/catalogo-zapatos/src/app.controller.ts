@@ -101,13 +101,8 @@ export class AppController {
     @Post('compras/crear')
     async insertarCompra(
         @Response() res,
-        @Body() compra : Compras
-        // @Body('codigoCli') codigoCli: number,
-        // @Body('codigoZap') codigoZap: number,
-        // @Body('fecha') fecha: Date,
-        // @Body('cantidad') cantidad: number,
+        @Body() compra: Compras
     ) {
-        // const compra: Compras = {} as Compras
         compra.cantidad = Number(compra.cantidad)
         compra.comCliId = Number(compra.comCliId)
         compra.comZapId = Number(compra.comZapId)

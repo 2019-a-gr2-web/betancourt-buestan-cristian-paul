@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="122" column="55" lean-forward="true" selection-start-line="122" selection-start-column="55" selection-end-line="122" selection-end-column="55" />
+            <state relative-caret-position="44">
+              <caret line="105" selection-start-line="105" selection-end-line="105" />
             </state>
           </provider>
         </entry>
@@ -43,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -85,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="36" />
+              <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -189,14 +184,14 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-clientes.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" />
-        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts" />
       </list>
     </option>
   </component>
@@ -450,7 +445,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197767000" />
+    <option name="totallyTimeSpent" value="198035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -739,13 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -780,13 +768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="122" column="55" lean-forward="true" selection-start-line="122" selection-start-column="55" selection-end-line="122" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -800,7 +781,21 @@
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/compras.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
         </state>
       </provider>
     </entry>
