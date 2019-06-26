@@ -1,6 +1,7 @@
 import {NestFactory} from '@nestjs/core';
 import {AppModule} from './app.module';
 import * as express from 'express';
+import * as session from 'express-session';
 import * as favicon from 'serve-favicon';
 import * as path from 'path';
 
@@ -14,6 +15,20 @@ async function bootstrap() {
     // @ts-ignore
     app.set('view engine', 'ejs');
     app.use(express.static('publico'));
+    const FileStore = require('session-file-store')(session);
+    app.use(
+        session({
+            name: 'server-session-id',
+            secret: 'No sera de tomar un traguito',
+            resave: false,
+            saveUninitialized: true,
+            cookie: {
+                secure: false
+            },
+            store: new FileStore()
+        })
+    );
     await app.listen(3000);
 }
+
 bootstrap();

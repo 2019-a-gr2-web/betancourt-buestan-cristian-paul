@@ -137,6 +137,32 @@ let AppController = class AppController {
     cinecalidad(respuesta) {
         return respuesta.render('copia/cinecalidad', {});
     }
+    loginVista(res) {
+        res.render('login', {});
+    }
+    login(res, usuario, session) {
+        if (usuario.username == 'Cristian' && usuario.password == '12345678') {
+            session.username = usuario.username;
+            session.password = usuario.password;
+            res.redirect('/api/protegida');
+        }
+        else {
+            res.status(400);
+            res.send({ mensaje: 'Error login', error: 400 });
+        }
+    }
+    session(nombre, session) {
+        console.log(session);
+        return 'ok';
+    }
+    protegida(session, res) {
+        if (session.username) {
+            res.render('protegida', { nombre: session.username });
+        }
+        else {
+            res.redirect('login');
+        }
+    }
 };
 __decorate([
     common_1.Get('/hello-world'),
@@ -235,6 +261,36 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "cinecalidad", null);
+__decorate([
+    common_1.Get('login'),
+    __param(0, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "loginVista", null);
+__decorate([
+    common_1.Post('login'),
+    __param(0, common_1.Response()), __param(1, common_1.Body()), __param(2, common_1.Session()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "login", null);
+__decorate([
+    common_1.Get('session'),
+    __param(0, common_1.Query('nombre')),
+    __param(1, common_1.Session()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "session", null);
+__decorate([
+    common_1.Get('protegida'),
+    __param(0, common_1.Session()),
+    __param(1, common_1.Response()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "protegida", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])

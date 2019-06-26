@@ -10,7 +10,7 @@ import {
     Param,
     Body,
     Response,
-    Request
+    Request, Session
 } from '@nestjs/common';
 import {AppService} from './app.service';
 import * as Joi from '@hapi/joi';
@@ -201,6 +201,43 @@ export class AppController {
             {});
     }
 
+    @Get('login')
+    loginVista(@Response() res) {
+        res.render('login', {});
+    }
+
+    @Post('login')
+    login(@Response() res, @Body() usuario, @Session() session) {
+        if (usuario.username == 'Cristian' && usuario.password == '12345678') {
+            session.username = usuario.username;
+            session.password = usuario.password;
+            res.redirect('/api/protegida');
+        } else {
+            res.status(400);
+            res.send({mensaje: 'Error login', error: 400});
+        }
+    }
+
+    @Get('session')
+    session(
+        @Query('nombre') nombre,
+        @Session() session
+    ) {
+        console.log(session);
+        return 'ok';
+    }
+
+    @Get('protegida')
+    protegida(
+        @Session() session,
+        @Response() res
+    ) {
+        if (session.username) { //si es que existe la sesion significa que estamos logeados
+            res.render('protegida', {nombre: session.username});
+        } else {
+            res.redirect('login');
+        }
+    }
 }
 
 function holaMundo() {
