@@ -1,0 +1,47 @@
+<html lang="es">
+<head>
+    <title>Web Socket</title>
+</head>
+<body>
+<!--<script src="socket.io.js"></script>-->
+<script src="/websockets/socket.io.js"></script>
+<script>
+    // const url = 'http://172.31.103.218:3001/websockets'
+    const url = 'http://localhost:3001/websockets'
+    const socket = io(url)
+    console.log('Ya mismito nos conectamos')
+
+    socket.on(
+        'connect',
+        () => {
+            console.log('Estamos conectados!!');
+            // socket.disconnect()
+            // setTimeout(()=> socket.connect(),3000)
+        }
+    );
+
+    socket.on(
+        'disconnect',
+        () => {
+            console.log('Nos desconectamos!!');
+        }
+    );
+
+    socket.on(
+        'saludaron',
+        (data) => {
+            console.log('Nos desconectamos!!');
+        }
+    );
+
+    function peticionHolaMundo() {
+        const nombreMetodo = 'holaMundo'
+        socket.emit(nombreMetodo, {nombre: 'Te hackie :v'},
+            (respuesta) => {
+                console.log(respuesta);
+            }
+        )
+    }
+</script>
+</body>
+</html>
