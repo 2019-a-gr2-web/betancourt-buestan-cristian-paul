@@ -1,13 +1,35 @@
 <html lang="es">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Web Socket</title>
 </head>
 <body>
+<h1 id="titulo">CHAT EPN</h1>
+<p class="par">Primero</p>
+<p class="par">Segundo</p>
+<!--<p class="par" onmouseenter="clickParrafo()">Segundo</p>-->
+
+<div id="contenedor-chat"></div>
+'<label for="chat-texto"></label>Texto:
+<input id="chat-texto" type="text">
+<button onclick="obtenerMensaje()">Añadir chat</button>
+<script>
+    const titulo = document.getElementById("titulo")
+    titulo.style.background = "green"
+    titulo.onclick = () => {
+        console.log("Le diste click al titulo")
+    }
+
+    function clickParrafo() {
+        alert('CUIDADO!!!')
+    }
+</script>
 <!--<script src="socket.io.js"></script>-->
 <script src="/websockets/socket.io.js"></script>
 <script>
     // const url = 'http://172.31.103.218:3001/websockets'
-    const url = 'http://localhost:3001/websockets'
+    const url = 'http://172.29.47.7:3001/websockets'
     const socket = io(url)
     console.log('Ya mismito nos conectamos')
 
@@ -30,7 +52,18 @@
     socket.on(
         'saludaron',
         (data) => {
-            console.log('Nos desconectamos!!');
+            console.log(data);
+        }
+    );
+
+    socket.on(
+        'recepcion',
+        (data) => {
+            console.log(data);
+            parrafo = document.createElement("p")
+            const contenidoHtml = `<div class="alert alert-warning text-left" role="alert"> ${data.mensaje}</div>`
+            parrafo.innerHTML = contenidoHtml
+            anadirEtiqueta('contenedor-chat', parrafo)
         }
     );
 
@@ -41,6 +74,31 @@
                 console.log(respuesta);
             }
         )
+    }
+
+    function obtenerMensaje() {
+        const chatTexto = document.getElementById("chat-texto")
+        const texto = chatTexto.value
+        console.log(texto)
+        const idContenedor = 'contenedor-chat'
+        const nombreEtiquetaHtmlChat = "p"
+        const parrafo = document.createElement(nombreEtiquetaHtmlChat)
+        const contenidoHtml = `<div class="alert alert-primary text-right" role="alert"> ${texto}</div>`
+        parrafo.innerHTML = contenidoHtml
+        anadirEtiqueta(idContenedor, parrafo)
+        enviarMensaje(texto)
+
+    }
+
+    function enviarMensaje(texto) {
+        const nombreMetodo = "chat"
+        socket.emit(nombreMetodo, {mensaje: texto})
+    }
+
+    function anadirEtiqueta(idEtiqueta, elementoHtml) {
+        const etiqueta = document.getElementById(idEtiqueta)
+        etiqueta.appendChild(elementoHtml)
+
     }
 </script>
 </body>

@@ -8,19 +8,28 @@ import {Client} from "socket.io";
         namespace: '/websockets' //url
     }
 )
-export class ChatGateway{
+export class ChatGateway {
     @WebSocketServer() server;
 
-    constructor(){
+    constructor() {
         console.log(this.server)
     }
 
     @SubscribeMessage('holaMundo')
-    holaMundo(client: Client  | any, data:any){
+    holaMundo(client: Client | any, data: any) {
         console.log(data)
         console.log('Nos hacen la peticion')
         // console.log(this.server)
         client.broadcast.emit('saludaron', data)
         return 'Hola ' + data.nombre
+    }
+
+    @SubscribeMessage('chat')
+    mensaje(client: Client | any, data: any) {
+        console.log(data)
+
+        // console.log(this.server)
+        client.broadcast.emit('recepcion', data)
+        // return 'Hola ' + data.nombre
     }
 }

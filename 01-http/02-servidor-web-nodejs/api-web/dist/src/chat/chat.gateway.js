@@ -20,6 +20,10 @@ let ChatGateway = class ChatGateway {
         client.broadcast.emit('saludaron', data);
         return 'Hola ' + data.nombre;
     }
+    mensaje(client, data) {
+        console.log(data);
+        client.broadcast.emit('recepcion', data);
+    }
 };
 __decorate([
     websockets_1.WebSocketServer(),
@@ -31,6 +35,12 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], ChatGateway.prototype, "holaMundo", null);
+__decorate([
+    websockets_1.SubscribeMessage('chat'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], ChatGateway.prototype, "mensaje", null);
 ChatGateway = __decorate([
     websockets_1.WebSocketGateway(3001, {
         namespace: '/websockets'
