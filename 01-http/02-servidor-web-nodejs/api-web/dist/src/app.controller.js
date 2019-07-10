@@ -163,6 +163,11 @@ let AppController = class AppController {
             res.redirect('login');
         }
     }
+    logout(res, session) {
+        session.username = undefined;
+        session.destroy();
+        res.redirect('/api/login');
+    }
 };
 __decorate([
     common_1.Get('/hello-world'),
@@ -291,6 +296,14 @@ __decorate([
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "protegida", null);
+__decorate([
+    common_1.Get('logout'),
+    __param(0, common_1.Response()),
+    __param(1, common_1.Session()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "logout", null);
 AppController = __decorate([
     common_1.Controller('/api'),
     __metadata("design:paramtypes", [app_service_1.AppService])

@@ -238,6 +238,16 @@ export class AppController {
             res.redirect('login');
         }
     }
+
+    @Get('logout')
+    logout(
+        @Response() res,
+        @Session() session,
+    ){
+        session.username = undefined;
+        session.destroy();
+        res.redirect('/api/login');
+    }
 }
 
 function holaMundo() {
