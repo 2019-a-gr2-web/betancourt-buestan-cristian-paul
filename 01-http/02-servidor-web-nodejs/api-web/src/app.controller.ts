@@ -10,11 +10,12 @@ import {
     Param,
     Body,
     Response,
-    Request, Session
+    Request, Session, UseInterceptors, Render, UploadedFile, UploadedFiles, Res
 } from '@nestjs/common';
 import {AppService} from './app.service';
 import * as Joi from '@hapi/joi';
 import {isNullOrUndefined} from "util";
+import {FileInterceptor, FilesInterceptor} from "@nestjs/platform-express";
 
 
 // http://192.168.1.10:3000/segmentoInicial
@@ -41,6 +42,59 @@ export class AppController {
 
     constructor(private readonly appService: AppService) {
     }
+
+    @Get('subirArchivo/:idTrago')
+    @Render('archivo')
+    subirArchivo(
+        @Param('idTrago') idTrago,
+    ) {
+        return {idTrago: idTrago}
+    }
+
+    @Post('subirArchivo/:idTrago')
+    @UseInterceptors(FileInterceptor(
+        'imagen',
+        {
+            dest: __dirname + '/../archivos'
+        }
+        )
+    )
+    subirArchivoPost(
+        @Param('idTrago') idTrago,
+        @UploadedFile() archivo
+    ) {
+        // console.log(archivo)
+        return {mensaje: 'ok'}
+    }
+
+    @Get('descargarArchivo/:idTrago')
+    descargarArchivo(
+        @Response() res,
+        @Param('idTrago') idTrago
+    ) {
+        const originalName = 'Penguins.jpg'
+        const path = 'C:\\Users\\USRKAP\\Documents\\GitHub\\betancourt-buestan-cristian-paul\\01-http\\' +
+            '02-servidor-web-nodejs\\api-web\\archivos\\a8e5c5de52bb16f7257b47f7f6dc9ac4'
+        res.download(path, originalName)
+    }
+
+    ////////////////////////////SUBIR MULTIPLES ARCHIVOS A LA VEZ
+    // }   @Post('subirArchivo/:idTrago')
+    // @UseInterceptors(FilesInterceptor(
+    //     'imagen',
+    //     4,
+    //     {
+    //         dest: __dirname + '/../archivos'
+    //     }
+    //     )
+    // )
+    // subirArchivoPost(
+    //     @Param('idTrago') idTrago,
+    //     @UploadedFiles() archivo
+    // ) {
+    //     console.log(archivo)
+    //     return {mensaje: 'ok'}
+    // }
 
     @Get('/hello-world')      //Método http
     helloWorld() {
@@ -243,7 +297,7 @@ export class AppController {
     logout(
         @Response() res,
         @Session() session,
-    ){
+    ) {
         session.username = undefined;
         session.destroy();
         res.redirect('/api/login');

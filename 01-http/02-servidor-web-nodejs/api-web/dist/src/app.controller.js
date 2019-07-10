@@ -15,10 +15,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
 const Joi = require("@hapi/joi");
+const platform_express_1 = require("@nestjs/platform-express");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
         this.arregloUsuarios = [];
+    }
+    subirArchivo(idTrago) {
+        return { idTrago: idTrago };
+    }
+    subirArchivoPost(idTrago, archivo) {
+        return { mensaje: 'ok' };
+    }
+    descargarArchivo(res, idTrago) {
+        const originalName = 'Penguins.jpg';
+        const path = 'C:\\Users\\USRKAP\\Documents\\GitHub\\betancourt-buestan-cristian-paul\\01-http\\' +
+            '02-servidor-web-nodejs\\api-web\\archivos\\a8e5c5de52bb16f7257b47f7f6dc9ac4';
+        res.download(path, originalName);
     }
     helloWorld() {
         return 'Hello world';
@@ -169,6 +182,33 @@ let AppController = class AppController {
         res.redirect('/api/login');
     }
 };
+__decorate([
+    common_1.Get('subirArchivo/:idTrago'),
+    common_1.Render('archivo'),
+    __param(0, common_1.Param('idTrago')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "subirArchivo", null);
+__decorate([
+    common_1.Post('subirArchivo/:idTrago'),
+    common_1.UseInterceptors(platform_express_1.FileInterceptor('imagen', {
+        dest: __dirname + '/../archivos'
+    })),
+    __param(0, common_1.Param('idTrago')),
+    __param(1, common_1.UploadedFile()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "subirArchivoPost", null);
+__decorate([
+    common_1.Get('descargarArchivo/:idTrago'),
+    __param(0, common_1.Response()),
+    __param(1, common_1.Param('idTrago')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "descargarArchivo", null);
 __decorate([
     common_1.Get('/hello-world'),
     __metadata("design:type", Function),
