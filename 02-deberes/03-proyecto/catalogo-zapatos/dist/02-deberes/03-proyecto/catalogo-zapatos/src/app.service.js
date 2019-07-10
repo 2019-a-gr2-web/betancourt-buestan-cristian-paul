@@ -12,7 +12,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var _a, _b, _c;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("typeorm");
 const typeorm_2 = require("@nestjs/typeorm");
@@ -95,7 +94,9 @@ AppService = __decorate([
     __param(0, typeorm_2.InjectRepository(cliente_entity_1.ClienteEntity)),
     __param(1, typeorm_2.InjectRepository(zapato_entity_1.ZapatoEntity)),
     __param(2, typeorm_2.InjectRepository(compras_entity_1.ComprasEntity)),
-    __metadata("design:paramtypes", [typeof (_a = typeof typeorm_1.Repository !== "undefined" && typeorm_1.Repository) === "function" ? _a : Object, typeof (_b = typeof typeorm_1.Repository !== "undefined" && typeorm_1.Repository) === "function" ? _b : Object, typeof (_c = typeof typeorm_1.Repository !== "undefined" && typeorm_1.Repository) === "function" ? _c : Object])
+    __metadata("design:paramtypes", [typeorm_1.Repository,
+        typeorm_1.Repository,
+        typeorm_1.Repository])
 ], AppService);
 exports.AppService = AppService;
 //# sourceMappingURL=app.service.js.map
