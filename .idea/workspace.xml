@@ -229,7 +229,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/02-deberes/04-websockets" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
