@@ -1,0 +1,137 @@
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Juego</title>
+</head>
+<style>
+    #titulo {
+        margin: 10px 50px 40px 50px;
+        background-color: #99e1d9;
+        color: #245FAD;
+        text-align: center;
+    }
+
+    #contendor-preparacion {
+        margin: 10px 50px 40px 50px;
+        text-align: center;
+    }
+</style>
+<body>
+<!--<script src="socket.io.js"></script>-->
+<script src="/websockets/socket.io.js"></script>
+<script>
+    // const url = 'http://172.31.103.218:3001/websockets'
+
+    const url = 'http://192.168.0.102:3001/websockets'
+    const socket = io(url)
+    console.log('Ya mismito nos conectamos')
+
+    socket.on(
+        'connect',
+        () => {
+            console.log('Estamos conectados!!');
+            // setTimeout(()=> socket.connect(),3000)
+        }
+    );
+
+    socket.on(
+        'disconnect',
+        () => {
+            console.log('Nos desconectamos!!');
+            socket.disconnect()
+        }
+    );
+
+    socket.on(
+        'preparacion',
+        data => {
+            timeout()
+            comenzarJuego()
+        }
+    );
+
+    socket.on(
+        'elemento',
+        (data) => {
+            console.log(data)
+            anadirElemento(data)
+            configurarBotones(false)
+        }
+    );
+    socket.on(
+        'resultado',
+        (data) => {
+            console.log(data)
+            anadirRespuesta(data)
+        }
+    );
+
+    function anadirRespuesta(data) {
+        const parrafo = document.createElement("p")
+        const contenidoHtml =
+            `<div class="alert alert-success text-right" role="alert">
+            ${data.resultado}
+                </div>`
+        parrafo.innerHTML = contenidoHtml
+        const etiqueta = document.getElementById("elemento")
+        etiqueta.appendChild(parrafo)
+    }
+
+    function anadirElemento(data) {
+        const parrafo = document.createElement("p")
+        const contenidoHtml = `<div class="alert alert-info text-left" role="alert">
+${data.elemento}
+    <img src="${data.url}"  width="50px" height="50px" alt="">
+</div>`
+        parrafo.innerHTML = contenidoHtml
+        const etiqueta = document.getElementById("elemento")
+        etiqueta.appendChild(parrafo)
+    }
+
+    function preparado() {
+        const nombreMetodo = 'preparado'
+        socket.emit(nombreMetodo, {})
+    }
+
+    function configurarBotones(escondidos) {
+        document.getElementById("btn_papel").hidden = escondidos
+        document.getElementById("btn_piedra").hidden = escondidos
+        document.getElementById("btn_tijera").hidden = escondidos
+        document.getElementById("btn_preparado").hidden = !escondidos
+    }
+
+    function comenzarJuego() {
+        const nombreMetodo = "comenzar"
+        socket.emit(nombreMetodo, {},)
+    }
+
+    function respuesta(opc) {
+        configurarBotones(true)
+        const nombreMetodo = "respuesta"
+        socket.emit(nombreMetodo, {respuesta: opc})
+    }
+
+    function timeout() {
+        document.getElementById("info-preparacion").innerHTML = "Espere. El juego comenzará pronto.";
+        setTimeout(function () {
+            document.getElementById("info-preparacion").innerHTML = "Listo";
+        }, 3000, "JavaScript");
+    }
+</script>
+<h1 id="titulo">PIEDRA - PAPEL - TIJERA</h1>
+<div id="contendor-preparacion">
+    <button id="btn_preparado" onclick="preparado()">Preparado</button>
+    <div id="info-preparacion"></div>
+</div>
+<div id="contenedor-chat">
+    <div id="elemento"></div>
+    <div id="contendor-botones">
+        <!--        <img src="http://192.168.0.102:3000/websockets/images/piedra.png" width="30px" height="30px">-->
+        <button id="btn_piedra" onclick="respuesta(0)" hidden>Piedra</button>
+        <button id="btn_papel" onclick="respuesta(1)" hidden>Papel</button>
+        <button id="btn_tijera" onclick="respuesta(2)" hidden>Tijera</button>
+    </div>
+</div>
+</body>
+</html>

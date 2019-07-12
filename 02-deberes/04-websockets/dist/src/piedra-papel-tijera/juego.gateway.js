@@ -12,17 +12,65 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const websockets_1 = require("@nestjs/websockets");
 let JuegoGateway = class JuegoGateway {
     constructor() {
+        this.elementos = ["piedra", "papel", "tijera"];
+        this.secuencia = [0, 2, 1, 1, 2, 1, 1, 0, 0, 1, 2, 1, 0, 2, 0, 1, 2];
+        this.seleccionado = 0;
+        this.primeraRespuesta = true;
         console.log(this.server);
     }
-    holaMundo(client, data) {
-        console.log(data);
-        console.log('Nos hacen la peticion');
-        client.broadcast.emit('saludaron', data);
-        return 'Hola ' + data.nombre;
+    preparacion(client, data) {
+        client.emit('preparacion', {});
+        console.log(client.id);
+        client.broadcast.emit('preparacion', {});
     }
-    mensaje(client, data) {
-        console.log(data);
-        client.broadcast.emit('recepcion', data);
+    comenzar(client, data) {
+        const elemento = this.elementos[this.secuencia[this.seleccionado]];
+        console.log(elemento);
+        client.emit('elemento', {
+            url: "http://192.168.0.102:3000/websockets/images/" + elemento + ".png",
+            elemento: elemento
+        });
+    }
+    validarRespuesta(client, data) {
+        var respuesta = "Perdiste";
+        switch (this.secuencia[this.seleccionado]) {
+            case 0:
+                if (data.respuesta == 1) {
+                    respuesta = "Ganaste";
+                }
+                break;
+            case 1:
+                if (data.respuesta == 2) {
+                    respuesta = "Ganaste";
+                }
+                break;
+            case 2:
+                if (data.respuesta == 0) {
+                    respuesta = "Ganaste";
+                }
+                break;
+        }
+        if (this.primeraRespuesta) {
+            this.primeraRespuesta = false;
+            this.enviarResultado(client, respuesta);
+        }
+        else {
+            this.primeraRespuesta = true;
+            this.seleccionado++;
+        }
+    }
+    enviarResultado(client, resultado) {
+        client.emit('resultado', {
+            resultado: resultado
+        });
+        client.broadcast.emit('resultado', {
+            resultado: "Perdiste"
+        });
+        this.seleccionado++;
+    }
+    prueba(client, data) {
+        client.emit('prueba', { hola: 'hola' });
+        client.broadcast.emit('prueba', { hola: 'hola todos' });
     }
 };
 __decorate([
@@ -30,17 +78,29 @@ __decorate([
     __metadata("design:type", Object)
 ], JuegoGateway.prototype, "server", void 0);
 __decorate([
-    websockets_1.SubscribeMessage('holaMundo'),
+    websockets_1.SubscribeMessage('preparado'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
-], JuegoGateway.prototype, "holaMundo", null);
+], JuegoGateway.prototype, "preparacion", null);
 __decorate([
-    websockets_1.SubscribeMessage('chat'),
+    websockets_1.SubscribeMessage('comenzar'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
-], JuegoGateway.prototype, "mensaje", null);
+], JuegoGateway.prototype, "comenzar", null);
+__decorate([
+    websockets_1.SubscribeMessage('respuesta'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], JuegoGateway.prototype, "validarRespuesta", null);
+__decorate([
+    websockets_1.SubscribeMessage('prueba'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:returntype", void 0)
+], JuegoGateway.prototype, "prueba", null);
 JuegoGateway = __decorate([
     websockets_1.WebSocketGateway(3001, {
         namespace: '/websockets'
