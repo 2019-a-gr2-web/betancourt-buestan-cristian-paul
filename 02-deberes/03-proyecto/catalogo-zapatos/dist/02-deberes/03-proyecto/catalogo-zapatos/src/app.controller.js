@@ -69,39 +69,56 @@ let AppController = class AppController {
     }
     listaCompras(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const arregloZapatos = yield this.__appService.obtenerZapatos();
-            const arregloClientes = yield this.__appService.obtenerClientes();
             const arregloCompras = yield this.__appService.obtenerCompras();
-            console.log(arregloZapatos);
-            console.log(arregloCompras);
-            console.log(arregloClientes);
             res.render('lista-compras', {
-                arregloClientes: arregloClientes,
-                arregloZapatos: arregloZapatos,
-                arregloCompras: arregloCompras,
+                arregloCompras: arregloCompras
             });
         });
     }
     crearCompra(res) {
         return __awaiter(this, void 0, void 0, function* () {
-            res.render('crear-compra');
+            res.render('crear-compra', { mensaje: null });
         });
     }
-    insertarCompra(res, compra) {
+    insertarCompra(res, compra, comCliId, comZapId) {
         return __awaiter(this, void 0, void 0, function* () {
+            const zapato = {};
+            zapato.codigoZap = Number(comZapId);
+            const cliente = {};
+            cliente.codigoCli = Number(comCliId);
             compra.cantidad = Number(compra.cantidad);
-            compra.comCliId = Number(compra.comCliId);
-            compra.comZapId = Number(compra.comZapId);
             compra.fecha = new Date(compra.fecha);
             compra.validez = true;
+            compra.comCliId = cliente;
+            compra.comZapId = zapato;
             const arregloZapatos = yield this.__appService.obtenerZapatos();
-            arregloZapatos.forEach(zapato => {
-                if (zapato.codigoZap == compra.comZapId) {
-                    compra.total = zapato.precio * compra.cantidad;
-                }
+            const arregloClientes = yield this.__appService.obtenerClientes();
+            const clienteAux = arregloClientes.find(cliente => {
+                return compra.comCliId.codigoCli == cliente.codigoCli;
             });
-            console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`);
-            this.__appService.insertarCompra(compra);
+            const zapatosAux = arregloZapatos.find(zapato => {
+                return compra.comZapId.codigoZap == zapato.codigoZap;
+            });
+            if (clienteAux != null && zapatosAux != null) {
+                arregloZapatos.forEach(zapato => {
+                    if (zapato.codigoZap == compra.comZapId.codigoZap) {
+                        compra.total = zapato.precio * compra.cantidad;
+                    }
+                });
+                this.__appService.insertarCompra(compra);
+                res.redirect('/shoes/compras');
+            }
+            else {
+                res.render('crear-compra', { mensaje: "Cliente o zapato no existente" });
+            }
+        });
+    }
+    invalidarCompra(res, codigoCom) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log(codigoCom);
+            const compra = {};
+            compra.codigoCom = Number(codigoCom);
+            yield this.__appService.actualizarCompra(compra);
             res.redirect('/shoes/compras');
         });
     }
@@ -215,10 +232,19 @@ __decorate([
     common_1.Post('compras/crear'),
     __param(0, common_1.Response()),
     __param(1, common_1.Body()),
+    __param(2, common_1.Body('comCliId')),
+    __param(3, common_1.Body('comZapId')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, Object]),
+    __metadata("design:paramtypes", [Object, Object, Number, Number]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "insertarCompra", null);
+__decorate([
+    common_1.Post('compras/invalidar'),
+    __param(0, common_1.Response()), __param(1, common_1.Body('codigoCom')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object, Number]),
+    __metadata("design:returntype", Promise)
+], AppController.prototype, "invalidarCompra", null);
 __decorate([
     common_1.Get('zapatos'),
     __param(0, common_1.Response()),

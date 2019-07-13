@@ -5,7 +5,7 @@
   "url": "http://localhost:3000",
   "tests": [{
     "id": "403965ff-4ecb-43bd-a8a3-e251fbfffce6",
-    "name": "Untitled",
+    "name": "ingreso compras",
     "commands": [{
       "id": "e0aaeb39-07fd-47eb-804f-a2c7cc679440",
       "comment": "",
@@ -572,6 +572,171 @@
         ["xpath=//a[contains(@href, '/shoes/compras')]", "xpath:href"],
         ["xpath=//a[2]", "xpath:position"],
         ["xpath=//a[contains(.,'Compras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "201711cb-14b7-45c9-803d-0b6d44b1ad41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn_agregar']/a/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c50c36b1-7bb0-4016-8287-740c62b0852e",
+      "comment": "",
+      "command": "click",
+      "target": "id=zapatoID",
+      "targets": [
+        ["id=zapatoID", "id"],
+        ["name=comZapId", "name"],
+        ["css=#zapatoID", "css:finder"],
+        ["xpath=//input[@id='zapatoID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88023738-384e-4220-9a19-6ea9d03612b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=clienteID",
+      "targets": [
+        ["id=clienteID", "id"],
+        ["name=comCliId", "name"],
+        ["css=#clienteID", "css:finder"],
+        ["xpath=//input[@id='clienteID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74aa3fcd-02f8-48bd-b6d5-2bb8e77f070e",
+      "comment": "",
+      "command": "type",
+      "target": "id=clienteID",
+      "targets": [
+        ["id=clienteID", "id"],
+        ["name=comCliId", "name"],
+        ["css=#clienteID", "css:finder"],
+        ["xpath=//input[@id='clienteID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "cf3ee19b-d874-44be-8c13-528531578055",
+      "comment": "",
+      "command": "click",
+      "target": "id=zapatoID",
+      "targets": [
+        ["id=zapatoID", "id"],
+        ["name=comZapId", "name"],
+        ["css=#zapatoID", "css:finder"],
+        ["xpath=//input[@id='zapatoID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23ca8856-a7ef-4f2f-8529-bf8716cec5e6",
+      "comment": "",
+      "command": "type",
+      "target": "id=zapatoID",
+      "targets": [
+        ["id=zapatoID", "id"],
+        ["name=comZapId", "name"],
+        ["css=#zapatoID", "css:finder"],
+        ["xpath=//input[@id='zapatoID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "b40b5cad-4467-425c-970e-8eedfb737123",
+      "comment": "",
+      "command": "click",
+      "target": "id=cantidadID",
+      "targets": [
+        ["id=cantidadID", "id"],
+        ["name=fecha", "name"],
+        ["css=#cantidadID", "css:finder"],
+        ["xpath=//input[@id='cantidadID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58a20713-977a-4a08-8a07-64313998358e",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidadID",
+      "targets": [
+        ["id=cantidadID", "id"],
+        ["name=fecha", "name"],
+        ["css=#cantidadID", "css:finder"],
+        ["xpath=//input[@id='cantidadID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "2019-07-13"
+    }, {
+      "id": "0ed456e0-ebff-412e-85b8-cbed5eceb283",
+      "comment": "",
+      "command": "click",
+      "target": "id=principal",
+      "targets": [
+        ["id=principal", "id"],
+        ["css=#principal", "css:finder"],
+        ["xpath=//div[@id='principal']", "xpath:attributes"],
+        ["xpath=//form/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf925d55-19e0-4569-9994-667b4a4f11d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=fechaID",
+      "targets": [
+        ["id=fechaID", "id"],
+        ["name=cantidad", "name"],
+        ["css=#fechaID", "css:finder"],
+        ["xpath=//input[@id='fechaID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0218d451-c0e7-4d3c-b353-7de0fbc9c474",
+      "comment": "",
+      "command": "type",
+      "target": "id=fechaID",
+      "targets": [
+        ["id=fechaID", "id"],
+        ["name=cantidad", "name"],
+        ["css=#fechaID", "css:finder"],
+        ["xpath=//input[@id='fechaID']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "2204e178-c221-4aed-8859-6c6747602f5f",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn_insertar",
+      "targets": [
+        ["id=btn_insertar", "id"],
+        ["css=#btn_insertar", "css:finder"],
+        ["xpath=//button[@id='btn_insertar']", "xpath:attributes"],
+        ["xpath=//div[@id='botones']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Insertar')]", "xpath:innerText"]
       ],
       "value": ""
     }]

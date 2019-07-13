@@ -43,8 +43,6 @@
             <tr>
                 <th></th>
                 <th>Código</th>
-                <th>Codigo cliente</th>
-                <th>Código zapato</th>
                 <th>Fecha</th>
                 <th>Cantidad</th>
                 <th>Total</th>
@@ -52,24 +50,28 @@
             </tr>
             </thead>
             <% arregloCompras.forEach(compra=> { %>
+
                 <tbody>
                 <tr>
                     <td>
                         <form action="/shoes/compras/invalidar" method="post">
-                            <input type="text" id="compraID" name="codigoCom" value="<%= compra.codigoCom %>" hidden>
-                            <input type="text" id="zapatoID" name="comZapId" value="<%= compra.codigoZap %>" hidden>
-                            <input type="text" id="cantidadID" name="cantidad" value="<%= compra.cantidad %>" hidden>
-                            <input type="image" src="/images/cancelar.png" align="center" width="30" height="30"
-                                   alt="Submit Form">
+                            <input type="text" id="compraID" name="codigoCom" value="<%= compra.codigoCom %>"
+                                   hidden>
+                            <% if (compra.validez){ %>
+                                <input type="image" src="/images/cancelar.png" align="center" width="30" height="30"
+                                       alt="Submit Form">
+                            <% } %>
                         </form>
                     </td>
                     <td><%= compra.codigoCom %></td>
-                    <td><%= compra.comCliId %></td>
-                    <td><%= compra.comZapId %></td>
                     <td><%= compra.fecha %></td>
                     <td><%= compra.cantidad %></td>
                     <td><%= compra.total %></td>
-                    <td><%= compra.validez %></td>
+                    <% if(compra.validez){ %>
+                        <td>VALIDA</td>
+                    <% }else{ %>
+                        <td>NO VALIDA</td>
+                    <% } %>
                 </tr>
                 </tbody>
             <% }) %>

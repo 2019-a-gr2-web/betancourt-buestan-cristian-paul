@@ -4,7 +4,6 @@ import * as express from 'express';
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
-    console.log(__dirname + 'public')
     // app.use(express.static('public'));
     app.use(express.static(__dirname + '/public'));
     // @ts-ignore

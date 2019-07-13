@@ -1,5 +1,4 @@
 import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {FiestaEntity} from "../../../../01-http/02-servidor-web-nodejs/api-web/src/fiesta/fiesta.entity";
 import {ComprasEntity} from "./compras.entity";
 
 @Entity('Zapato') // Nombre tabla
