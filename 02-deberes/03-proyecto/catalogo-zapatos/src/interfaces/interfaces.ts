@@ -7,8 +7,8 @@ export interface Cliente {
 
 export interface Compras {
     codigoCom: number
-    comZapId: number
-    comCliId: number
+    comZapId: Zapato
+    comCliId: Cliente
     fecha: Date
     cantidad: number
     total: number
@@ -16,7 +16,7 @@ export interface Compras {
 }
 
 export interface Zapato {
-    codigoZap?: number;
+    codigoZap: number
     marca: string
     color: string
     talla: number

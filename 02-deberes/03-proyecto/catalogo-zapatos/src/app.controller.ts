@@ -1,28 +1,12 @@
 import {Body, Controller, Get, Param, Post, Put, Query, Request, Response} from '@nestjs/common';
 import {AppService} from './app.service';
 import {Cliente, Compras, Zapato} from "./interfaces/interfaces";
+import {response} from "express";
 
 @Controller('shoes')
 export class AppController {
 
-    cons
-
     constructor(private readonly __appService: AppService) {
-    }
-
-    @Get('login')
-    login(@Response() res) {
-        res.render('login')
-    }
-
-    @Post('usuario')
-    usuario(@Body('usuario') usuario: String, @Response() res) {
-        res.cookie(
-            'usuario',      //nombre
-            usuario,               //valor
-            {                                   //opciones
-                signed: true
-            }).redirect('/api/inicio');
     }
 
     ////CLIENTES///////////////////////////////////////////////////////////////////////////////////
@@ -78,47 +62,76 @@ export class AppController {
     ////COMPRAS///////////////////////////////////////////////////////////////////////////////////
     @Get('compras')
     async listaCompras(@Response() res) {
-        const arregloZapatos = await this.__appService.obtenerZapatos();
-        // const arregloClientes = await this.__appService.obtenerClientes();
         const arregloCompras = await this.__appService.obtenerCompras();
 
         res.render('lista-compras',
             {
-                // arregloClientes: arregloClientes,
-                arregloZapatos: arregloZapatos,
-                arregloCompras: arregloCompras,
+                arregloCompras: arregloCompras
             }
         )
     }
 
     @Get('compras/crear')
     async crearCompra(@Response() res) {
-        res.render('crear-compra',
+        res.render('crear-compra', {mensaje: null}
         )
     }
-
 
     @Post('compras/crear')
     async insertarCompra(
         @Response() res,
-        @Body() compra: Compras
+        @Body() compra: Compras,
+        @Body('comCliId') comCliId: number,
+        @Body('comZapId') comZapId: number
     ) {
+
+        const zapato = {} as Zapato
+        zapato.codigoZap = Number(comZapId)
+        const cliente = {} as Cliente
+        cliente.codigoCli = Number(comCliId)
+
         compra.cantidad = Number(compra.cantidad)
-        compra.comCliId = Number(compra.comCliId)
-        compra.comZapId = Number(compra.comZapId)
         compra.fecha = new Date(compra.fecha)
         compra.validez = true
+        compra.comCliId = cliente
+        compra.comZapId = zapato
+        // compra.comZapId = Number(compra.comZapId)
+        // compra.comCliId = Number(compra.comCliId)
+
         const arregloZapatos = await this.__appService.obtenerZapatos();
-        arregloZapatos.forEach(zapato => {
-            if (zapato.codigoZap == compra.comZapId) {
-                compra.total = zapato.precio * compra.cantidad
-            }
+        const arregloClientes = await this.__appService.obtenerClientes();
+
+        const clienteAux = arregloClientes.find(cliente => {
+            return compra.comCliId.codigoCli == cliente.codigoCli
         })
-        console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`)
-        const resp = await this.__appService.insertarCompra(compra)
-        res.redirect('/shoes/compras/crear')
+
+        const zapatosAux = arregloZapatos.find(zapato => {
+            return compra.comZapId.codigoZap == zapato.codigoZap
+        })
+
+        if (clienteAux != null && zapatosAux != null) {
+            arregloZapatos.forEach(zapato => {
+                if (zapato.codigoZap == compra.comZapId.codigoZap) {
+                    compra.total = zapato.precio * compra.cantidad
+                }
+
+            })
+            this.__appService.insertarCompra(compra)
+            res.redirect('/shoes/compras')
+        } else {
+            res.render('crear-compra', {mensaje: "Cliente o zapato no existente"}
+            )
+        }
     }
 
+    @Post('compras/invalidar')
+    async invalidarCompra(@Response() res, @Body('codigoCom') codigoCom: number) {
+        console.log(codigoCom)
+        const compra = {} as Compras
+        compra.codigoCom = Number(codigoCom)
+        await this.__appService.actualizarCompra(compra)
+        res.redirect('/shoes/compras')
+    }
 
     ////ZAPATOS///////////////////////////////////////////////////////////////////////////////////
     @Get('zapatos')
@@ -181,16 +194,10 @@ export class AppController {
     }
 
     /////////////////////////////////////////////////////////////
-
     @Get('inicio')
     inicio(@Response() res) {
         res.render('inicio', {})
     }
 
-    cookieValida(@Response() res, usuario: string) {
-        if (!usuario) {
-            res.redirect('/api/cerrar');
-        }
-    }
 }
 

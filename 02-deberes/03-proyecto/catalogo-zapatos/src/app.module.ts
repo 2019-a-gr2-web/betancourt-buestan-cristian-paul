@@ -25,7 +25,6 @@ import {ComprasEntity} from "./compras.entity";
         TypeOrmModule.forFeature(
             [
                 ClienteEntity, ZapatoEntity, ComprasEntity
-
             ], 'default'
         )
     ],

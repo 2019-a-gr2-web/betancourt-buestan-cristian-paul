@@ -99,4 +99,20 @@ export class AppService {
             .create(compra)
         return this._comprasRepository.save(objetoEntidad)
     }
+
+    actualizarCompra(compra: Compras) {
+        return this._comprasRepository.createQueryBuilder()
+            .update(compra)
+            .set({
+                    validez: false
+                }
+            )
+            .where(
+                "codigoCom = :id"
+                , {
+                    id: compra.codigoCom
+                }
+            )
+            .execute();
+    }
 }

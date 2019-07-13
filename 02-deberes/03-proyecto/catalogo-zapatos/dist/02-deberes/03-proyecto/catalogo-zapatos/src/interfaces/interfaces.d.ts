@@ -5,12 +5,12 @@ export interface Cliente {
     apellido: string;
 }
 export interface Compras {
-    codigoCom?: number;
-    codigoZap: string;
-    codigoCli: number;
+    codigoCom: number;
+    comZapId: number;
+    comCliId: number;
     fecha: Date;
     cantidad: number;
-    total: boolean;
+    total: number;
     validez: boolean;
 }
 export interface Zapato {
