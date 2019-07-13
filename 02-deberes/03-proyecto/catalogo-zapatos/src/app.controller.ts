@@ -5,24 +5,7 @@ import {Cliente, Compras, Zapato} from "./interfaces/interfaces";
 @Controller('shoes')
 export class AppController {
 
-    cons
-
     constructor(private readonly __appService: AppService) {
-    }
-
-    @Get('login')
-    login(@Response() res) {
-        res.render('login')
-    }
-
-    @Post('usuario')
-    usuario(@Body('usuario') usuario: String, @Response() res) {
-        res.cookie(
-            'usuario',      //nombre
-            usuario,               //valor
-            {                                   //opciones
-                signed: true
-            }).redirect('/api/inicio');
     }
 
     ////CLIENTES///////////////////////////////////////////////////////////////////////////////////
@@ -79,12 +62,14 @@ export class AppController {
     @Get('compras')
     async listaCompras(@Response() res) {
         const arregloZapatos = await this.__appService.obtenerZapatos();
-        // const arregloClientes = await this.__appService.obtenerClientes();
+        const arregloClientes = await this.__appService.obtenerClientes();
         const arregloCompras = await this.__appService.obtenerCompras();
-
+        console.log(arregloZapatos)
+        console.log(arregloCompras)
+        console.log(arregloClientes)
         res.render('lista-compras',
             {
-                // arregloClientes: arregloClientes,
+                arregloClientes: arregloClientes,
                 arregloZapatos: arregloZapatos,
                 arregloCompras: arregloCompras,
             }
@@ -96,7 +81,6 @@ export class AppController {
         res.render('crear-compra',
         )
     }
-
 
     @Post('compras/crear')
     async insertarCompra(
@@ -115,8 +99,8 @@ export class AppController {
             }
         })
         console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`)
-        const resp = await this.__appService.insertarCompra(compra)
-        res.redirect('/shoes/compras/crear')
+        this.__appService.insertarCompra(compra)
+        res.redirect('/shoes/compras')
     }
 
 
@@ -187,10 +171,5 @@ export class AppController {
         res.render('inicio', {})
     }
 
-    cookieValida(@Response() res, usuario: string) {
-        if (!usuario) {
-            res.redirect('/api/cerrar');
-        }
-    }
 }
 

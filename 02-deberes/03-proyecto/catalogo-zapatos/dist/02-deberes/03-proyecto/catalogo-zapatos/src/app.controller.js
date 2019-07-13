@@ -26,14 +26,6 @@ let AppController = class AppController {
     constructor(__appService) {
         this.__appService = __appService;
     }
-    login(res) {
-        res.render('login');
-    }
-    usuario(usuario, res) {
-        res.cookie('usuario', usuario, {
-            signed: true
-        }).redirect('/api/inicio');
-    }
     listaClientes(res) {
         return __awaiter(this, void 0, void 0, function* () {
             const arregloClientes = yield this.__appService.obtenerClientes();
@@ -78,8 +70,13 @@ let AppController = class AppController {
     listaCompras(res) {
         return __awaiter(this, void 0, void 0, function* () {
             const arregloZapatos = yield this.__appService.obtenerZapatos();
+            const arregloClientes = yield this.__appService.obtenerClientes();
             const arregloCompras = yield this.__appService.obtenerCompras();
+            console.log(arregloZapatos);
+            console.log(arregloCompras);
+            console.log(arregloClientes);
             res.render('lista-compras', {
+                arregloClientes: arregloClientes,
                 arregloZapatos: arregloZapatos,
                 arregloCompras: arregloCompras,
             });
@@ -104,8 +101,8 @@ let AppController = class AppController {
                 }
             });
             console.log(`${compra.comCliId} ${compra.comZapId} ${compra.cantidad} ${compra.fecha} ${compra.validez} ${compra.total}`);
-            const resp = yield this.__appService.insertarCompra(compra);
-            res.redirect('/shoes/compras/crear');
+            this.__appService.insertarCompra(compra);
+            res.redirect('/shoes/compras');
         });
     }
     listaZapatos(res) {
@@ -159,26 +156,7 @@ let AppController = class AppController {
     inicio(res) {
         res.render('inicio', {});
     }
-    cookieValida(res, usuario) {
-        if (!usuario) {
-            res.redirect('/api/cerrar');
-        }
-    }
 };
-__decorate([
-    common_1.Get('login'),
-    __param(0, common_1.Response()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "login", null);
-__decorate([
-    common_1.Post('usuario'),
-    __param(0, common_1.Body('usuario')), __param(1, common_1.Response()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Object]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "usuario", null);
 __decorate([
     common_1.Get('clientes'),
     __param(0, common_1.Response()),
@@ -291,12 +269,6 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "inicio", null);
-__decorate([
-    __param(0, common_1.Response()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String]),
-    __metadata("design:returntype", void 0)
-], AppController.prototype, "cookieValida", null);
 AppController = __decorate([
     common_1.Controller('shoes'),
     __metadata("design:paramtypes", [app_service_1.AppService])
