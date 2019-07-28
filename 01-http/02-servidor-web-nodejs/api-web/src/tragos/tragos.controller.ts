@@ -2,12 +2,13 @@ import {Controller, Get, Response, Post, Request, Body, Res, Query} from "@nestj
 import {TragosService} from "./tragos.services";
 import {Trago} from "./interfaces/trago";
 import {TragosCreateDto} from "./dto/tragos.create.dto";
-import {validate} from "class-validator";
+import {validate} from "class-validator";import {TragosEntity} from "./tragos.entity";
 
 @Controller('/api/traguito')
 export class TragosController {
     constructor(private readonly _tragosService: TragosService) {
     }
+
 
     @Get('lista')
     async listarTragos(@Response() res) {

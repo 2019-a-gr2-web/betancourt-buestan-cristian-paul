@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/02-deberes/01-calculadora" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/02-deberes/04-websockets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/03-examen/02-bimestre" vcs="Git" />
   </component>
 </project>

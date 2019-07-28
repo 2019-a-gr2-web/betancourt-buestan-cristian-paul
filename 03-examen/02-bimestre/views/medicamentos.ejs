@@ -1,0 +1,105 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <title>
+        Medicamentos
+    </title>
+    <style>
+        #encabezado {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #24AD46;
+            font-size: 30px;
+        }
+
+        #btn_insertar {
+            float: right;
+        }
+
+        .row {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        MEDICAMENTOS
+    </div>
+    <form action="/medicamento/lista/<%= idPaciente %>" method="get">
+        <div class="form-group row">
+            <label for="nombreID">Nombre</label>
+            <div class="form-group col-sm-7">
+                <input type="text" name="nombre" class="form-control" id="nombreID">
+            </div>
+            <div class="form-group col-sm-4">
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </form>
+    <form action="/medicamento/lista/<%= idPaciente %>" method="get">
+        <div class="form-group row">
+            <label for="nombreID">Composicion</label>
+            <div class="form-group col-sm-7">
+                <input type="text" name="composicion" class="form-control" id="composicionID">
+            </div>
+            <div class="form-group col-sm-4">
+                <button class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div id="btn_insertar" class="d-flex justify-content-center">
+            <a href="/medicamento/insertar/<%= idPaciente %>">
+                <button class="btn btn-success">Insertar</button>
+            </a>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Composicion</th>
+            <th scope="col">Gramos a ingerir</th>
+            <th scope="col">Usado para</th>
+            <th scope="col">Fecha de caducidad</th>
+            <th scope="col">Numero de pastillas</th>
+            <th scope="col">Precio</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% listaMedicamentos.forEach( medicamento => { %>
+            <tr>
+                <td><%= medicamento.nombre %></td>
+                <td><%= medicamento.composicion %></td>
+                <td><%= medicamento.gramosAIngerir %></td>
+                <td><%= medicamento.usadoPara %></td>
+                <td><%= medicamento.fechaCaducidad %></td>
+                <td><%= medicamento.numeroPastillas %></td>
+                <td>$ <%= medicamento.precio %></td>
+                <td>
+                    <form action="/medicamento/actualizar/<%= idPaciente %>" method="post">
+                        <input type="number" name="id" value="<%= medicamento.id %>" hidden>
+                        <button class="btn btn-warning">Actualizar</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/medicamento/eliminar/<%= idPaciente %>" method="post">
+                        <input type="number" name="id" value="<%= medicamento.id %>" hidden>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

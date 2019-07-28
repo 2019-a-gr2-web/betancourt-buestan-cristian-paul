@@ -1,0 +1,45 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Pacientes</title>
+    <style>
+        .row {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        #encabezado {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #245FAD;
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        PACIENTES
+    </div>
+    <% pacientes.forEach(paciente =>{ %>
+        <div class="row">
+            <a href="/medicamento/lista/<%= paciente.id %>">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <%= paciente.nombres.toUpperCase() + ' ' %> <%= paciente.apellidos.toUpperCase() %>
+                    </div>
+                    <div class="panel-body">
+                        Fecha de nacimiento: <%= paciente.fechaNacimiento %><br>
+                        Numero de hijos: <%= paciente.hijos %><br>
+                        Seguro: <%= paciente.tieneSeguro %>
+                    </div>
+                </div>
+            </a>
+        </div>
+    <% }) %>
+</div>
+</body>
+</html>

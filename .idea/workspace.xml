@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3e70de9-f522-4742-8f38-2c79aa32e755" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/catalogo-zapatos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/02-deberes/04-websockets/src/piedra-papel-tijera/juego.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/02-deberes/04-websockets/src/piedra-papel-tijera/juego.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/02-deberes/04-websockets/src/piedra-papel-tijera/juego.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/cabecera/pedido.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/medicamento/medicamento.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/medicamento/medicamento.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/medicamento/medicamento.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/paciente/paciente.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/paciente/paciente.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/dist/03-examen/02-bimestre/src/paciente/paciente.entity.js.map" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/images/papel.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/images/piedra.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/images/tijera.png" afterDir="false" />
@@ -10,23 +37,186 @@
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/socket.io.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/src/piedra-papel-tijera/juego.gateway.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/02-deberes/04-websockets/src/piedra-papel-tijera/juego.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/.prettierrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.spec.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.controller.spec.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/app.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/cabecera.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/cabecera.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/cabecera.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/detalle.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/detalle.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/detalle.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera-detalle/medicamento.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/Paciente.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/Paciente.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/Paciente.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/cabecera.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/elementoCarrito.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/elementoCarrito.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/elementoCarrito.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/medicamento.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/paciente.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/cabecera/pedido.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.gateway.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.gateway.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.gateway.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/despacho/despacho.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/Paciente.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/Paciente.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/Paciente.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/medicamento.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/medicamento/paciente.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/Paciente.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/Paciente.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/Paciente.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.contoller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.contoller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.contoller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.controller.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.controller.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.entity.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.entity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.entity.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.module.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/src/paciente/paciente.service.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/test/app.e2e-spec.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/test/app.e2e-spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/dist/test/app.e2e-spec.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/nest-cli.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/public/websockets/despachadorPedidos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/public/websockets/socket.io.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/elementoCarrito.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/pedido.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/pedido.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/pedido.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/pedido.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/cabecera/pedido.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/despacho/despacho.gateway.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/despacho/despacho.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/medicamento/medicamento.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/paciente/Paciente.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/paciente/paciente.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/paciente/paciente.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/src/paciente/paciente.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/carrito.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/compra.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/confirmarCompra.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/crearMedicamento.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/login.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/medicamentos.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/pacientes.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/03-examen/02-bimestre/views/pedidos.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/dto/tragos.create.dto.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/dto/tragos.create.dto.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/dist/src/tragos/tragos.controller.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/dto/tragos.create.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/dto/tragos.create.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/zapato.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/dist/02-deberes/03-proyecto/catalogo-zapatos/src/zapato.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/interfaces/interfaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/zapato.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/zapato.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/test/ingreso datos.side" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/test/ingreso datos.side" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/crear-compra.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/02-deberes/04-websockets/public/websockets/juego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/03-examen/01-bimestre/views/login.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,20 +232,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -103,8 +284,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/gestion-so.ejs" />
-        <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/crear-app.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/lista-app.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/lista-so.ejs" />
         <option value="$PROJECT_DIR$/03-examen/01-bimestre/views/crear-so.ejs" />
@@ -154,6 +333,8 @@
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.service.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs" />
+        <option value="$PROJECT_DIR$/03-examen/02-bimestre/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -167,7 +348,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,120 +358,44 @@
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="03-examen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
               <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="betancourt-buestan-cristian-paul" type="b2602c69:ProjectViewProjectNode" />
-              <item name="betancourt-buestan-cristian-paul" type="462c0819:PsiDirectoryNode" />
-              <item name="02-deberes" type="462c0819:PsiDirectoryNode" />
-              <item name="03-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="catalogo-zapatos" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="03-examen" type="462c0819:PsiDirectoryNode" />
+              <item name="02-bimestre" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/public/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/03-examen/02-bimestre" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public\images" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\publico\websockets\images" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\04-websockets\public\websockets" />
-      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\04-websockets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public\images" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public" />
       <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\04-websockets\public\websockets" />
       <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src\chat" />
       <recent name="C:\Users\USRKAP\Documents\GitHub\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\03-examen\02-bimestre" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public\images" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\03-proyecto\catalogo-zapatos\src\public" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\01-http\02-servidor-web-nodejs\api-web\publico\websockets\images" />
+      <recent name="E:\Cristian\Universidad\Proyectos\Web\betancourt-buestan-cristian-paul\02-deberes\04-websockets\public\websockets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -358,16 +462,18 @@
       <workItem from="1562970790813" duration="1432000" />
       <workItem from="1563037249483" duration="2062000" />
       <workItem from="1563042581380" duration="1644000" />
+      <workItem from="1564327468403" duration="408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239312000" />
+    <option name="totallyTimeSpent" value="239720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.22538003" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49676025" visible="true" weight="0.22538003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926686" />
       <window_info id="Favorites" order="2" sideWeight="0.50323975" side_tool="true" weight="0.271261" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -379,7 +485,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32647058" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.5703899" visible="true" weight="0.26764706" />
+      <window_info anchor="bottom" x="11" y="356" width="1513" height="112" id="Terminal" order="9" sideWeight="0.5703899" visible="true" weight="0.26764706" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.42961004" side_tool="true" weight="0.275" />
       <window_info anchor="bottom" id="TypeScript" order="11" weight="0.32058823" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -391,16 +497,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.service.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/actualizar-zapato.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="44" column="60" lean-forward="true" selection-start-line="44" selection-start-column="60" selection-end-line="44" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-zapatos.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -587,7 +683,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json" />
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -704,6 +799,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -711,10 +820,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/02-deberes/03-proyecto/catalogo-zapatos/views/lista-compras.ejs">
+    <entry file="file://$PROJECT_DIR$/03-examen/02-bimestre/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="72" column="42" lean-forward="true" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        <state>
+          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>

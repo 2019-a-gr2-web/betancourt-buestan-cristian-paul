@@ -1,0 +1,51 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title> CARRITO DE COMPRAS </title>
+    <style>
+        #encabezado {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #245FAD;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        PEDIDOS
+    </div>
+    <% pedidos.forEach( p => { %>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Pedido #<%= p.id %>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    Direccion: <%= p.direccion %> <br>
+                    Teléfono: <%= p.telefono %> <br>
+                    Cédula: <%= p.cedula %> <br>
+                    Subtotal: $<%= p.subtotal %> <br>
+                    Total: $<%= p.total %> <br>
+                </div>
+                <div class="col-sm-6">
+                    Estado: <%= p.estado %> <br>
+                    <% if(p.estado.toUpperCase() === 'POR DESPACHAR'){ %>
+                        <form action="/pedido/eliminar" method="post">
+                        <div class="form-row">
+                            <input type="number" name="id" value="<%= p.id %>" hidden>
+                            <button class="btn btn-danger">Descartar</button>
+                        </div>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
+</body>
+</html>

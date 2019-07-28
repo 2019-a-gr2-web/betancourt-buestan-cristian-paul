@@ -1,0 +1,79 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const typeorm_1 = require("typeorm");
+const PrimaryGeneratedColumn_1 = require("typeorm/decorator/columns/PrimaryGeneratedColumn");
+const Column_1 = require("typeorm/decorator/columns/Column");
+let PedidoEntity = class PedidoEntity {
+};
+__decorate([
+    PrimaryGeneratedColumn_1.PrimaryGeneratedColumn(),
+    __metadata("design:type", Number)
+], PedidoEntity.prototype, "id", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'varchar',
+        length: 70,
+        name: 'nombre',
+    }),
+    __metadata("design:type", String)
+], PedidoEntity.prototype, "nombre", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'varchar',
+        length: 70,
+        name: 'direccion',
+    }),
+    __metadata("design:type", String)
+], PedidoEntity.prototype, "direccion", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'varchar',
+        length: 70,
+        name: 'telefono'
+    }),
+    __metadata("design:type", String)
+], PedidoEntity.prototype, "telefono", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'varchar',
+        name: 'cedula',
+    }),
+    __metadata("design:type", String)
+], PedidoEntity.prototype, "cedula", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'varchar',
+        name: 'estado',
+    }),
+    __metadata("design:type", String)
+], PedidoEntity.prototype, "estado", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'double',
+        name: 'subtotal',
+        default: 0
+    }),
+    __metadata("design:type", Number)
+], PedidoEntity.prototype, "subtotal", void 0);
+__decorate([
+    Column_1.Column({
+        type: 'double',
+        name: 'total',
+        default: 0
+    }),
+    __metadata("design:type", Number)
+], PedidoEntity.prototype, "total", void 0);
+PedidoEntity = __decorate([
+    typeorm_1.Entity('pedido')
+], PedidoEntity);
+exports.PedidoEntity = PedidoEntity;
+//# sourceMappingURL=pedido.entity.js.map

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>DESPACHO PEDIDOS</title>
+    <style>
+        #encabezado {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align-all: center;
+            font-size: 30px;
+            color: indigo;
+        }
+    </style>
+</head>
+<body>
+<script src="/websockets/socket.io.js"></script>
+<script>
+    const url = 'http://localhost:3001/websockets'
+    const socket = io(url)
+    socket.on(
+        'connect',
+        () => {
+            console.log('Estamos conectados!!');
+        }
+    );
+
+    socket.on(
+        'disconnect',
+        () => {
+            console.log('Nos desconectamos!!');
+            socket.disconnect()
+        }
+    );
+
+    socket.on(
+        'pedidoActualizar',
+        data => {
+            agregarPedidos(data)
+        }
+    );
+
+    function despachar(id) {
+        const nombreMetodo = 'despachar'
+        socket.emit(nombreMetodo, {id: id},
+            respuesta => {
+                console.log(respuesta)
+                agregarPedidos(respuesta)
+            }
+        )
+    }
+
+    function agregarPedidos(data) {
+        const tbody = document.getElementById('pedidos')
+        tbody.innerHTML = ''
+        let contenidoHtml = ''
+        data.forEach(p => {
+            contenidoHtml =
+                `<tr>
+                <td> ${p.nombre} </td>
+                <td> ${p.direccion} </td>
+                <td> ${p.telefono} </td>
+                <td> ${p.cedula} </td>
+                <td>
+                    <button class="btn btn-info" onclick="despachar(${p.id})">Despachar</button>
+                </td>
+                </tr>`
+            tbody.innerHTML = tbody.innerHTML + contenidoHtml
+        })
+    }
+
+    function obtenerPedidos() {
+        const nombreMetodo = 'peticion'
+        socket.emit(nombreMetodo, {},
+            respuesta => {
+                console.log(respuesta)
+                agregarPedidos(respuesta)
+            }
+        )
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function actualizarPedidos() {
+        while (true) {
+            await sleep(2500);
+            obtenerPedidos();
+        }
+    }
+
+    actualizarPedidos()
+</script>
+<div class="container">
+    <div id="encabezado" class="row">
+        DESPACHO DE PEDIDOS
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Teléfono</th>
+                <th scope="col">Cedula</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody id="pedidos">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

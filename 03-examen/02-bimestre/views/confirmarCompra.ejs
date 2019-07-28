@@ -1,0 +1,59 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title> CONFIRMAR DE COMPRAS </title>
+    <style>
+        #encabezado {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #245FAD;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        #boton {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        CONFIRMACIÓN DE COMPRA
+    </div>
+    <form action="/pedido/ingresarCompra" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nombreID">Nombre</label>
+            </div>
+            <div class="form-group col-md-6">
+                <input class="form-control" id="nombreID" type="text" name="nombre" value="<%= nombrePaciente%>" disabled>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="direccionID">Direccion</label>
+            </div>
+            <div class="form-group col-md-6">
+                <input class="form-control" id="direccionID" type="text" name="direccion">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="telefonoID">Telefono</label>
+            </div>
+            <div class="form-group col-md-6">
+                <input class="form-control" id="telefonoID" type="number" name="telefono">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="cedulaID">Cedula</label>
+            </div>
+            <div class="form-group col-md-6">
+                <input class="form-control" id="nombcedulaIDreID" type="number" name="cedula">
+            </div>
+            <div id="boton" class="form-group col-md-12">
+                <button class="btn btn-success"> Confirmar compra</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

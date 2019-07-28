@@ -1,0 +1,78 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title> CARRITO DE COMPRAS </title>
+    <style>
+        #encabezado {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #245FAD;
+            text-align: center;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        CARRITO DE COMPRAS
+    </div>
+    <div class="row">
+        <% carrito.forEach( c => { %>
+            <div class="panel panel-warning">
+                <div class="panel-heading"><%= c.nombre %> </div>
+                <div class="panel-body">
+                    <div class="col-sm-6">
+                        Cantidad: <%= c.cantidad %><br>
+                        Precio: <%= c.precio %> <br>
+                        <% const precio = (c.cantidad * c.precio) %>
+                        Total: <%= precio %> <br>
+                    </div>
+                    <div class="col-sm-6">
+                        <form action="/pedido/desagregarMedicamento" method="post">
+                            <input type="number" id="medicamentoID" name="idMedicamento" value="<%= c.idMedicamento %>"
+                                   hidden>
+                            <button class="btn btn-danger">Eliminar del carrito</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+    <div class="row">
+        <% let subtotal = 0 %>
+        <% carrito.forEach(c=>{ %>
+            <% subtotal = subtotal + (Number(c.precio) * Number(c.cantidad)) %>
+        <% }) %>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="col-sm-6">
+                    TOTAL
+                </div>
+                <div class="col-sm-6">
+                    SUBTOTAL
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    $ <%= subtotal %>
+                </div>
+                <div class="col-sm-6">
+                    <% total = Number(impuesto + 1) * Number(subtotal) %>
+                    $<%= total %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="/pedido/confirmarCompra">
+            <button class="btn btn-success">Confirmar compra</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

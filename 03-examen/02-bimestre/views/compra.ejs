@@ -1,0 +1,66 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>
+        COMPRA
+    </title>
+    <style>
+        #encabezado {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #245FAD;
+            text-align: center;
+            font-size: 25px;
+        }
+        #botones{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="encabezado" class="row">
+        USUARIO: <%= nombrePaciente %>
+    </div>
+    <div class="row">
+        <div class="panel-group">
+            <% medicamentos.forEach(med=>{ %>
+                <div class="panel panel-success">
+                    <div class="panel-heading"><%= med.nombre %> - $<%= med.precio %></div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            Composición: <%= med.composicion %><br>
+                            Gramos a ingerir: <%= med.gramosAIngerir %><br>
+                            Fecha de caducidad: <%= med.fechaCaducidad %><br>
+                            Uso: <%= med.usadoPara %><br>
+                            Numero de pastillas: <%= med.numeroPastillas %>
+                        </div>
+                        <div class="col-sm-4">
+                            <form action="/pedido/agregarMedicamento" method="post">
+                                <label for="cantidadID">Cantidad: </label>
+                                <input type="number" name="cantidad" id="cantidadID">
+                                <input type="number" name="idMedicamento" value="<%= med.id %>" hidden>
+                                <input type="number" name="precio" value="<%= med.precio %>" hidden>
+                                <input type="text" name="nombre" value="<%= med.nombre %>" hidden>
+                                <button class="btn btn-success">Agregar al carrito</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <div id="botones" class="row">
+        <a href="/pedido/carrito">
+            <button class="btn btn-info">Ver el carrito</button>
+        </a>
+        <a href="/pedido/lista">
+            <button class="btn btn-warning">Ver pedidos</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
